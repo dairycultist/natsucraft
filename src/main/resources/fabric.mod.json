@@ -2,29 +2,20 @@
   "schemaVersion": 1,
   "id": "template",
   "version": "${version}",
-
   "name": "Template",
   "description": "",
-  "authors": [
-    "DanyGames2014"
-  ],
-
+  "authors": [ "BlueBunnex" ],
   "license": "MIT",
   "icon": "assets/template/icon.png",
-
   "environment": "*",
   "entrypoints": {
-    "stationapi:event_bus": [
-    ],
-    "stationapi:event_bus_client": [
-    ],
-    "stationapi:event_bus_server": [
-    ]
+    "stationapi:event_bus": [ "net.bluebunnex.template.Template" ],
+    "stationapi:event_bus_client": [],
+    "stationapi:event_bus_server": []
   },
   "mixins": [
     "template.mixins.json"
   ],
-
   "depends": {
     "minecraft": "1.0.0-beta.7.3"
   }
