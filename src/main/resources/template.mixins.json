@@ -3,7 +3,10 @@
   "minVersion": "0.8",
   "package": "net.bluebunnex.template.mixin",
   "compatibilityLevel": "JAVA_17",
-  "mixins": [],
+  "mixins": [
+    "ToolRecipesMixin",
+    "WeaponRecipesMixin"
+  ],
   "server": [],
   "client": [],
   "injectors": {
