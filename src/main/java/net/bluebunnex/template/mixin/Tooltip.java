@@ -72,9 +72,7 @@ public class Tooltip {
 
                         if (i * 2 + 1 < livingEntity.health) {
                             hud.drawTexture(12 + i * 8, 21, 52, 0, 9, 9);
-                        }
-
-                        if (i * 2 + 1 == livingEntity.health) {
+                        } else if (i * 2 + 1 == livingEntity.health) {
                             hud.drawTexture(12 + i * 8, 21, 61, 0, 9, 9);
                         }
                     }
