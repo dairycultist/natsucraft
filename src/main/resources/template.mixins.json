@@ -5,7 +5,9 @@
   "compatibilityLevel": "JAVA_17",
   "mixins": [],
   "server": [],
-  "client": [],
+  "client": [
+    "Tooltip"
+  ],
   "injectors": {
     "defaultRequire": 1
   }
