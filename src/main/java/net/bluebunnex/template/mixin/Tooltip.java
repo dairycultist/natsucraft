@@ -8,6 +8,7 @@ import net.minecraft.client.render.item.ItemRenderer;
 import net.minecraft.client.render.platform.Lighting;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.EntityRegistry;
+import net.minecraft.entity.LivingEntity;
 import net.minecraft.item.Item;
 import net.minecraft.util.hit.HitResultType;
 import org.lwjgl.opengl.GL11;
@@ -38,11 +39,11 @@ public class Tooltip {
     @Inject(method = "render", at = @At("TAIL"))
     private void renderMixin(float tickDelta, boolean screenOpen, int mouseX, int mouseY, CallbackInfo ci) {
 
-        TextRenderer textRenderer = this.minecraft.textRenderer;
-        InGameHud hud = (InGameHud) (Object) this;
-
         // tooltip for What Am I Looking At clone
         if (this.minecraft.crosshairTarget != null) {
+
+            TextRenderer textRenderer = this.minecraft.textRenderer;
+            InGameHud hud = (InGameHud) (Object) this;
 
             // stolen from AchievementToast
             GL11.glColor4f(1.0F, 1.0F, 1.0F, 1.0F);
@@ -58,8 +59,26 @@ public class Tooltip {
                 Entity entity = this.minecraft.crosshairTarget.entity;
 
                 // entity name
-                textRenderer.drawWithShadow(EntityRegistry.getId(entity), 12, 16, -1);
-                // TODO show health
+                textRenderer.drawWithShadow(EntityRegistry.getId(entity), 12, 11, -1);
+
+                // health
+                if (entity instanceof LivingEntity livingEntity) {
+
+                    GL11.glBindTexture(3553, this.minecraft.textureManager.getTextureId("/gui/icons.png"));
+
+                    for (int i = 0; i < livingEntity.maxHealth / 2; i++) {
+
+                        hud.drawTexture(12 + i * 8, 21, 16, 0, 9, 9);
+
+                        if (i * 2 + 1 < livingEntity.health) {
+                            hud.drawTexture(12 + i * 8, 21, 52, 0, 9, 9);
+                        }
+
+                        if (i * 2 + 1 == livingEntity.health) {
+                            hud.drawTexture(12 + i * 8, 21, 61, 0, 9, 9);
+                        }
+                    }
+                }
 
             } else {
 
