@@ -8,6 +8,8 @@
     - Have a stone-equivalent mining level
     - Craftable in your inventory
   - Wood logs can only be mined with stone-equivalent mining level
-- Maracas??
+  - Leaves have a chance of dropping sticks
 - Foods
   - Tomato
+
+...and maybe maracas idk yet.
