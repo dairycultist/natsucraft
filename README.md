@@ -7,7 +7,8 @@
   - Added flint axe and pickaxe
     - Have a stone-equivalent mining level
     - Craftable in your inventory
-  - Wood logs can only be mined with stone-equivalent mining level
+  - Wooden blocks can only be mined with a stone-or-above axe
+    - Crafting tables can now be quickly mined with an axe
   - Leaves have a chance of dropping sticks
 - Foods
   - Tomato

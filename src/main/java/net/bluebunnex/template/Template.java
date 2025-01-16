@@ -1,8 +1,13 @@
 package net.bluebunnex.template;
 
+import net.bluebunnex.template.mixin.MaterialInvoker;
 import net.mine_diver.unsafeevents.listener.EventListener;
+import net.minecraft.block.Block;
+import net.minecraft.block.material.Material;
+import net.minecraft.item.AxeItem;
 import net.minecraft.item.Item;
 import net.minecraft.item.ToolMaterial;
+import net.modificationstation.stationapi.api.event.mod.InitEvent;
 import net.modificationstation.stationapi.api.event.registry.ItemRegistryEvent;
 import net.modificationstation.stationapi.api.mod.entrypoint.Entrypoint;
 import net.modificationstation.stationapi.api.template.item.TemplateAxeItem;
@@ -11,6 +16,8 @@ import net.modificationstation.stationapi.api.template.item.TemplatePickaxeItem;
 import net.modificationstation.stationapi.api.util.Namespace;
 import net.modificationstation.stationapi.api.util.Null;
 
+import java.lang.reflect.Field;
+
 public class Template {
 
     @Entrypoint.Namespace
@@ -18,7 +25,6 @@ public class Template {
 
     public static Item FLINT_AXE;
     public static Item FLINT_PICKAXE;
-
     public static Item TOMATO;
 
     @EventListener
@@ -33,5 +39,13 @@ public class Template {
         TOMATO = new TemplateFoodItem(NAMESPACE.id("tomato"), 2, false)
                 .setMaxCount(8)
                 .setTranslationKey(NAMESPACE, "tomato");
+    }
+
+    @EventListener
+    public void listenToInit(InitEvent event) {
+
+        ((MaterialInvoker) Material.WOOD).invokeSetHandHarvestable();
+
+        // TODO add crafting table to AxeItem.axeEffectiveBlocks
     }
 }
