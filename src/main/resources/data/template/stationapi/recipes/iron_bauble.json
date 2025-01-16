@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "ww",
+    "ww"
+  ],
+  "key": {
+    "w": {
+      "item": "minecraft:iron_ingot"
+    }
+  },
+  "result": {
+    "item": "template:iron_bauble",
+    "count": 1
+  }
+}
