@@ -6,7 +6,6 @@ import net.minecraft.item.Item;
 import net.modificationstation.stationapi.api.event.registry.BlockRegistryEvent;
 import net.modificationstation.stationapi.api.event.registry.ItemRegistryEvent;
 import net.modificationstation.stationapi.api.mod.entrypoint.Entrypoint;
-import net.modificationstation.stationapi.api.template.block.TemplateCropBlock;
 import net.modificationstation.stationapi.api.template.item.TemplateFoodItem;
 import net.modificationstation.stationapi.api.template.item.TemplateMushroomStewItem;
 import net.modificationstation.stationapi.api.util.Namespace;
@@ -36,11 +35,7 @@ public class Template {
     @EventListener
     public void registerBlocks(BlockRegistryEvent event) {
 
-        // gonna have to make a new class extending TemplateCropBlock, override getTexture,
-        // and bind our own textures the same way we did in Peanutbutter for copper tools
-
-        // also override getDroppedItemId
-
-        TOMATO_CROP = new TemplateCropBlock(NAMESPACE.id("tomato_crop"), 88);
+        TOMATO_CROP = new TomatoCropBlock(NAMESPACE.id("tomato_crop"))
+                .setTranslationKey(NAMESPACE, "tomato_crop");
     }
 }
