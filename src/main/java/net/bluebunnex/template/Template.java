@@ -2,9 +2,7 @@ package net.bluebunnex.template;
 
 import net.bluebunnex.template.mixin.MaterialInvoker;
 import net.mine_diver.unsafeevents.listener.EventListener;
-import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
-import net.minecraft.item.AxeItem;
 import net.minecraft.item.Item;
 import net.minecraft.item.ToolMaterial;
 import net.modificationstation.stationapi.api.event.mod.InitEvent;
@@ -15,8 +13,6 @@ import net.modificationstation.stationapi.api.template.item.TemplateFoodItem;
 import net.modificationstation.stationapi.api.template.item.TemplatePickaxeItem;
 import net.modificationstation.stationapi.api.util.Namespace;
 import net.modificationstation.stationapi.api.util.Null;
-
-import java.lang.reflect.Field;
 
 public class Template {
 
