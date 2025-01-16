@@ -41,7 +41,5 @@ public class Template {
     public void listenToInit(InitEvent event) {
 
         ((MaterialInvoker) Material.WOOD).invokeSetHandHarvestable();
-
-        // TODO add crafting table to AxeItem.axeEffectiveBlocks
     }
 }
