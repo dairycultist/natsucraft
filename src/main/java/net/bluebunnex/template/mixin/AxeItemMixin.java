@@ -25,6 +25,16 @@ public class AxeItemMixin {
     }
 
     static {
-        axeEffectiveBlocks = new Block[] { Block.PLANKS, Block.BOOKSHELF, Block.LOG, Block.CHEST, Block.CRAFTING_TABLE };
+        axeEffectiveBlocks = new Block[] {
+                Block.PLANKS,
+                Block.BOOKSHELF,
+                Block.LOG,
+                Block.CHEST,
+                Block.CRAFTING_TABLE,
+                Block.WOODEN_STAIRS,
+                Block.DOOR,
+                Block.TRAPDOOR,
+                Block.WOODEN_PRESSURE_PLATE
+        };
     }
 }

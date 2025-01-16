@@ -10,7 +10,6 @@ without even going underground.
   - Are a stone-equivalent mining level
   - Craftable in your inventory
 - Wooden blocks can only be mined with a stone-or-above axe
-  - Crafting tables can now be quickly mined with an axe
 - Leaves have a chance of dropping sticks
 - Iron no longer spawns at the surface
 
@@ -20,4 +19,5 @@ I like food.
 
 Some tweaks that just make the game a little better.
 
-- Leaves now drop saplings (and sticks) twice as often.
+- Leaves now drop saplings (and sticks) twice as often
+- Crafting tables are now quickly mined with an axe
