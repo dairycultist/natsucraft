@@ -17,3 +17,7 @@ without even going underground.
 I like food.
 
 - Added tomato
+
+Some tweaks that just make the game a little better.
+
+- Leaves now drop saplings (and sticks) twice as often.
