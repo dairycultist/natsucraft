@@ -1,23 +1,13 @@
 > [!IMPORTANT]
 > I'm adding whatever I want to this mod, on the condition that it enhances my survival experience. This means doing runs in survival and deducing from that what to add.
 
-## Features
-I don't like how in the first 5 minutes of the game, you can immediately jump right from wood to stone to iron tools
-without even going underground.
+notes
 
-- Removed wood and stone tools
-- Added flint axe and pickaxe
-  - Are a stone-equivalent mining level
-  - Craftable in your inventory
-- Wooden blocks can only be mined with a stone-or-above axe
-- Leaves have a chance of dropping sticks
-- Iron no longer spawns at the surface
+sidegrade... not upgrade!
+
+I don't like how in the first 5 minutes of the game, you can immediately jump right from wood to stone to iron tools
+without even going underground. Should make iron no longer spawn at the surface at least!!
 
 I like food.
-
 - Added tomato
-
-Some tweaks that just make the game a little better.
-
-- Leaves now drop saplings (and sticks) twice as often
-- Crafting tables are now quickly mined with an axe
+- Added curry
