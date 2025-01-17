@@ -4,7 +4,6 @@ import net.mine_diver.unsafeevents.listener.EventListener;
 import net.minecraft.item.Item;
 import net.modificationstation.stationapi.api.event.registry.ItemRegistryEvent;
 import net.modificationstation.stationapi.api.mod.entrypoint.Entrypoint;
-import net.modificationstation.stationapi.api.template.item.TemplateFoodItem;
 import net.modificationstation.stationapi.api.template.item.TemplateItem;
 import net.modificationstation.stationapi.api.util.Namespace;
 import net.modificationstation.stationapi.api.util.Null;
@@ -15,7 +14,6 @@ public class Template {
     public static final Namespace NAMESPACE = Null.get();
 
     public static Item IRON_BAUBLE;
-    public static Item MUFFIN;
 
     @EventListener
     public void registerItems(ItemRegistryEvent event) {
@@ -23,8 +21,5 @@ public class Template {
         IRON_BAUBLE = new TemplateItem(NAMESPACE.id("iron_bauble"))
                 .setMaxCount(1)
                 .setTranslationKey(NAMESPACE, "iron_bauble");
-
-        MUFFIN = new TemplateFoodItem(NAMESPACE.id("muffin"), 10, false)
-                .setTranslationKey(NAMESPACE, "muffin");
     }
 }
