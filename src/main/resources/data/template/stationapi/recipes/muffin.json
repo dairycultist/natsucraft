@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "www",
+    "wsw",
+    "www"
+  ],
+  "key": {
+    "w": {
+      "item": "minecraft:wheat"
+    },
+    "s": {
+      "item": "minecraft:sugar"
+    }
+  },
+  "result": {
+    "item": "template:muffin",
+    "count": 1
+  }
+}
