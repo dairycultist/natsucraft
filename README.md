@@ -6,6 +6,8 @@ runs in survival and deducing from that what to add.
 
 fairy pet that you have from the start of the game that you can level up?
 
+Ectogel: dropped by ghasts, you run really fast on it
+
 guidance
 throw an end goal in there, as well as change up the achievements section to make it more obvious what the steps are
 
