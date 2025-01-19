@@ -9,9 +9,22 @@ import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
 @Mixin(PlayerEntity.class)
 public class PlayerEntityMixin {
 
+    // score is currently being used for keeping track of game time, I'll change this later
+
     @Inject(method = "tickPortalCooldown", at = @At("TAIL"))
     public void tickPortalCooldown(CallbackInfo ci) {
 
-        ((PlayerEntity) (Object) this).score = Math.abs(((PlayerEntity) (Object) this).score) * -1;
+        PlayerEntity player = ((PlayerEntity) (Object) this);
+
+        player.score = Math.abs(player.score) * -1;
+    }
+
+    @Inject(method = "tick", at = @At("TAIL"))
+    public void tick(CallbackInfo ci) {
+
+        PlayerEntity player = ((PlayerEntity) (Object) this);
+
+        if (player.score >= 0)
+            player.score++;
     }
 }

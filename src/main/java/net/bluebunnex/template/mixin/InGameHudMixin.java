@@ -32,11 +32,4 @@ public class InGameHudMixin {
 
         this.minecraft.textRenderer.drawWithShadow(text, 1, 1, color);
     }
-
-    @Inject(method = "tick", at = @At("TAIL"))
-    public void tick(CallbackInfo ci) {
-
-        if (this.minecraft.player != null && this.minecraft.player.score >= 0)
-            this.minecraft.player.score++;
-    }
 }
