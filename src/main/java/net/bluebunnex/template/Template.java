@@ -1,9 +1,7 @@
 package net.bluebunnex.template;
 
 import net.mine_diver.unsafeevents.listener.EventListener;
-import net.minecraft.block.Block;
 import net.minecraft.item.Item;
-import net.modificationstation.stationapi.api.event.registry.BlockRegistryEvent;
 import net.modificationstation.stationapi.api.event.registry.ItemRegistryEvent;
 import net.modificationstation.stationapi.api.mod.entrypoint.Entrypoint;
 import net.modificationstation.stationapi.api.template.item.TemplateItem;
@@ -15,16 +13,7 @@ public class Template {
     @Entrypoint.Namespace
     public static final Namespace NAMESPACE = Null.get();
 
-    public static Block ECTOGEL;
-
     public static Item IRON_BAUBLE;
-
-    @EventListener
-    public void registerBlocks(BlockRegistryEvent event) {
-
-        ECTOGEL = new EctogelBlock(NAMESPACE.id("ectogel"))
-                .setTranslationKey(NAMESPACE, "ectogel");
-    }
 
     @EventListener
     public void registerItems(ItemRegistryEvent event) {

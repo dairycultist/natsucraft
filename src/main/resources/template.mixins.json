@@ -4,6 +4,7 @@
   "package": "net.bluebunnex.template.mixin",
   "compatibilityLevel": "JAVA_17",
   "mixins": [
+    "PlayerEntityMixin"
   ],
   "server": [],
   "client": [
