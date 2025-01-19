@@ -1,6 +1,6 @@
 {
   "parent": "item/generated",
   "textures": {
-    "layer0": "template:block/iron_bauble"
+    "layer0": "template:item/iron_bauble"
   }
 }

@@ -4,6 +4,8 @@
 I'm adding whatever I want to this mod, on the condition that it enhances my survival experience. This means doing
 runs in survival and deducing from that what to add.
 
-- fairy pet that you have from the start of the game that you can level up?
-- throw an end goal in there
+- End goal
   - currently it's just "touch a nether portal"
+- RPG elements
+  - iron bauble that does nothing
+  - such a vibe
