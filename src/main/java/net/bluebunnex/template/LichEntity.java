@@ -5,6 +5,7 @@ import net.fabricmc.api.Environment;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.mob.MonsterEntity;
 import net.minecraft.entity.mob.SkeletonEntity;
+import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.world.World;
@@ -21,6 +22,16 @@ public class LichEntity extends MonsterEntity {
         this.health = 200;
         this.attackDamage = 12;
         this.fireImmune = true;
+    }
+
+    @Override
+    public void onKilledBy(Entity adversary) {
+        super.onKilledBy(adversary);
+
+        if (adversary instanceof PlayerEntity player) {
+
+            player.score = Math.abs(player.score) * -1;
+        }
     }
 
     @Override
