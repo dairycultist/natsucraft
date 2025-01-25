@@ -10,7 +10,7 @@
   "environment": "*",
   "entrypoints": {
     "stationapi:event_bus": [ "net.bluebunnex.template.Template" ],
-    "stationapi:event_bus_client": [],
+    "stationapi:event_bus_client": [ "net.bluebunnex.template.TemplateClient" ],
     "stationapi:event_bus_server": []
   },
   "mixins": [
