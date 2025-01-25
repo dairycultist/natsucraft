@@ -5,7 +5,7 @@ I'm adding whatever I want to this mod, on the sole condition that it makes me a
 - I like dungeon crawling/looting
 - I like RPG elements/mechanics
 - I don't like stripmining
-- I like jungles
+  - Maybe add mineshafts which are rather common?
 
 I should remember to playtest in survival.
 
