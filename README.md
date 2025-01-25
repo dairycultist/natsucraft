@@ -8,7 +8,7 @@ I'm adding whatever I want to this mod, on the sole condition that it makes me a
   - Maybe add mineshafts which are rather common?
   - Miner skeletons!
 - Jungles
-  - Tall (oak) trees
+  - Tall trees (either oak or new yellow jungle wood)
   - Any oak leaf broken in a jungle has a chance to drop bananas
 
 I should remember to playtest in survival.
