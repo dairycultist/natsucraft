@@ -6,10 +6,11 @@ I'm adding whatever I want to this mod, on the sole condition that it makes me a
 - I like RPG elements/mechanics
 - I don't like stripmining
   - Maybe add mineshafts which are rather common?
+  - Miner skeletons!
 
 I should remember to playtest in survival.
 
-## Currently in the mod (subject to change)
+## Currently in the mod (WIP and subject to change)
 
 - Sapphires
 - Lich
@@ -19,4 +20,3 @@ I should remember to playtest in survival.
   - summoned by...
   - drops the lich sword
   - https://namemc.com/skin/adcc6eab0088f51e
-- Iron bauble that does nothing

@@ -24,7 +24,6 @@ public class Template {
 
     public static Block SAPPHIRE_ORE;
 
-    public static Item IRON_BAUBLE;
     public static Item SAPPHIRE;
 
     @EventListener
@@ -44,10 +43,6 @@ public class Template {
 
     @EventListener
     public void registerItems(ItemRegistryEvent event) {
-
-        IRON_BAUBLE = new TemplateItem(NAMESPACE.id("iron_bauble"))
-                .setMaxCount(1)
-                .setTranslationKey(NAMESPACE, "iron_bauble");
 
         SAPPHIRE = new TemplateItem(NAMESPACE.id("sapphire"))
                 .setTranslationKey(NAMESPACE, "sapphire");
