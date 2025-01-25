@@ -7,6 +7,7 @@ I'm adding whatever I want to this mod, on the sole condition that it makes me a
 - I don't like stripmining
   - Maybe add mineshafts which are rather common?
   - Miner skeletons!
+- Jungles
 
 I should remember to playtest in survival.
 
@@ -19,4 +20,5 @@ I should remember to playtest in survival.
   - every once in a while, the lich uses necromancy to summon three skeletons in a puff of smoke to assist it in battle
   - summoned by...
   - drops the lich sword
-  - https://namemc.com/skin/adcc6eab0088f51e
+  - [inspiration](https://the-grimoire-of-gaia.fandom.com/wiki/Bone_Knight)
+  - [skin base](https://namemc.com/skin/adcc6eab0088f51e)
