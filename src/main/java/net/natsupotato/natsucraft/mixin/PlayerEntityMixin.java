@@ -1,4 +1,4 @@
-package net.bluebunnex.template.mixin;
+package net.natsupotato.natsucraft.mixin;
 
 import net.minecraft.entity.player.PlayerEntity;
 import org.spongepowered.asm.mixin.Mixin;

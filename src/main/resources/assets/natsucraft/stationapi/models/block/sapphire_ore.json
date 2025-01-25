@@ -1,6 +1,6 @@
 {
   "parent": "block/cube_all",
   "textures": {
-    "all": "template:block/sapphire_ore"
+    "all": "natsucraft:block/sapphire_ore"
   }
 }

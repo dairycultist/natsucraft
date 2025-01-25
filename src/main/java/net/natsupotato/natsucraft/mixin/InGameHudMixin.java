@@ -1,4 +1,4 @@
-package net.bluebunnex.template.mixin;
+package net.natsupotato.natsucraft.mixin;
 
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.gui.hud.InGameHud;

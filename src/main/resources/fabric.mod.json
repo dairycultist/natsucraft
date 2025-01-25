@@ -1,20 +1,20 @@
 {
   "schemaVersion": 1,
-  "id": "template",
+  "id": "natsucraft",
   "version": "${version}",
-  "name": "Template",
+  "name": "Natsucraft",
   "description": "",
-  "authors": [ "BlueBunnex" ],
+  "authors": [ "NatsuPotato" ],
   "license": "MIT",
-  "icon": "assets/template/icon.png",
+  "icon": "assets/natsucraft/icon.png",
   "environment": "*",
   "entrypoints": {
-    "stationapi:event_bus": [ "net.bluebunnex.template.Template" ],
-    "stationapi:event_bus_client": [ "net.bluebunnex.template.TemplateClient" ],
+    "stationapi:event_bus": [ "net.natsupotato.natsucraft.Template" ],
+    "stationapi:event_bus_client": [ "net.natsupotato.natsucraft.TemplateClient" ],
     "stationapi:event_bus_server": []
   },
   "mixins": [
-    "template.mixins.json"
+    "natsucraft.mixins.json"
   ],
   "depends": {
     "minecraft": "1.0.0-beta.7.3"

@@ -1,4 +1,4 @@
-package net.bluebunnex.template;
+package net.natsupotato.natsucraft;
 
 import net.mine_diver.unsafeevents.listener.EventListener;
 import net.minecraft.client.render.entity.UndeadEntityRenderer;

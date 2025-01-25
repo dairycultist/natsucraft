@@ -1,4 +1,4 @@
-package net.bluebunnex.template;
+package net.natsupotato.natsucraft;
 
 import net.fabricmc.api.EnvType;
 import net.fabricmc.api.Environment;
@@ -17,7 +17,7 @@ public class LichEntity extends MonsterEntity {
     public LichEntity(World world) {
         super(world);
 
-        this.texture = "/assets/template/stationapi/textures/entity/lich.png";
+        this.texture = "/assets/natsucraft/stationapi/textures/entity/lich.png";
 
         this.health = 200;
         this.attackDamage = 12;

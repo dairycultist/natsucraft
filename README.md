@@ -15,7 +15,7 @@ I should remember to playtest in survival.
 
 ## Currently in the mod (WIP and subject to change)
 
-- Sapphires
+- Sapphire and sapphire ore
 - Lich
   - end goal of the game is to defeat the lich
   - a knight with a skeleton head
