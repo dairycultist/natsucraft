@@ -29,14 +29,14 @@ public class Template {
     @EventListener
     public void registerBlocks(BlockRegistryEvent event) {
 
-        SAPPHIRE_ORE = new TemplateBlock(NAMESPACE.id("sapphire_ore"), Material.SPONGE) {
+        SAPPHIRE_ORE = new TemplateBlock(NAMESPACE.id("sapphire_ore"), Material.STONE) {
 
             public int getDroppedItemId(int blockMeta, Random random) {
                 return SAPPHIRE.id;
             }
         }
-        .setHardness(1.5f) // copied from stone
-        .setResistance(10.0f)
+        .setHardness(3.0f)
+        .setResistance(5.0f)
         .setSoundGroup(STONE_SOUND_GROUP)
         .setTranslationKey(NAMESPACE, "sapphire_ore");
     }
