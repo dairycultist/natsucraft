@@ -4,6 +4,7 @@
   "package": "net.natsupotato.natsucraft.mixin",
   "compatibilityLevel": "JAVA_17",
   "mixins": [
+    "OverworldChunkGeneratorMixin",
     "PlayerEntityMixin"
   ],
   "server": [],

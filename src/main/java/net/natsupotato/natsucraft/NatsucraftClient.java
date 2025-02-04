@@ -5,7 +5,7 @@ import net.minecraft.client.render.entity.UndeadEntityRenderer;
 import net.minecraft.client.render.entity.model.BipedEntityModel;
 import net.modificationstation.stationapi.api.client.event.render.entity.EntityRendererRegisterEvent;
 
-public class TemplateClient {
+public class NatsucraftClient {
 
     @EventListener
     public void registerEntityRenderer(EntityRendererRegisterEvent event) {

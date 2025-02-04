@@ -17,7 +17,7 @@ import java.util.Random;
 
 import static net.minecraft.block.Block.STONE_SOUND_GROUP;
 
-public class Template {
+public class Natsucraft {
 
     @Entrypoint.Namespace
     public static final Namespace NAMESPACE = Null.get();
