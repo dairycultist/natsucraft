@@ -1,6 +1,6 @@
 # My mod
 
-What makes me want to play the game bruh. I should remember to playtest in survival...
+What do I like about Minecraft? Maybe I should actually play it to find out lol
 
 ### Implemented
 
@@ -9,7 +9,7 @@ What makes me want to play the game bruh. I should remember to playtest in survi
 - Lich
   - end goal of the game is to defeat the lich
   - a knight with a skeleton head
-  - every once in a while, the lich uses necromancy to summon three skeletons in a puff of smoke to assist it in battle
+  - After a certain amount of damage, the lich uses necromancy to summon three skeletons in a puff of smoke to assist it in battle
   - summoned by...
   - drops the lich sword
   - [inspiration](https://the-grimoire-of-gaia.fandom.com/wiki/Bone_Knight)
