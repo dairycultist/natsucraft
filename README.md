@@ -1,5 +1,5 @@
 >[!NOTE]
->Beta Minecraft is very nice because of its simplicity, but it doesn't really have a lot of content, so you can't play it for very long. I want to add more content that leans into light-fantasy survival, without making it bloated like I feel modern Minecraft is.
+>Beta Minecraft is very nice because of its simplicity, but it doesn't really have a lot of content, so you can't play it for very long. I want to add more content that leans into light-fantasy survival, without making it bloated like I feel modern Minecraft is. I'm not gonna make changes to the base-game loop/feel.
 
 # My mod
 
@@ -7,10 +7,8 @@ What do I like about Minecraft? Maybe I should actually play it to find out lol
 
 ### Implemented
 
-subject to change
+subject to change (I should remove sapphire)
 
-- Sapphire and sapphire ore
-  - Mineable with a diamond pickaxe
 - Lich
   - end goal of the game is to defeat the lich
   - a knight with a skeleton head
@@ -22,6 +20,6 @@ subject to change
 
 ### Planned (maybe)
 
-- Dungeons, because I like dungeon crawling/looting and caving (and I don't like stripmining)
-- Jungles
-  - Tall trees (either oak or new yellow jungle wood)
+- Exploration
+  - Dungeons, because I like dungeon crawling/looting and caving (and I don't like stripmining)
+  - Jungles (with tall trees, either oak or new yellow jungle wood)
