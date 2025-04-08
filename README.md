@@ -1,8 +1,13 @@
+>[!NOTE]
+>Beta Minecraft is very nice because of its simplicity, but it doesn't really have a lot of content, so you can't play it for very long. I want to add more content that leans into light-fantasy survival, without making it bloated like I feel modern Minecraft is.
+
 # My mod
 
 What do I like about Minecraft? Maybe I should actually play it to find out lol
 
 ### Implemented
+
+subject to change
 
 - Sapphire and sapphire ore
   - Mineable with a diamond pickaxe
@@ -17,11 +22,6 @@ What do I like about Minecraft? Maybe I should actually play it to find out lol
 
 ### Planned (maybe)
 
-- I like dungeon crawling/looting
-- I like RPG elements/mechanics
-- I don't like stripmining
-  - Maybe add mineshafts which are rather common?
-  - Miner skeletons!
+- Dungeons, because I like dungeon crawling/looting and caving (and I don't like stripmining)
 - Jungles
   - Tall trees (either oak or new yellow jungle wood)
-  - Any oak leaf broken in a jungle has a chance to drop bananas
