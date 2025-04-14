@@ -23,4 +23,5 @@ subject to change (I should remove sapphire)
 - Exploration
   - Dungeons, because I like dungeon crawling/looting and caving (and I don't like stripmining)
   - Jungles (with tall trees, either oak or new yellow jungle wood)
-  - Wings ([reference](https://www.curseforge.com/minecraft/mc-mods/simple-flight))
+- Wings ([reference](https://www.curseforge.com/minecraft/mc-mods/simple-flight))
+- Familiars ([reference](https://www.curseforge.com/minecraft/mc-mods/touhou-little-maid))
