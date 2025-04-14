@@ -1,5 +1,5 @@
 >[!NOTE]
->Beta Minecraft is very nice because of its simplicity, but it doesn't really have a lot of content, so you can't play it for very long. I want to add more content that leans into light-fantasy survival, without making it bloated like I feel modern Minecraft is. I'm not gonna make changes to the base-game loop/feel.
+>A mod for Minecraft b1.7.3 made with StationAPI. Beta Minecraft is very nice because of its simplicity, but it doesn't really have a lot of content, so you can't play it for very long. I want to add more content that leans into light-fantasy survival, without making it bloated like I feel modern Minecraft is. I'm not gonna make changes to the base-game loop/feel.
 
 # My mod
 
@@ -25,3 +25,4 @@ subject to change (I should remove sapphire)
   - Jungles (with tall trees, either oak or new yellow jungle wood)
 - Wings ([reference](https://www.curseforge.com/minecraft/mc-mods/simple-flight))
 - Familiars ([reference](https://www.curseforge.com/minecraft/mc-mods/touhou-little-maid))
+- Revive mechanic: When you are slain, you must choose between three algorithmically selected items within your inventory to sacrifice in order to revive (at the location you were slain, with all your items)
