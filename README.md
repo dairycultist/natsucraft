@@ -23,5 +23,4 @@ subject to change (I should remove sapphire)
   - Jungles (with tall trees, either oak or new yellow jungle wood)
 - Wings ([reference](https://www.curseforge.com/minecraft/mc-mods/simple-flight))
 - Familiars ([reference](https://www.curseforge.com/minecraft/mc-mods/touhou-little-maid))
-- Revive mechanic: When you are slain, you must choose between three algorithmically selected items within your inventory to sacrifice in order to revive (at the location you were slain, with all your items)
-  - Concept is WIP, but the main idea is preventing ragequitting (which is what often ends my runs)
+- Revive mechanic (to prevent frustration): When you are slain, you are sent to a dimension with a pool of water decorated with stone and vegetation. A angel's statue heads the pool which, when clicked, tells you to "empty your entire inventory except for your hotbar into the pool." Upon your complying, you are sent back to the place you were slain.
