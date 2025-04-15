@@ -23,4 +23,5 @@ subject to change (I should remove sapphire)
   - Jungles (with tall trees, either oak or new yellow jungle wood)
 - Wings ([reference](https://www.curseforge.com/minecraft/mc-mods/simple-flight))
 - Familiars ([reference](https://www.curseforge.com/minecraft/mc-mods/touhou-little-maid))
+- Mob skin variants (I like the Deep Aether's pastel quails)
 - Revive mechanic (to prevent frustration): When you are slain, you are sent to a dimension with a pool of water decorated with stone and vegetation. An angel's statue heads the pool which, when clicked, tells you to "Forgo your mortal possessions to the pool and be born again. You may only keep items within your hotbar. Click me when you are ready." Upon your complying, you are sent back to the place you were slain.
