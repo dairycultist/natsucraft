@@ -12,7 +12,7 @@ import net.minecraft.world.World;
 
 public class LichEntity extends MonsterEntity {
 
-    private static final ItemStack HELD_ITEM = new ItemStack(Item.IRON_SWORD, 1);
+    private static final ItemStack HELD_ITEM = new ItemStack(Natsucraft.LICH_SWORD, 1);
 
     public LichEntity(World world) {
         super(world);
@@ -30,7 +30,7 @@ public class LichEntity extends MonsterEntity {
 
         if (adversary instanceof PlayerEntity player) {
 
-            player.score = Math.abs(player.score) * -1;
+            player.score = Math.abs(player.score) * -1; // quick and dirty trick to tell the timer to stop increasing
         }
     }
 
@@ -90,6 +90,8 @@ public class LichEntity extends MonsterEntity {
 
             this.world.spawnEntity(skeleton);
         }
+
+        this.world.playSound(this, "random.fizz", 0.5F, 2.6F + (world.random.nextFloat() - world.random.nextFloat()) * 0.8F);
     }
 
     @Override
@@ -100,19 +102,17 @@ public class LichEntity extends MonsterEntity {
 
     @Override
     protected void dropItems() {
-        this.dropItem(Item.IRON_SWORD.id, 1);
+        this.dropItem(HELD_ITEM.itemId, 1);
     }
 
     @Override
     protected String getRandomSound() {
         return "mob.skeleton";
     }
-
     @Override
     protected String getHurtSound() {
         return "mob.skeletonhurt";
     }
-
     @Override
     protected String getDeathSound() {
         return "mob.skeletonhurt";
