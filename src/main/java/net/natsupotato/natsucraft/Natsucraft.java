@@ -2,50 +2,37 @@ package net.natsupotato.natsucraft;
 
 import net.mine_diver.unsafeevents.listener.EventListener;
 import net.minecraft.block.Block;
-import net.minecraft.block.material.Material;
-import net.minecraft.item.Item;
 import net.modificationstation.stationapi.api.event.entity.EntityRegister;
 import net.modificationstation.stationapi.api.event.registry.BlockRegistryEvent;
 import net.modificationstation.stationapi.api.event.registry.ItemRegistryEvent;
 import net.modificationstation.stationapi.api.mod.entrypoint.Entrypoint;
-import net.modificationstation.stationapi.api.template.block.TemplateBlock;
-import net.modificationstation.stationapi.api.template.item.TemplateItem;
+import net.modificationstation.stationapi.api.template.block.TemplateLogBlock;
 import net.modificationstation.stationapi.api.util.Namespace;
 import net.modificationstation.stationapi.api.util.Null;
 
-import java.util.Random;
-
-import static net.minecraft.block.Block.STONE_SOUND_GROUP;
+import static net.minecraft.block.Block.WOOD_SOUND_GROUP;
 
 public class Natsucraft {
 
     @Entrypoint.Namespace
     public static final Namespace NAMESPACE = Null.get();
 
-    public static Block SAPPHIRE_ORE;
-
-    public static Item SAPPHIRE;
+    public static Block JUNGLE_LOG;
 
     @EventListener
     public void registerBlocks(BlockRegistryEvent event) {
 
-        SAPPHIRE_ORE = new TemplateBlock(NAMESPACE.id("sapphire_ore"), Material.STONE) {
-
-            public int getDroppedItemId(int blockMeta, Random random) {
-                return SAPPHIRE.id;
-            }
-        }
-        .setHardness(3.0f)
-        .setResistance(5.0f)
-        .setSoundGroup(STONE_SOUND_GROUP)
-        .setTranslationKey(NAMESPACE, "sapphire_ore");
+        JUNGLE_LOG = new TemplateLogBlock(NAMESPACE.id("jungle_log"))
+        .setHardness(2.0F)
+        .setSoundGroup(WOOD_SOUND_GROUP)
+        .setTranslationKey(NAMESPACE, "jungle_log");
     }
 
     @EventListener
     public void registerItems(ItemRegistryEvent event) {
 
-        SAPPHIRE = new TemplateItem(NAMESPACE.id("sapphire"))
-                .setTranslationKey(NAMESPACE, "sapphire");
+//        SAPPHIRE = new TemplateItem(NAMESPACE.id("sapphire"))
+//                .setTranslationKey(NAMESPACE, "sapphire");
     }
 
     @EventListener
