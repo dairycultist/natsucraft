@@ -11,7 +11,14 @@ A mod for Minecraft b1.7.3 made with StationAPI. Working title. For soft-fantasy
 ### Implemented (subject to change)
 
 - Exploration
-  - Jungle biome (with tall trees and new wood)
+  - Jungle biome
+    - New wood type
+    - Very tall trees
+    - Good for finding slimes
+  - Mystical Forest biome
+    - Inspired by The Aether/Deep Aether
+    - (not yet added) Grows blue "somnishrooms" that, when eaten, speed up the daylight cycle until dusk
+    - Grows yellow "glowcaps" that glow when placed
 - Lich
   - end goal of the game is to defeat the lich
   - a knight with a skeleton head
@@ -20,13 +27,6 @@ A mod for Minecraft b1.7.3 made with StationAPI. Working title. For soft-fantasy
   - drops the lich sword
   - [inspiration](https://the-grimoire-of-gaia.fandom.com/wiki/Bone_Knight)
   - [skin base](https://namemc.com/skin/adcc6eab0088f51e)
-
-### Planned (definitely!!)
-
-- Exploration
-  - Magical Forest biome (inspired by The Aether/Deep Aether)
-    - Grows blue "somnishrooms" that, when eaten, speed up the daylight cycle until dusk
-    - Grows yellow "glowcaps" that glow when placed
 
 ### Planned (maybe)
 

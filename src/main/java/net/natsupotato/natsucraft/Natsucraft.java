@@ -104,6 +104,8 @@ public class Natsucraft {
     @EventListener
     public void registerBiomeProvider(BiomeProviderRegisterEvent event) {
 
+        // mystical forest
+
         CLIMATE_BIOME_PROVIDER = new ClimateBiomeProvider();
         // Add a biome in the temperature range of t2 - t1 and humidity of d2 - d1
         CLIMATE_BIOME_PROVIDER.addBiome(JUNGLE_BIOME, 1.0f, 0.95f, 1.0f, 0.95f);

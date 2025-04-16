@@ -1,3 +1,6 @@
 {
-  "parent": "natsucraft:block/glowcap"
+  "parent": "item/generated",
+  "textures": {
+    "layer0": "natsucraft:block/glowcap"
+  }
 }

@@ -24,19 +24,21 @@ public class JungleBushFeature extends Feature {
 
                 world.setBlockWithoutNotifyingNeighbors(lx, ly, lz, Natsucraft.JUNGLE_LOG.id);
 
-                for (int dist = 2 + random.nextInt(2); dist >= 1; dist--) {
+                int maxDist = 2 + random.nextInt(2);
+
+                for (int dist = maxDist; dist >= 1; dist--) {
                     for (int ox = -dist; ox <= dist; ox++) {
                         for (int oz = -dist; oz <= dist; oz++) {
 
                             if (Math.abs(ox) == dist && Math.abs(oz) == dist)
                                 continue;
 
-                            int interveningBlock = world.getBlockId(lx + ox, ly + 3 - dist, lz + oz);
+                            int interveningBlock = world.getBlockId(lx + ox, ly + maxDist - dist, lz + oz);
 
                             if (interveningBlock != 0 && interveningBlock != Block.GRASS.id)
                                 continue;
 
-                            world.setBlockWithoutNotifyingNeighbors(lx + ox, ly + 3 - dist, lz + oz, Block.LEAVES.id, 2);
+                            world.setBlockWithoutNotifyingNeighbors(lx + ox, ly + maxDist - dist, lz + oz, Block.LEAVES.id, 2);
                         }
                     }
                 }
