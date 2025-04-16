@@ -22,6 +22,9 @@ working title
 
 - Exploration
   - Dungeons, because I like dungeon crawling/looting and caving (and I don't like stripmining)
+  - Magical Forest biome (inspired by The Aether/Deep Aether)
+    - Grows "somnishrooms" that speed up the daylight cycle until dusk
+    - Maybe berries? idk blueberries are cool, and bunnies, and quails
 - Wings ([reference](https://www.curseforge.com/minecraft/mc-mods/simple-flight))
 - Familiars ([reference](https://www.curseforge.com/minecraft/mc-mods/touhou-little-maid))
 - Mob skin variants (I like the Deep Aether's pastel quails)
