@@ -25,7 +25,8 @@ A mod for Minecraft b1.7.3 made with StationAPI. Working title. For soft-fantasy
 
 - Exploration
   - Magical Forest biome (inspired by The Aether/Deep Aether)
-    - Grows "somnishrooms" that, when eaten, speed up the daylight cycle until dusk
+    - Grows blue "somnishrooms" that, when eaten, speed up the daylight cycle until dusk
+    - Grows yellow "glowcaps" that glow when placed
 
 ### Planned (maybe)
 
