@@ -1,11 +1,9 @@
 >[!NOTE]
->A mod for Minecraft b1.7.3 made with StationAPI. Beta Minecraft is very nice because of its simplicity, but it doesn't really have a lot of content, so you can't play it for very long. I want to add more content that leans into **soft-fantasy casual survival**, without making it bloated like I feel modern Minecraft is. I'm not gonna make changes to the base-game loop/feel.
-
-I might merge some stuff (copper, cockatrice, _maybe_ some structures/loot) from [Peanutbutter](https://modrinth.com/mod/peanutbutter) into this.
+>Beta Minecraft is good because it's simple: It's built around just a few strong central game mechanics (something you can't really say for modern). However, these mechanics don't have a lot of depth. My goal with this mod is to add more content that fleshes out existing mechanics (so you can play longer), without adding new ones (to prevent bloat).
 
 # My mod
 
-working title
+A mod for Minecraft b1.7.3 made with StationAPI. Working title. For soft-fantasy casual survival.
 
 ### Implemented (subject to change)
 
