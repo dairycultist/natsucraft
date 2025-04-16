@@ -1,5 +1,8 @@
 >[!NOTE]
->Beta Minecraft is good because it's simple: It's built around just a few strong central game mechanics (something you can't really say for modern). However, these mechanics don't have a lot of depth. My goal with this mod is to add more content that fleshes out existing mechanics (so you can play longer), without adding new ones (to prevent bloat).
+>Beta Minecraft is good because it's simple: It's built around just a few strong central game mechanics that give it a
+> very focused gamefeel (something you can't really say for modern). However, these mechanics don't have a lot of depth.
+> My goal with this mod is to add more content that fleshes out existing mechanics (so you can play longer), without
+> adding new ones (to prevent bloat/confusion).
 
 # My mod
 
@@ -8,7 +11,7 @@ A mod for Minecraft b1.7.3 made with StationAPI. Working title. For soft-fantasy
 ### Implemented (subject to change)
 
 - Exploration
-  - Jungles (with tall trees and new wood)
+  - Jungle biome (with tall trees and new wood)
 - Lich
   - end goal of the game is to defeat the lich
   - a knight with a skeleton head
@@ -18,13 +21,17 @@ A mod for Minecraft b1.7.3 made with StationAPI. Working title. For soft-fantasy
   - [inspiration](https://the-grimoire-of-gaia.fandom.com/wiki/Bone_Knight)
   - [skin base](https://namemc.com/skin/adcc6eab0088f51e)
 
+### Planned (definitely!!)
+
+- Exploration
+  - Magical Forest biome (inspired by The Aether/Deep Aether)
+    - Grows "somnishrooms" that, when eaten, speed up the daylight cycle until dusk
+
 ### Planned (maybe)
 
 - Exploration
   - Dungeons, because I like dungeon crawling/looting and caving (and I don't like stripmining)
-  - Magical Forest biome (inspired by The Aether/Deep Aether)
-    - Grows "somnishrooms" that, when eaten, speed up the daylight cycle until dusk
-    - Maybe berries? idk blueberries are cool, and bunnies, and quails
+- Maybe berries? idk blueberries are cool, and bunnies, and quails, like the Aether
 - Wings ([reference](https://www.curseforge.com/minecraft/mc-mods/simple-flight))
 - Familiars ([reference](https://www.curseforge.com/minecraft/mc-mods/touhou-little-maid))
 - Mob skin variants (I like the Deep Aether's pastel quails)
