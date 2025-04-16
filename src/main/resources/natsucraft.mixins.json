@@ -9,7 +9,8 @@
   ],
   "server": [],
   "client": [
-    "InGameHudMixin"
+    "InGameHudMixin",
+    "UndeadEntityRendererMixin"
   ],
   "injectors": {
     "defaultRequire": 1

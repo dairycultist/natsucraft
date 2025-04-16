@@ -20,7 +20,7 @@ public class LichEntity extends MonsterEntity {
         this.texture = "/assets/natsucraft/stationapi/textures/entity/lich.png";
 
         this.health = 200;
-        this.attackDamage = 12;
+        this.attackDamage = Natsucraft.LICH_SWORD.getAttackDamage(null);
         this.fireImmune = true;
     }
 

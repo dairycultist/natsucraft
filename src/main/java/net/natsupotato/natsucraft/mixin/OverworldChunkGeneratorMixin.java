@@ -12,6 +12,7 @@ public class OverworldChunkGeneratorMixin {
 //    @Shadow
 //    private World world;
 //
+// // generates trees, dungeons, ores, whatever
 //    @Inject(method = "decorate", at = @At("TAIL"))
 //    private void decorateMixin(ChunkSource source, int x, int z, CallbackInfo ci) {
 //

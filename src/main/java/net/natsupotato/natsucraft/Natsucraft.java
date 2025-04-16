@@ -19,8 +19,7 @@ import static net.minecraft.block.Block.WOOD_SOUND_GROUP;
 public class Natsucraft {
 
     // TODO texture lich sword (dark and ashy and with a cool skull on its hilt or smth)
-    // TODO fix lich sword holding visual bug
-    // TODO add crafting recipe for wood from jungle logs
+    // TODO add jungle biome + trees
 
     @Entrypoint.Namespace
     public static final Namespace NAMESPACE = Null.get();
