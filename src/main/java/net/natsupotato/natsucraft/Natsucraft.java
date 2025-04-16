@@ -25,12 +25,13 @@ import net.modificationstation.stationapi.api.worldgen.BiomeAPI;
 import net.modificationstation.stationapi.api.worldgen.biome.BiomeBuilder;
 import net.modificationstation.stationapi.api.worldgen.biome.ClimateBiomeProvider;
 
+import java.util.Random;
+
 import static net.minecraft.block.Block.WOOD_SOUND_GROUP;
 
 public class Natsucraft {
 
     // TODO texture lich sword (dark and ashy and with a cool skull on its hilt or smth)
-    // TODO add jungle biome + trees https://stationapi.wiki/StationAPI/Modding-Tutorials/Adding-a-Biome
 
     @Entrypoint.Namespace
     public static final Namespace NAMESPACE = Null.get();
@@ -41,7 +42,13 @@ public class Natsucraft {
     @EventListener
     public void registerBlocks(BlockRegistryEvent event) {
 
-        JUNGLE_LOG = new TemplateLogBlock(NAMESPACE.id("jungle_log"))
+        JUNGLE_LOG = new TemplateLogBlock(NAMESPACE.id("jungle_log")) {
+
+            public int getDroppedItemId(int blockMeta, Random random) {
+                return this.id;
+            }
+
+        }
         .setHardness(2.0F)
         .setSoundGroup(WOOD_SOUND_GROUP)
         .setTranslationKey(NAMESPACE, "jungle_log");

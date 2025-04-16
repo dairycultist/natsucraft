@@ -26,6 +26,7 @@ public class JungleTreeFeature extends Feature {
 
                 while (ly < height) {
                     world.setBlockWithoutNotifyingNeighbors(lx, ly, lz, Natsucraft.JUNGLE_LOG.id);
+                    // TODO slight chance to spawn an offshoot
                     ly++;
                 }
 
