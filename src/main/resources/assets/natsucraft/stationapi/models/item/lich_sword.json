@@ -1,6 +1,6 @@
 {
   "parent": "item/handheld",
   "textures": {
-    "layer0": "minecraft:item/iron_sword"
+    "layer0": "natsucraft:item/lich_sword"
   }
 }
