@@ -1,6 +1,8 @@
 >[!NOTE]
 >A mod for Minecraft b1.7.3 made with StationAPI. Beta Minecraft is very nice because of its simplicity, but it doesn't really have a lot of content, so you can't play it for very long. I want to add more content that leans into **soft-fantasy casual survival**, without making it bloated like I feel modern Minecraft is. I'm not gonna make changes to the base-game loop/feel.
 
+I might merge some stuff (copper, cockatrice, _maybe_ some structures/loot) from [Peanutbutter](https://modrinth.com/mod/peanutbutter) into this.
+
 # My mod
 
 working title
@@ -23,7 +25,7 @@ working title
 - Exploration
   - Dungeons, because I like dungeon crawling/looting and caving (and I don't like stripmining)
   - Magical Forest biome (inspired by The Aether/Deep Aether)
-    - Grows "somnishrooms" that speed up the daylight cycle until dusk
+    - Grows "somnishrooms" that, when eaten, speed up the daylight cycle until dusk
     - Maybe berries? idk blueberries are cool, and bunnies, and quails
 - Wings ([reference](https://www.curseforge.com/minecraft/mc-mods/simple-flight))
 - Familiars ([reference](https://www.curseforge.com/minecraft/mc-mods/touhou-little-maid))
