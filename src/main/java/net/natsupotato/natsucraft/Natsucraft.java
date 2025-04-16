@@ -18,6 +18,7 @@ import net.modificationstation.stationapi.api.event.world.biome.BiomeRegisterEve
 import net.modificationstation.stationapi.api.event.worldgen.biome.BiomeProviderRegisterEvent;
 import net.modificationstation.stationapi.api.mod.entrypoint.Entrypoint;
 import net.modificationstation.stationapi.api.template.block.TemplateLogBlock;
+import net.modificationstation.stationapi.api.template.block.TemplateMushroomPlantBlock;
 import net.modificationstation.stationapi.api.template.item.TemplateSwordItem;
 import net.modificationstation.stationapi.api.util.Namespace;
 import net.modificationstation.stationapi.api.util.Null;
@@ -50,6 +51,10 @@ public class Natsucraft {
         .setHardness(2.0F)
         .setSoundGroup(WOOD_SOUND_GROUP)
         .setTranslationKey(NAMESPACE, "jungle_log");
+
+        new TemplateMushroomPlantBlock(NAMESPACE.id("glowcap"), 0)
+        .setLuminance(0.8f) // 0.8f * 15f = 12f, mushrooms break at 13f
+        .setTranslationKey(NAMESPACE, "glowcap");
     }
 
 
@@ -89,7 +94,7 @@ public class Natsucraft {
         biomeBuilder.hostileEntity(SlimeEntity.class, 10);
         biomeBuilder.height(60, 90);
         biomeBuilder.feature(new JungleTreeFeature());
-        // TODO add jungle bush feature
+        biomeBuilder.feature(new JungleBushFeature());
         biomeBuilder.feature(new GrassPatchFeature(Block.GRASS.id, 1));
         JUNGLE_BIOME = biomeBuilder.build();
     }
@@ -101,8 +106,7 @@ public class Natsucraft {
 
         CLIMATE_BIOME_PROVIDER = new ClimateBiomeProvider();
         // Add a biome in the temperature range of t2 - t1 and humidity of d2 - d1
-        CLIMATE_BIOME_PROVIDER.addBiome(JUNGLE_BIOME, 1.0f, 0.9f, 1.0f, 0.9f);
-//        CLIMATE_BIOME_PROVIDER.addBiome(JUNGLE_BIOME, 1.0f, 0.2f, 1.0f, 0.2f);
+        CLIMATE_BIOME_PROVIDER.addBiome(JUNGLE_BIOME, 1.0f, 0.95f, 1.0f, 0.95f);
         BiomeAPI.addOverworldBiomeProvider(Natsucraft.NAMESPACE.id("climate_biome_provider"), CLIMATE_BIOME_PROVIDER);
     }
 
