@@ -37,7 +37,7 @@ public class JungleTreeFeature extends Feature {
                             if (Math.abs(ox) == dist && Math.abs(oz) == dist)
                                 continue;
 
-                            world.setBlockWithoutNotifyingNeighbors(lx + ox, ly + 4 - dist, lz + oz, Block.GLASS.id); // TODO replace with leaves
+                            world.setBlockWithoutNotifyingNeighbors(lx + ox, ly + 4 - dist, lz + oz, Block.LEAVES.id, 2);
                         }
                     }
                 }

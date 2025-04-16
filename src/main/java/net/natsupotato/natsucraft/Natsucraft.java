@@ -31,8 +31,6 @@ import static net.minecraft.block.Block.WOOD_SOUND_GROUP;
 
 public class Natsucraft {
 
-    // TODO texture lich sword (dark and ashy and with a cool skull on its hilt or smth)
-
     @Entrypoint.Namespace
     public static final Namespace NAMESPACE = Null.get();
 
@@ -103,7 +101,7 @@ public class Natsucraft {
 
         CLIMATE_BIOME_PROVIDER = new ClimateBiomeProvider();
         // Add a biome in the temperature range of t2 - t1 and humidity of d2 - d1
-        CLIMATE_BIOME_PROVIDER.addBiome(JUNGLE_BIOME, 0.9f, 0.7f, 1.0f, 0.9f);
+        CLIMATE_BIOME_PROVIDER.addBiome(JUNGLE_BIOME, 1.0f, 0.9f, 1.0f, 0.9f);
 //        CLIMATE_BIOME_PROVIDER.addBiome(JUNGLE_BIOME, 1.0f, 0.2f, 1.0f, 0.2f);
         BiomeAPI.addOverworldBiomeProvider(Natsucraft.NAMESPACE.id("climate_biome_provider"), CLIMATE_BIOME_PROVIDER);
     }
