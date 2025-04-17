@@ -26,13 +26,16 @@ A mod for Minecraft b1.7.3 made with StationAPI. Working title. For soft-fantasy
 ### Planned (maybe)
 
 - Exploration
-  - Dungeons, because I like dungeon crawling/looting and caving (and I don't like stripmining)
+  - Dungeons
+    - I like dungeon crawling/looting and caving (and I don't like stripmining)
+    - Has iron, gold, and sometimes an unlit nether portal, meaning you technically don't need to do any mining to progress
   - Mystical Forest biome
     - Inspired by The Aether/Deep Aether
     - Grows blue "somnishrooms" that, when eaten, speed up the daylight cycle until dusk
   - Nether
     - Grows yellow "glowcaps" that glow when placed
     - Now has diamonds! if you don't like mining for endgame gear, you can explore/fight for it instead
+    - Red slime? idk
 - Maybe berries? idk blueberries are cool, and bunnies, and quails, like the Aether
 - Wings ([reference](https://www.curseforge.com/minecraft/mc-mods/simple-flight))
 - Familiars ([reference](https://www.curseforge.com/minecraft/mc-mods/touhou-little-maid))
