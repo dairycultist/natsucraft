@@ -20,7 +20,7 @@ public class ChickenEntityModelMixin {
     @Inject(method = "<init>", at = @At(value = "TAIL"))
     private void initMixin(CallbackInfo ci) {
 
-        this.tail = new ModelPart(0, 9);
+        this.tail = new ModelPart(38, -8);
         this.tail.addCuboid(0.0F, 10.0F, 0.0F, 0, 8, 8, 0.0F);
         this.tail.setPivot(0.0F, 0.0F, 0.0F);
     }
