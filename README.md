@@ -13,12 +13,7 @@ A mod for Minecraft b1.7.3 made with StationAPI. Working title. For soft-fantasy
 - Exploration
   - Jungle biome
     - New wood type
-    - Very tall trees
-    - Good for finding slimes
-  - Mystical Forest biome
-    - Inspired by The Aether/Deep Aether
-    - (not yet added) Grows blue "somnishrooms" that, when eaten, speed up the daylight cycle until dusk
-    - Grows yellow "glowcaps" that glow when placed
+    - Very tall trees (need to add custom leaves + sapling)
 - Lich
   - end goal of the game is to defeat the lich
   - a knight with a skeleton head
@@ -32,6 +27,12 @@ A mod for Minecraft b1.7.3 made with StationAPI. Working title. For soft-fantasy
 
 - Exploration
   - Dungeons, because I like dungeon crawling/looting and caving (and I don't like stripmining)
+  - Mystical Forest biome
+    - Inspired by The Aether/Deep Aether
+    - Grows blue "somnishrooms" that, when eaten, speed up the daylight cycle until dusk
+  - Nether
+    - Grows yellow "glowcaps" that glow when placed
+    - Now has diamonds! if you don't like mining for endgame gear, you can explore/fight for it instead
 - Maybe berries? idk blueberries are cool, and bunnies, and quails, like the Aether
 - Wings ([reference](https://www.curseforge.com/minecraft/mc-mods/simple-flight))
 - Familiars ([reference](https://www.curseforge.com/minecraft/mc-mods/touhou-little-maid))
