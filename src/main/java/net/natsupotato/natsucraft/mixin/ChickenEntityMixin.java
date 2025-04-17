@@ -12,6 +12,9 @@ public class ChickenEntityMixin {
     @Inject(method = "<init>", at = @At(value = "TAIL"))
     private void initMixin(CallbackInfo ci) {
 
-        ((LivingEntityAccessor) this).setTexture("/assets/natsucraft/stationapi/textures/entity/chicken.png");
+        ((LivingEntityAccessor) this).setTexture("/assets/natsucraft/stationapi/textures/entity/chicken_"
+                                                 + (int) (Math.random() * 2) + ".png");
     }
+
+    // might mixin NBT later
 }
