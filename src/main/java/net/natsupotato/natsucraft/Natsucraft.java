@@ -26,6 +26,7 @@ public class Natsucraft {
 
 
     public static Block JUNGLE_LOG;
+    public static Block GLOWCAP;
 
     @EventListener
     public void registerBlocks(BlockRegistryEvent event) {
@@ -41,7 +42,7 @@ public class Natsucraft {
         .setSoundGroup(WOOD_SOUND_GROUP)
         .setTranslationKey(NAMESPACE, "jungle_log");
 
-        new TemplateMushroomPlantBlock(NAMESPACE.id("glowcap"), 0)
+        GLOWCAP = new TemplateMushroomPlantBlock(NAMESPACE.id("glowcap"), 0)
         .setLuminance(0.8f) // 0.8f * 15f = 12f, mushrooms break at 13f
         .setTranslationKey(NAMESPACE, "glowcap");
     }

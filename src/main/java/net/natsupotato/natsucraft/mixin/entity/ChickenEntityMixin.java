@@ -1,4 +1,4 @@
-package net.natsupotato.natsucraft.mixin;
+package net.natsupotato.natsucraft.mixin.entity;
 
 import net.minecraft.entity.passive.ChickenEntity;
 import org.spongepowered.asm.mixin.Mixin;

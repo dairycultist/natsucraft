@@ -1,4 +1,4 @@
-package net.natsupotato.natsucraft.mixin;
+package net.natsupotato.natsucraft.mixin.entity;
 
 import net.fabricmc.api.EnvType;
 import net.fabricmc.api.Environment;
