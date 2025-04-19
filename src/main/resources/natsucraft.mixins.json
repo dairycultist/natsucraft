@@ -8,7 +8,8 @@
     "LeavesBlockMixin",
     "LivingEntityAccessor",
     "OverworldChunkGeneratorMixin",
-    "PlayerEntityMixin"
+    "PlayerEntityMixin",
+    "RainforestBiomeMixin"
   ],
   "server": [],
   "client": [

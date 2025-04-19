@@ -11,9 +11,10 @@ A mod for Minecraft b1.7.3 made with StationAPI. Working title. For soft-fantasy
 ### Implemented (subject to change)
 
 - Exploration
-  - Jungle biome
+  - Rainforest biome
+    - Did you know beta already has a rainforest biome? The only difference from a forest is that it spawns big trees more often though, so I updated it
     - New wood type
-    - Very tall trees (need to add custom leaves + sapling)
+    - Very tall trees (TODO need to add custom leaves + sapling)
 - Lich
   - end goal of the game is to defeat the lich
   - a knight with a skeleton head
@@ -27,13 +28,15 @@ A mod for Minecraft b1.7.3 made with StationAPI. Working title. For soft-fantasy
 
 ### Planned (maybe)
 
-- Exploration
+- Exploration (my fav)
   - Dungeons
     - I like dungeon crawling/looting and caving (and I don't like stripmining)
     - Has iron, gold, and sometimes an unlit nether portal, meaning you technically don't need to do any mining to progress
   - Mystical Forest biome
     - Inspired by The Aether/Deep Aether
     - Grows blue "somnishrooms" that, when eaten, speed up the daylight cycle until dusk
+    - Grows blackberry bushes
+    - Spawns slimes?
   - Nether
     - Grows yellow "glowcaps" that glow when placed
     - Now has diamonds! if you don't like mining for endgame gear, you can explore/fight for it instead
