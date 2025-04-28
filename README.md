@@ -29,7 +29,10 @@ A mod for Minecraft b1.7.3 made with StationAPI. Working title. For soft-fantasy
 
 ### Planned (maybe)
 
+- Decoration Blocks
+  - Mossy cobblestone for structures probably
 - Exploration (my fav)
+  - Surface Structures
   - Dungeons
     - I like dungeon crawling/looting and caving (and I don't like stripmining)
     - Has iron, gold, and sometimes an unlit nether portal, meaning you technically don't need to do any mining to progress
@@ -39,7 +42,9 @@ A mod for Minecraft b1.7.3 made with StationAPI. Working title. For soft-fantasy
     - spawns slimes?
   - Nether
     - Grows mushrooms, including yellow "glowcaps" that glow when placed
-    - Now has diamonds! if you don't like mining for endgame gear, you can explore/fight for it instead
+    - Gold (and diamond) are only found most often (but not exclusively) in the nether
+      - you need gold to make another portal
+      - if you don't like mining for endgame gear, you can explore/fight for it instead
     - Red slime? idk
 - Maybe berries? idk blueberries are cool, and bunnies, and quails, like the Aether
 - Wings ([reference](https://www.curseforge.com/minecraft/mc-mods/simple-flight))
