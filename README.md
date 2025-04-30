@@ -1,12 +1,9 @@
 >[!NOTE]
->Beta Minecraft is good because it's simple: It's built around just a few strong central game mechanics that give it a
-> very focused gamefeel (something you can't really say for modern). However, these mechanics don't have a lot of depth.
-> My goal with this mod is to add more content that fleshes out existing mechanics (so you can play longer), without
-> adding new ones (to prevent bloat/confusion).
+> My goal for this mod is to cut down on the survival aspect of beta Minecraft, and flesh out the exploration aspect.
 
 # My mod
 
-A mod for Minecraft b1.7.3 made with StationAPI. Working title. For soft-fantasy casual survival.
+A mod for Minecraft b1.7.3 made with StationAPI. Working title. Keepin' it soft-fantasy.
 
 ### Implemented (subject to change)
 
@@ -49,4 +46,4 @@ A mod for Minecraft b1.7.3 made with StationAPI. Working title. For soft-fantasy
 - Maybe berries? idk blueberries are cool, and bunnies, and quails, like the Aether
 - Wings ([reference](https://www.curseforge.com/minecraft/mc-mods/simple-flight))
 - Familiars ([reference](https://www.curseforge.com/minecraft/mc-mods/touhou-little-maid))
-- Revive mechanic (to prevent frustration): When you are slain, you are sent to a dimension with a pool of water decorated with stone and vegetation. An angel's statue heads the pool which, when clicked, tells you to "Forgo your mortal possessions to the pool and be born again. You may only keep items within your hotbar. Click me when you are ready." Upon your complying, you are sent back to the place you were slain.
+- Definitely add automatic regen
