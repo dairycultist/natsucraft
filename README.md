@@ -1,5 +1,5 @@
 >[!NOTE]
-> My goal for this mod is to cut down on the survival aspect of beta Minecraft, and flesh out the exploration aspect.
+> My goal for this mod is to cut down on the survival aspect of beta Minecraft, and flesh out the exploration aspect (in the name of fun!).
 
 # My mod
 
@@ -10,7 +10,7 @@ A mod for Minecraft b1.7.3 made with StationAPI. Working title. Keepin' it soft-
 - Exploration
   - Updated rainforest biome (previously was just a forest that spawned big oak trees more often)
     - New wood type
-    - Very tall trees (TODO need to add custom leaves + sapling)
+    - Very tall trees
   - Updated forest biome (inspired by The Aether/Deep Aether)
     - Grows mushrooms
 - Lich
@@ -23,6 +23,13 @@ A mod for Minecraft b1.7.3 made with StationAPI. Working title. Keepin' it soft-
   - [skin base](https://namemc.com/skin/adcc6eab0088f51e)
 - Mob skin variants (I like the Deep Aether's pastel quails)
   - Chickens (also they have tails now)
+
+### To-do
+
+- Add custom rainforest leaves + sapling
+- Add automatic regen
+- Remove tool durability
+- Retexture stone tools to copper, remove their crafting recipe, and make the player spawn with them by default (even after death!)
 
 ### Planned (maybe)
 
@@ -46,4 +53,3 @@ A mod for Minecraft b1.7.3 made with StationAPI. Working title. Keepin' it soft-
 - Maybe berries? idk blueberries are cool, and bunnies, and quails, like the Aether
 - Wings ([reference](https://www.curseforge.com/minecraft/mc-mods/simple-flight))
 - Familiars ([reference](https://www.curseforge.com/minecraft/mc-mods/touhou-little-maid))
-- Definitely add automatic regen
