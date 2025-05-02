@@ -7,12 +7,13 @@ A mod for Minecraft b1.7.3 made with StationAPI. Working title. Keepin' it soft-
 
 ### Implemented (subject to change)
 
+- Glowcaps - new type of mushroom that glows when placed
 - Exploration
   - Updated rainforest biome (previously was just a forest that spawned big oak trees more often)
     - New wood type
     - Very tall trees
   - Updated forest biome (inspired by The Aether/Deep Aether)
-    - Grows mushrooms
+    - Grows mushrooms (including glowcaps)
 - Lich
   - end goal of the game is to defeat the lich
   - a knight with a skeleton head
@@ -33,6 +34,7 @@ A mod for Minecraft b1.7.3 made with StationAPI. Working title. Keepin' it soft-
 
 ### Planned (maybe)
 
+- Update some UI textures (like hearts and inventory)
 - Decoration Blocks
   - Mossy cobblestone for structures probably
 - Exploration (my fav)
@@ -41,15 +43,13 @@ A mod for Minecraft b1.7.3 made with StationAPI. Working title. Keepin' it soft-
     - I like dungeon crawling/looting and caving (and I don't like stripmining)
     - Has iron, gold, and sometimes an unlit nether portal, meaning you technically don't need to do any mining to progress
   - Updated forest biome
-    - grows new blue "somnishrooms" that, when eaten, speed up the daylight cycle until dusk
-    - grows blackberry bushes
-    - spawns slimes?
+    - grows blackberry bushes (and blueberries, and bunnies, and quails, like the Aether)
+    - spawns slimes
   - Nether
-    - Grows mushrooms, including yellow "glowcaps" that glow when placed
+    - Grows mushrooms (including glowcaps)
     - Gold (and diamond) are only found most often (but not exclusively) in the nether
       - you need gold to make another portal
       - if you don't like mining for endgame gear, you can explore/fight for it instead
-    - Red slime? idk
-- Maybe berries? idk blueberries are cool, and bunnies, and quails, like the Aether
+    - Red slime
 - Wings ([reference](https://www.curseforge.com/minecraft/mc-mods/simple-flight))
 - Familiars ([reference](https://www.curseforge.com/minecraft/mc-mods/touhou-little-maid))
