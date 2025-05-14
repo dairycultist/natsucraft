@@ -31,6 +31,13 @@ A mod for Minecraft b1.7.3 made with StationAPI. Working title. Keepin' it soft-
 - Add automatic regen
 - Remove tool durability
 - Retexture stone tools to copper, remove their crafting recipe, and make the player spawn with them by default (even after death!)
+- Add fairies
+  - look like white/gold 2x2x2 cubes that fly
+  - you can pick them up and release them again (somehow)
+  - a white one plus 8 gold can craft into a golden one
+  - you can craft a fairy nest from a log and some flowers which spawns ("attracts") fairies. fairy garden!
+  - Used for crafting
+    - golden fairy + apple = golden apple
 
 ### Planned (maybe)
 
