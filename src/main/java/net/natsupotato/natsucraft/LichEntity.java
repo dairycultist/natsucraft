@@ -25,16 +25,6 @@ public class LichEntity extends MonsterEntity {
     }
 
     @Override
-    public void onKilledBy(Entity adversary) {
-        super.onKilledBy(adversary);
-
-        if (adversary instanceof PlayerEntity player) {
-
-            player.score = Math.abs(player.score) * -1; // quick and dirty trick to tell the timer to stop increasing
-        }
-    }
-
-    @Override
     public boolean damage(Entity damageSource, int amount) {
 
         // prevent lich from being damaged by its own skeletons
