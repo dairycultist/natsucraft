@@ -10,7 +10,8 @@ import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
 @Mixin(PlayerEntity.class)
 public class PlayerEntityMixin {
 
-    private static int TICKS_TO_HEAL = 200;
+    @Unique
+    private static final int TICKS_TO_HEAL = 200;
 
     @Unique
     private int ticksLeft = TICKS_TO_HEAL;
