@@ -17,6 +17,7 @@ import net.modificationstation.stationapi.api.util.Null;
 
 import java.util.Random;
 
+import static net.minecraft.block.Block.DIRT_SOUND_GROUP;
 import static net.minecraft.block.Block.WOOD_SOUND_GROUP;
 
 public class Natsucraft {
@@ -25,6 +26,7 @@ public class Natsucraft {
     public static final Namespace NAMESPACE = Null.get();
 
     public static Block JUNGLE_LOG;
+    public static Block FAIRY_SAP_LOG;
     public static Block GLOWCAP;
 
     public static Item LICH_SWORD;
@@ -43,8 +45,20 @@ public class Natsucraft {
         .setSoundGroup(WOOD_SOUND_GROUP)
         .setTranslationKey(NAMESPACE, "jungle_log");
 
+        FAIRY_SAP_LOG = new TemplateLogBlock(NAMESPACE.id("fairy_sap_log")) {
+
+            public int getDroppedItemId(int blockMeta, Random random) {
+                return Item.DIAMOND.id; // TEMP
+            }
+
+        }
+        .setHardness(2.0F)
+        .setSoundGroup(WOOD_SOUND_GROUP)
+        .setTranslationKey(NAMESPACE, "fairy_sap_log");
+
         GLOWCAP = new TemplateMushroomPlantBlock(NAMESPACE.id("glowcap"), 0)
         .setLuminance(0.8f) // 0.8f * 15f = 12f, mushrooms break at 13f
+        .setSoundGroup(DIRT_SOUND_GROUP)
         .setTranslationKey(NAMESPACE, "glowcap");
     }
 

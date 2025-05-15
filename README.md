@@ -13,6 +13,7 @@ My goal for this mod is to cut down on the survival aspect of beta Minecraft, an
   - Updated rainforest biome (previously was just a forest that spawned big oak trees more often)
   - Updated forest biome (inspired by The Aether/Deep Aether)
     - Grows mushrooms (including glowcaps)
+    - Some tree logs are glowsap ore (interally fairy sap lol)
 - Lich ([inspiration](https://the-grimoire-of-gaia.fandom.com/wiki/Bone_Knight)) ([skin base](https://namemc.com/skin/adcc6eab0088f51e))
   - end goal of the game is to defeat the lich (?)
   - After a certain amount of damage, the lich uses necromancy to summon three skeletons in a puff of smoke to assist it in battle
@@ -24,12 +25,12 @@ My goal for this mod is to cut down on the survival aspect of beta Minecraft, an
 - Weapon/tool rework
   - Remove crafting recipes of wooden and stone weapons/tools
   - Player spawns with stone tools (on world spawn and after death)
+  - Retexture/rename stone tools to copper
 
 ### To-do
 
 - Add custom rainforest leaves + sapling
 - Remove tool durability
-- Retexture stone tools to copper
 - Add fairies
   - look like white/gold 2x2x2 cubes that fly
   - you can pick them up and release them again (somehow)

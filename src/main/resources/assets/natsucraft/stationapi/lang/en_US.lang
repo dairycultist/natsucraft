@@ -1,3 +1,10 @@
+item.swordStone.name=Copper Sword
+item.pickaxeStone.name=Copper Pickaxe
+item.hatchetStone.name=Copper Axe
+item.shovelStone.name=Copper Shovel
+item.hoeStone.name=Copper Hoe
+
 tile.@.jungle_log.name=Wood
+tile.@.fairy_sap_log.name=Wood
 item.@.lich_sword.name=Lich Sword
 tile.@.glowcap.name=Glowcap
