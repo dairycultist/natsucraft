@@ -1,4 +1,4 @@
-package net.natsupotato.natsucraft.mixin.structures;
+package net.natsupotato.natsucraft.mixin.structure;
 
 import net.minecraft.world.World;
 import net.minecraft.world.chunk.ChunkSource;

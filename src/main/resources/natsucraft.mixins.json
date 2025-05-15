@@ -11,7 +11,9 @@
     "entity.ChickenEntityMixin",
     "entity.LivingEntityAccessor",
     "entity.PlayerEntityMixin",
-    "structures.OverworldChunkGeneratorMixin"
+    "structure.OverworldChunkGeneratorMixin",
+    "tool.ToolRecipesMixin",
+    "tool.WeaponRecipesMixin"
   ],
   "server": [],
   "client": [

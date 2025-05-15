@@ -21,12 +21,15 @@ My goal for this mod is to cut down on the survival aspect of beta Minecraft, an
 - Mob skin variants (I like the Deep Aether's pastel quails)
   - Chickens (also they have tails now)
 - Idle regen
+- Weapon/tool rework
+  - Remove crafting recipes of wooden and stone weapons/tools
+  - Player spawns with stone tools (on world spawn and after death)
 
 ### To-do
 
 - Add custom rainforest leaves + sapling
 - Remove tool durability
-- Retexture stone tools to copper, remove their crafting recipe, and make the player spawn with them by default (even after death!)
+- Retexture stone tools to copper
 - Add fairies
   - look like white/gold 2x2x2 cubes that fly
   - you can pick them up and release them again (somehow)
