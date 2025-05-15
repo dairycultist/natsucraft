@@ -24,9 +24,10 @@ public class Natsucraft {
     @Entrypoint.Namespace
     public static final Namespace NAMESPACE = Null.get();
 
-
     public static Block JUNGLE_LOG;
     public static Block GLOWCAP;
+
+    public static Item LICH_SWORD;
 
     @EventListener
     public void registerBlocks(BlockRegistryEvent event) {
@@ -46,9 +47,6 @@ public class Natsucraft {
         .setLuminance(0.8f) // 0.8f * 15f = 12f, mushrooms break at 13f
         .setTranslationKey(NAMESPACE, "glowcap");
     }
-
-
-    public static Item LICH_SWORD;
 
     @EventListener
     public void registerItems(ItemRegistryEvent event) {

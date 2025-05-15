@@ -4,18 +4,19 @@
   "package": "net.natsupotato.natsucraft.mixin",
   "compatibilityLevel": "JAVA_17",
   "mixins": [
-    "entity.ChickenEntityMixin",
-    "worldgen.ForestBiomeMixin",
     "LeavesBlockMixin",
+    "MinecraftMixin",
+    "biome.ForestBiomeMixin",
+    "biome.RainforestBiomeMixin",
+    "entity.ChickenEntityMixin",
     "entity.LivingEntityAccessor",
-    "worldgen.OverworldChunkGeneratorMixin",
     "entity.PlayerEntityMixin",
-    "worldgen.RainforestBiomeMixin"
+    "structures.OverworldChunkGeneratorMixin"
   ],
   "server": [],
   "client": [
-    "entity.ChickenEntityModelMixin",
     "InGameHudMixin",
+    "entity.ChickenEntityModelMixin",
     "entity.UndeadEntityRendererMixin"
   ],
   "injectors": {

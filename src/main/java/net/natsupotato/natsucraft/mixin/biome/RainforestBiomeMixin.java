@@ -1,4 +1,4 @@
-package net.natsupotato.natsucraft.mixin.worldgen;
+package net.natsupotato.natsucraft.mixin.biome;
 
 import net.minecraft.world.biome.RainforestBiome;
 import net.minecraft.world.gen.feature.Feature;
