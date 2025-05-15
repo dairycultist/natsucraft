@@ -12,7 +12,7 @@ public class GlowsapTreeFeature extends Feature {
     @Override
     public boolean generate(World world, Random random, int x, int y, int z) {
 
-        // I stole this code from OakTreeFeature and changed 1 line
+        // I stole this code from OakTreeFeature and changed like 1 line
 
         int var6 = random.nextInt(3) + 4;
         boolean var7 = true;
@@ -69,14 +69,19 @@ public class GlowsapTreeFeature extends Feature {
                         }
                     }
 
-                    for(var9 = 0; var9 < var6; ++var9) {
+                    for(var9 = 0; var9 < var6 - 1; ++var9) {
+
                         var10 = world.getBlockId(x, y + var9, z);
+
                         if (var10 == 0 || var10 == Block.LEAVES.id) {
 
                             // this is the line I changed
                             world.setBlockWithoutNotifyingNeighbors(x, y + var9, z, random.nextInt(4) == 0 ? Natsucraft.GLOWSAP_LOG.id : Block.LOG.id);
                         }
                     }
+
+                    // also this (ensures leaves don't decay since glowsap logs don't prevent it)
+                    world.setBlockWithoutNotifyingNeighbors(x, y + var6 - 1, z, Block.LOG.id);
 
                     return true;
                 } else {
