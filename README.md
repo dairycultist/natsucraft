@@ -23,14 +23,14 @@ My goal for this mod is to cut down on the survival aspect of beta Minecraft, an
   - Chickens (also they have tails now)
 - Idle regen
 - Weapon/tool rework
+  - Remove tool durability
   - Remove crafting recipes of wooden and stone weapons/tools
   - Player spawns with stone tools (on world spawn and after death)
   - Retexture/rename stone tools to copper
 
 ### To-do
 
-- Add custom rainforest leaves + sapling
-- Remove tool durability
+- Add custom jungle leaves + sapling
 - Add fairies
   - look like white/gold 2x2x2 cubes that fly
   - you can pick them up and release them again (somehow)

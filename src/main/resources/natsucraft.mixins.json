@@ -11,6 +11,8 @@
     "entity.ChickenEntityMixin",
     "entity.LivingEntityAccessor",
     "entity.PlayerEntityMixin",
+    "tool.SwordItemMixin",
+    "tool.ToolItemMixin",
     "tool.ToolRecipesMixin",
     "tool.WeaponRecipesMixin"
   ],

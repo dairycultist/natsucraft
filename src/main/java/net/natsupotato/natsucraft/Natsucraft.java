@@ -76,7 +76,6 @@ public class Natsucraft {
                 return super.getAttackDamage(attackedEntity) + 1; // one more damage than diamond
             }
         }
-        .setMaxDamage(ToolMaterial.DIAMOND.getDurability() * 2) // twice that of a diamond sword
         .setTranslationKey(NAMESPACE, "lich_sword");
 
         GLOWSAP = new TemplateItem(NAMESPACE.id("glowsap"))
