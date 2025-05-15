@@ -12,6 +12,9 @@ public class DesertShrineFeature extends Feature {
     @Override
     public boolean generate(World world, Random random, int x, int y, int z) {
 
+        if (random.nextInt(128) != 0)
+            return false;
+
         for (int ox = x - 3; ox <= x + 3; ox++) {
             for (int oz = z - 3; oz <= z + 3; oz++) {
 
