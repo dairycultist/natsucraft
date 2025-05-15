@@ -7,7 +7,7 @@ import net.natsupotato.natsucraft.Natsucraft;
 
 import java.util.Random;
 
-public class FairySapTreeFeature extends Feature {
+public class GlowsapTreeFeature extends Feature {
 
     @Override
     public boolean generate(World world, Random random, int x, int y, int z) {
@@ -74,7 +74,7 @@ public class FairySapTreeFeature extends Feature {
                         if (var10 == 0 || var10 == Block.LEAVES.id) {
 
                             // this is the line I changed
-                            world.setBlockWithoutNotifyingNeighbors(x, y + var9, z, random.nextInt(4) == 0 ? Natsucraft.FAIRY_SAP_LOG.id : Block.LOG.id);
+                            world.setBlockWithoutNotifyingNeighbors(x, y + var9, z, random.nextInt(4) == 0 ? Natsucraft.GLOWSAP_LOG.id : Block.LOG.id);
                         }
                     }
 

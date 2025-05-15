@@ -11,6 +11,7 @@ import net.modificationstation.stationapi.api.event.registry.ItemRegistryEvent;
 import net.modificationstation.stationapi.api.mod.entrypoint.Entrypoint;
 import net.modificationstation.stationapi.api.template.block.TemplateLogBlock;
 import net.modificationstation.stationapi.api.template.block.TemplateMushroomPlantBlock;
+import net.modificationstation.stationapi.api.template.item.TemplateItem;
 import net.modificationstation.stationapi.api.template.item.TemplateSwordItem;
 import net.modificationstation.stationapi.api.util.Namespace;
 import net.modificationstation.stationapi.api.util.Null;
@@ -26,10 +27,11 @@ public class Natsucraft {
     public static final Namespace NAMESPACE = Null.get();
 
     public static Block JUNGLE_LOG;
-    public static Block FAIRY_SAP_LOG;
+    public static Block GLOWSAP_LOG;
     public static Block GLOWCAP;
 
     public static Item LICH_SWORD;
+    public static Item GLOWSAP;
 
     @EventListener
     public void registerBlocks(BlockRegistryEvent event) {
@@ -45,16 +47,17 @@ public class Natsucraft {
         .setSoundGroup(WOOD_SOUND_GROUP)
         .setTranslationKey(NAMESPACE, "jungle_log");
 
-        FAIRY_SAP_LOG = new TemplateLogBlock(NAMESPACE.id("fairy_sap_log")) {
+        GLOWSAP_LOG = new TemplateLogBlock(NAMESPACE.id("glowsap_log")) {
 
             public int getDroppedItemId(int blockMeta, Random random) {
-                return Item.DIAMOND.id; // TEMP
+                return GLOWSAP.id;
             }
 
         }
+        .setLuminance(0.5f)
         .setHardness(2.0F)
         .setSoundGroup(WOOD_SOUND_GROUP)
-        .setTranslationKey(NAMESPACE, "fairy_sap_log");
+        .setTranslationKey(NAMESPACE, "glowsap_log");
 
         GLOWCAP = new TemplateMushroomPlantBlock(NAMESPACE.id("glowcap"), 0)
         .setLuminance(0.8f) // 0.8f * 15f = 12f, mushrooms break at 13f
@@ -74,6 +77,9 @@ public class Natsucraft {
         }
         .setMaxDamage(ToolMaterial.DIAMOND.getDurability() * 2) // twice that of a diamond sword
         .setTranslationKey(NAMESPACE, "lich_sword");
+
+        GLOWSAP = new TemplateItem(NAMESPACE.id("glowsap"))
+        .setTranslationKey(NAMESPACE, "glowsap");
     }
 
     @EventListener

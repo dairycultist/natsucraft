@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "natsucraft:glowcap"
+    }
+  ],
+  "result": {
+    "item": "natsucraft:glowsap",
+    "count": 2
+  }
+}

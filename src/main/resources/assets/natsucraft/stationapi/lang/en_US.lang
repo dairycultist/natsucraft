@@ -5,6 +5,7 @@ item.shovelStone.name=Copper Shovel
 item.hoeStone.name=Copper Hoe
 
 tile.@.jungle_log.name=Wood
-tile.@.fairy_sap_log.name=Wood
+tile.@.glowsap_log.name=Wood
 item.@.lich_sword.name=Lich Sword
 tile.@.glowcap.name=Glowcap
+item.@.glowsap.name=Glowsap

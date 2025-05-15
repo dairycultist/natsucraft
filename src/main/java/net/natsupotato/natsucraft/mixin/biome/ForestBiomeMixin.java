@@ -5,7 +5,7 @@ import net.minecraft.world.biome.ForestBiome;
 import net.minecraft.world.gen.feature.Feature;
 import net.minecraft.world.gen.feature.GrassPatchFeature;
 import net.natsupotato.natsucraft.Natsucraft;
-import net.natsupotato.natsucraft.feature.FairySapTreeFeature;
+import net.natsupotato.natsucraft.feature.GlowsapTreeFeature;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.Inject;
@@ -31,6 +31,6 @@ public class ForestBiomeMixin {
     public void getRandomTreeFeatureMixin(Random random, CallbackInfoReturnable<Feature> cir) {
 
         if (random.nextBoolean())
-            cir.setReturnValue(new FairySapTreeFeature());
+            cir.setReturnValue(new GlowsapTreeFeature());
     }
 }
