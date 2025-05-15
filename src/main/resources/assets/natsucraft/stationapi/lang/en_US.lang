@@ -4,6 +4,8 @@ item.hatchetStone.name=Copper Axe
 item.shovelStone.name=Copper Shovel
 item.hoeStone.name=Copper Hoe
 
+tile.@.lapis_sandstone.name=Ornate Sandstone
+tile.@.glowsap_sandstone.name=Ornate Sandstone
 tile.@.jungle_log.name=Wood
 tile.@.glowsap_log.name=Wood
 item.@.lich_sword.name=Lich Sword

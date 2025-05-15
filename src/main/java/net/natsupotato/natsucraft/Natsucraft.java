@@ -11,6 +11,7 @@ import net.modificationstation.stationapi.api.event.registry.ItemRegistryEvent;
 import net.modificationstation.stationapi.api.mod.entrypoint.Entrypoint;
 import net.modificationstation.stationapi.api.template.block.TemplateLogBlock;
 import net.modificationstation.stationapi.api.template.block.TemplateMushroomPlantBlock;
+import net.modificationstation.stationapi.api.template.block.TemplateSandstoneBlock;
 import net.modificationstation.stationapi.api.template.item.TemplateItem;
 import net.modificationstation.stationapi.api.template.item.TemplateSwordItem;
 import net.modificationstation.stationapi.api.util.Namespace;
@@ -18,14 +19,15 @@ import net.modificationstation.stationapi.api.util.Null;
 
 import java.util.Random;
 
-import static net.minecraft.block.Block.DIRT_SOUND_GROUP;
-import static net.minecraft.block.Block.WOOD_SOUND_GROUP;
+import static net.minecraft.block.Block.*;
 
 public class Natsucraft {
 
     @Entrypoint.Namespace
     public static final Namespace NAMESPACE = Null.get();
 
+    public static Block LAPIS_SANDSTONE;
+    public static Block GLOWSAP_SANDSTONE;
     public static Block JUNGLE_LOG;
     public static Block GLOWSAP_LOG;
     public static Block GLOWCAP;
@@ -35,6 +37,17 @@ public class Natsucraft {
 
     @EventListener
     public void registerBlocks(BlockRegistryEvent event) {
+
+        LAPIS_SANDSTONE = new TemplateSandstoneBlock(NAMESPACE.id("lapis_sandstone"))
+        .setHardness(0.8F)
+        .setSoundGroup(STONE_SOUND_GROUP)
+        .setTranslationKey(NAMESPACE, "lapis_sandstone");
+
+        GLOWSAP_SANDSTONE = new TemplateSandstoneBlock(NAMESPACE.id("glowsap_sandstone"))
+        .setLuminance(0.8f)
+        .setHardness(0.8F)
+        .setSoundGroup(STONE_SOUND_GROUP)
+        .setTranslationKey(NAMESPACE, "glowsap_sandstone");
 
         JUNGLE_LOG = new TemplateLogBlock(NAMESPACE.id("jungle_log")) {
 

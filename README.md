@@ -9,6 +9,7 @@ My goal for this mod is to cut down on the survival aspect of beta Minecraft, an
 - Decoration Blocks
   - Glowcaps (mushroom that glows when placed)
   - Jungle wood
+  - Ornate sandstone (lapis and glowsap)
 - Exploration
   - Updated rainforest biome (previously was just a forest that spawned big oak trees more often)
   - Updated forest biome (inspired by The Aether/Deep Aether)
@@ -31,21 +32,10 @@ My goal for this mod is to cut down on the survival aspect of beta Minecraft, an
 ### To-do
 
 - Add custom jungle leaves + sapling
-- Add fairies
-  - They can despawn
-  - They attack hostile mobs
-  - You can pick them up (by feeding them a glowsap) and release them again
-  - Spawn near glowsap blocks (obeys mobcap)
-  - Look like white 2x2x2 cubes that fly, maybe with wings
-- Refactor to dairycultist.<new title>
+- Refactor to dairycultist.\<new title>
 
 ### Planned (maybe)
 
-- Fairies
-  - A white one plus 8 gold can craft into a golden one (these don't despawn?)
-  - you can craft a fairy nest from a log and some flowers which spawns ("attracts") fairies. fairy garden!
-  - Used for crafting
-    - golden fairy + apple = golden apple
 - Update some UI textures (like hearts and inventory)
 - Decoration Blocks
   - Mossy cobblestone for structures probably
