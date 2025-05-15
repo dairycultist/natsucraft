@@ -32,16 +32,20 @@ My goal for this mod is to cut down on the survival aspect of beta Minecraft, an
 
 - Add custom jungle leaves + sapling
 - Add fairies
-  - look like white/gold 2x2x2 cubes that fly
-  - you can pick them up and release them again (somehow)
-  - a white one plus 8 gold can craft into a golden one
-  - you can craft a fairy nest from a log and some flowers which spawns ("attracts") fairies. fairy garden!
-  - Used for crafting
-    - golden fairy + apple = golden apple
+  - They can despawn
+  - They attack hostile mobs
+  - You can pick them up (by feeding them a glowsap) and release them again
+  - Spawn near glowsap blocks (obeys mobcap)
+  - Look like white 2x2x2 cubes that fly, maybe with wings
 - Refactor to dairycultist.<new title>
 
 ### Planned (maybe)
 
+- Fairies
+  - A white one plus 8 gold can craft into a golden one (these don't despawn?)
+  - you can craft a fairy nest from a log and some flowers which spawns ("attracts") fairies. fairy garden!
+  - Used for crafting
+    - golden fairy + apple = golden apple
 - Update some UI textures (like hearts and inventory)
 - Decoration Blocks
   - Mossy cobblestone for structures probably
