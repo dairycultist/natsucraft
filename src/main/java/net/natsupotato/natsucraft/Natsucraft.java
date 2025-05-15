@@ -41,7 +41,6 @@ public class Natsucraft {
             public int getDroppedItemId(int blockMeta, Random random) {
                 return this.id;
             }
-
         }
         .setHardness(2.0F)
         .setSoundGroup(WOOD_SOUND_GROUP)
@@ -53,6 +52,9 @@ public class Natsucraft {
                 return GLOWSAP.id;
             }
 
+            public int getDroppedItemCount(Random random) {
+                return random.nextInt(2, 5);
+            }
         }
         .setLuminance(0.5f)
         .setHardness(2.0F)
@@ -73,7 +75,6 @@ public class Natsucraft {
             public int getAttackDamage(Entity attackedEntity) {
                 return super.getAttackDamage(attackedEntity) + 1; // one more damage than diamond
             }
-
         }
         .setMaxDamage(ToolMaterial.DIAMOND.getDurability() * 2) // twice that of a diamond sword
         .setTranslationKey(NAMESPACE, "lich_sword");
