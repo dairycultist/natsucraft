@@ -15,6 +15,8 @@ My goal for this mod is to cut down on the survival aspect of beta Minecraft, an
   - Updated forest biome (inspired by The Aether/Deep Aether)
     - Grows mushrooms (including glowcaps)
     - Some tree logs are glowsap ore
+  - Updated desert biome
+    - Desert shrine (dungeon?)
 - Lich ([inspiration](https://the-grimoire-of-gaia.fandom.com/wiki/Bone_Knight)) ([skin base](https://namemc.com/skin/adcc6eab0088f51e))
   - end goal of the game is to defeat the lich (?)
   - After a certain amount of damage, the lich uses necromancy to summon three skeletons in a puff of smoke to assist it in battle
@@ -28,6 +30,8 @@ My goal for this mod is to cut down on the survival aspect of beta Minecraft, an
   - Remove crafting recipes of wooden and stone weapons/tools
   - Player spawns with stone tools (on world spawn and after death)
   - Retexture/rename stone tools to copper
+- Lots of unique tools/weapons/armor
+  - Lich sword
 
 ### To-do
 
@@ -54,5 +58,7 @@ My goal for this mod is to cut down on the survival aspect of beta Minecraft, an
       - you need gold to make another portal
       - if you don't like mining for endgame gear, you can explore/fight for it instead
     - Red slime
+- Armor rework
+  - Armor now grants more max HP instead of reducing damage taken
 - Wings ([reference](https://www.curseforge.com/minecraft/mc-mods/simple-flight))
 - Familiars ([reference](https://www.curseforge.com/minecraft/mc-mods/touhou-little-maid))
