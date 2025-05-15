@@ -6,6 +6,7 @@
   "mixins": [
     "LeavesBlockMixin",
     "MinecraftMixin",
+    "biome.BiomeMixin",
     "biome.ForestBiomeMixin",
     "biome.RainforestBiomeMixin",
     "entity.ChickenEntityMixin",
