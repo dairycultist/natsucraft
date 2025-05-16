@@ -81,6 +81,7 @@ public class Natsucraft {
 
                 ItemStack stack = playerEntity.getHand();
 
+                // only drop items when mined with iron or diamond tier (since Material.WOOD usually drops regardless of tool requirement)
                 if (stack != null && stack.getItem() instanceof AxeItem axe && ((ToolItemAccessor) axe).getToolMaterial().getMiningLevel() >= 2)
                     this.dropStacks(world, x, y, z, meta);
             }

@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "aaa",
+    "bbb",
+    "aaa"
+  ],
+  "key": {
+    "a": {
+      "item": "minecraft:sandstone"
+    },
+    "b": {
+      "item": "minecraft:dye",
+      "damage": 4
+    }
+  },
+  "result": {
+    "item": "natsucraft:lapis_sandstone",
+    "count": 8
+  }
+}

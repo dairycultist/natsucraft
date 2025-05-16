@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "aaa",
+    "bbb",
+    "aaa"
+  ],
+  "key": {
+    "a": {
+      "item": "minecraft:sandstone"
+    },
+    "b": {
+      "item": "natsucraft:glowsap"
+    }
+  },
+  "result": {
+    "item": "natsucraft:glowsap_sandstone",
+    "count": 8
+  }
+}
