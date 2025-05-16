@@ -3,8 +3,13 @@ package net.natsupotato.natsucraft;
 import net.mine_diver.unsafeevents.listener.EventListener;
 import net.minecraft.block.Block;
 import net.minecraft.entity.Entity;
+import net.minecraft.entity.player.PlayerEntity;
+import net.minecraft.item.AxeItem;
 import net.minecraft.item.Item;
+import net.minecraft.item.ItemStack;
 import net.minecraft.item.ToolMaterial;
+import net.minecraft.stat.Stats;
+import net.minecraft.world.World;
 import net.modificationstation.stationapi.api.event.entity.EntityRegister;
 import net.modificationstation.stationapi.api.event.registry.BlockRegistryEvent;
 import net.modificationstation.stationapi.api.event.registry.ItemRegistryEvent;
@@ -16,6 +21,7 @@ import net.modificationstation.stationapi.api.template.item.TemplateItem;
 import net.modificationstation.stationapi.api.template.item.TemplateSwordItem;
 import net.modificationstation.stationapi.api.util.Namespace;
 import net.modificationstation.stationapi.api.util.Null;
+import net.natsupotato.natsucraft.mixin.tool.ToolItemAccessor;
 
 import java.util.Random;
 
@@ -67,6 +73,16 @@ public class Natsucraft {
 
             public int getDroppedItemCount(Random random) {
                 return random.nextInt(2, 5);
+            }
+
+            public void afterBreak(World world, PlayerEntity playerEntity, int x, int y, int z, int meta) {
+
+                playerEntity.increaseStat(Stats.MINE_BLOCK[this.id], 1);
+
+                ItemStack stack = playerEntity.getHand();
+
+                if (stack != null && stack.getItem() instanceof AxeItem axe && ((ToolItemAccessor) axe).getToolMaterial().getMiningLevel() >= 2)
+                    this.dropStacks(world, x, y, z, meta);
             }
         }
         .setLuminance(0.5f)
