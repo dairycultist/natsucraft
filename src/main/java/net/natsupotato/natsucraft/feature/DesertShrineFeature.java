@@ -12,8 +12,8 @@ public class DesertShrineFeature extends Feature {
     @Override
     public boolean generate(World world, Random random, int x, int y, int z) {
 
-//        if (random.nextInt(128) != 0)
-//            return false;
+        if (random.nextInt(4) != 0) // 128
+            return false;
 
         // base/foundation
         for (int ox = x - 3; ox <= x + 3; ox++) {
@@ -38,7 +38,7 @@ public class DesertShrineFeature extends Feature {
         }
 
         // maze
-        GenerationHelper.generateMaze(world, random, x - 2, y - 15, z - 2, Block.SANDSTONE.id);
+        GenerationHelper.generateMaze(world, random, x - 3, y - 15, z - 3, 4, 4, Block.SANDSTONE.id);
 
         // tunnel down
         for (int ox = x - 2; ox <= x + 2; ox++) {
