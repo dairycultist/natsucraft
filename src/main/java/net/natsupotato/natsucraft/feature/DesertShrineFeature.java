@@ -38,20 +38,13 @@ public class DesertShrineFeature extends Feature {
         }
 
         // maze
-        GenerationHelper.generateMaze(world, random, x - 3, y - 15, z - 3, 4, 4, Block.SANDSTONE.id);
+        GenerationHelper.generateMaze(world, random, x - 17, y - 15, z - 17, 5, 5, Block.SANDSTONE.id);
+
+        GenerationHelper.replaceRect(world, Block.SANDSTONE.id, Natsucraft.LAPIS_SANDSTONE.id, x - 17, y - 14, z - 17, 36, 1, 36);
 
         // tunnel down
-        for (int ox = x - 2; ox <= x + 2; ox++) {
-            for (int oz = z - 2; oz <= z + 2; oz++) {
-
-                if (ox == x - 2 || ox == x + 2 || oz == z - 2 || oz == z + 2)
-                    for (int oy = y - 10; oy <= y; oy++)
-                        world.setBlockWithoutNotifyingNeighbors(ox, oy, oz, Block.SANDSTONE.id);
-                else
-                    for (int oy = y - 10; oy <= y; oy++)
-                        world.setBlockWithoutNotifyingNeighbors(ox, oy, oz, 0);
-            }
-        }
+        GenerationHelper.fillRect(world, Block.SANDSTONE.id, x - 2, y - 10, z - 2, 5, 11, 5);
+        GenerationHelper.fillRect(world, 0, x - 1, y - 10, z - 1, 3, 11, 3);
 
         // ornate pillars
         for (int ox = x - 3; ox <= x + 3; ox += 6) {
