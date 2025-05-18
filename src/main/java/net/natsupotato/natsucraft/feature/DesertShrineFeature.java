@@ -12,7 +12,7 @@ public class DesertShrineFeature extends Feature {
     @Override
     public boolean generate(World world, Random random, int x, int y, int z) {
 
-        if (random.nextInt(4) != 0) // 128
+        if (random.nextInt(8) != 0) // 128
             return false;
 
         // base/foundation

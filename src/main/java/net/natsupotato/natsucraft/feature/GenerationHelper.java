@@ -2,6 +2,7 @@ package net.natsupotato.natsucraft.feature;
 
 import net.minecraft.world.World;
 
+import java.util.ArrayList;
 import java.util.Random;
 import java.util.Stack;
 
@@ -10,6 +11,7 @@ public class GenerationHelper {
     // generate a closed maze, where xyz is bottom corner
     public static void generateMaze(World world, Random random, int x, int y, int z, int xCels, int zCels, int wallBlockId) {
 
+        // generate rooms
         for (int xCel = 0; xCel < xCels; xCel++) {
             for (int zCel = 0; zCel < zCels; zCel++) {
 
@@ -17,24 +19,75 @@ public class GenerationHelper {
             }
         }
 
-        // cut doors
-        boolean[][] visited = new boolean[xCels][zCels];
-        Stack<Boolean> stack = new Stack<Boolean>();
+        // cut doors using randomized DFS
+        boolean[][] discovered = new boolean[xCels][zCels];
+        Stack<Integer> xStack = new Stack<>();
+        Stack<Integer> zStack = new Stack<>();
 
-        for (int xCel = 0; xCel < xCels; xCel++) {
-            for (int zCel = 0; zCel < zCels; zCel++) {
+        xStack.push(0);
+        zStack.push(0);
+        discovered[0][0] = true;
 
-                // +z
-                fillRect(world, 0, x + 2 + xCel * 7, y + 1, z + 6 + zCel * 7, 3, 3, 2);
+        while (!xStack.empty()) {
 
-                // +x
-                fillRect(world, 0, x + 6 + xCel * 7, y + 1, z + 2 + zCel * 7, 2, 3, 3);
+            int xCel = xStack.peek();
+            int zCel = zStack.peek();
 
-                // -z
-                fillRect(world, 0, x + 2 + xCel * 7, y + 1, z - 1 + zCel * 7, 3, 3, 2);
+            // find all possible paths we can go down from here
+            ArrayList<Integer> possibleDirections = new ArrayList<>();
 
-                // -x
-                fillRect(world, 0, x - 1 + xCel * 7, y + 1, z + 2 + zCel * 7, 2, 3, 3);
+            if (xCel > 0 && !discovered[xCel - 1][zCel])
+                possibleDirections.add(0); // -x
+
+            if (xCel < xCels - 1 && !discovered[xCel + 1][zCel])
+                possibleDirections.add(1); // +x
+
+            if (zCel > 0 && !discovered[xCel][zCel - 1])
+                possibleDirections.add(2); // -z
+
+            if (zCel < zCels - 1 && !discovered[xCel][zCel + 1])
+                possibleDirections.add(3); // +z
+
+            if (possibleDirections.isEmpty()) {
+
+                // no possible paths; backtrack
+                xStack.pop();
+                zStack.pop();
+
+            } else {
+
+                // take path at random
+                switch (possibleDirections.get(random.nextInt(possibleDirections.size()))) {
+
+                    case 0: // -x
+                        fillRect(world, 0, x - 1 + xCel * 7, y + 1, z + 2 + zCel * 7, 2, 3, 3);
+                        xStack.push(xCel - 1);
+                        zStack.push(zCel);
+                        discovered[xCel - 1][zCel] = true;
+                        break;
+
+                    case 1: // +x
+                        fillRect(world, 0, x + 6 + xCel * 7, y + 1, z + 2 + zCel * 7, 2, 3, 3);
+                        xStack.push(xCel + 1);
+                        zStack.push(zCel);
+                        discovered[xCel + 1][zCel] = true;
+                        break;
+
+                    case 2: // -z
+                        fillRect(world, 0, x + 2 + xCel * 7, y + 1, z - 1 + zCel * 7, 3, 3, 2);
+                        xStack.push(xCel);
+                        zStack.push(zCel - 1);
+                        discovered[xCel][zCel - 1] = true;
+                        break;
+
+                    case 3: // +z
+                        fillRect(world, 0, x + 2 + xCel * 7, y + 1, z + 6 + zCel * 7, 3, 3, 2);
+                        xStack.push(xCel);
+                        zStack.push(zCel + 1);
+                        discovered[xCel][zCel + 1] = true;
+                        break;
+
+                }
             }
         }
     }
