@@ -12,13 +12,13 @@ My goal for this mod is to cut down on the survival aspect of beta Minecraft, an
   - Glowcaps (mushroom that glows when placed)
   - Jungle wood
   - Ornate sandstone (lapis and glowsap)
-- Exploration
+- Worldgen/exploration
   - Updated rainforest biome (previously was just a forest that spawned big oak trees more often)
   - Updated forest biome (inspired by The Aether/Deep Aether)
     - Grows mushrooms (including glowcaps)
     - Some tree logs are glowsap ore
   - Updated desert biome
-    - Desert shrine (dungeon?)
+    - Desert shrine (featuring an underground dungeon)
 - Mob skin variants (I like the Deep Aether's pastel quails)
   - Chickens (also they have tails now)
 - Idle regen
@@ -38,6 +38,7 @@ My goal for this mod is to cut down on the survival aspect of beta Minecraft, an
   - drops the lich sword
 
 ### Unique tools/weapons/armor
+
 - Lich sword (dropped by Lich)
 
 ## To-do
@@ -52,8 +53,6 @@ My goal for this mod is to cut down on the survival aspect of beta Minecraft, an
 ## Planned (maybe)
 
 - Update some UI textures (like hearts and inventory)
-- Decoration Blocks
-  - Mossy cobblestone for structures probably
 - Exploration (my fav)
   - Surface Structures
     - Villages
