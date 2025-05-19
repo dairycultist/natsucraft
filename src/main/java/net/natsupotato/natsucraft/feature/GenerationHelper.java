@@ -8,14 +8,20 @@ import java.util.Stack;
 
 public class GenerationHelper {
 
+    public interface SubGenerator {
+
+        public void generate(World world, Random random, int x, int y, int z);
+    }
+
     // generate a closed maze, where xyz is bottom corner
-    public static void generateMaze(World world, Random random, int x, int y, int z, int xCels, int zCels, int wallBlockId) {
+    // maybe parameters for room size and lambda function for generating individual room contents (after cutting out shape), idk
+    public static void generateMaze(World world, Random random, int x, int y, int z, int roomW, int roomH, int roomL, int xCels, int zCels, int wallBlockId) {
 
         // generate rooms
         for (int xCel = 0; xCel < xCels; xCel++) {
             for (int zCel = 0; zCel < zCels; zCel++) {
 
-                fillHollowRect(world, wallBlockId, x + xCel * 7, y, z + zCel * 7, 7, 6, 7);
+                fillHollowRect(world, wallBlockId, x + xCel * roomW, y, z + zCel * roomL, roomW, roomH, roomL);
             }
         }
 
@@ -57,36 +63,41 @@ public class GenerationHelper {
             } else {
 
                 // take path at random
+                int minusZ_X = x + ((roomW - 3) / 2) + xCel * roomW;
+                int minusZ_Z = z - 1 + zCel * roomL;
+
+                int minusX_X = x - 1 + xCel * roomW;
+                int minusX_Z = z + ((roomL - 3) / 2) + zCel * roomL;
+
                 switch (possibleDirections.get(random.nextInt(possibleDirections.size()))) {
 
                     case 0: // -x
-                        fillRect(world, 0, x - 1 + xCel * 7, y + 1, z + 2 + zCel * 7, 2, 3, 3);
+                        fillRect(world, 0, minusX_X, y + 1, minusX_Z, 2, 3, 3);
                         xStack.push(xCel - 1);
                         zStack.push(zCel);
                         discovered[xCel - 1][zCel] = true;
                         break;
 
                     case 1: // +x
-                        fillRect(world, 0, x + 6 + xCel * 7, y + 1, z + 2 + zCel * 7, 2, 3, 3);
+                        fillRect(world, 0, minusX_X + roomW, y + 1, minusX_Z, 2, 3, 3);
                         xStack.push(xCel + 1);
                         zStack.push(zCel);
                         discovered[xCel + 1][zCel] = true;
                         break;
 
                     case 2: // -z
-                        fillRect(world, 0, x + 2 + xCel * 7, y + 1, z - 1 + zCel * 7, 3, 3, 2);
+                        fillRect(world, 0, minusZ_X, y + 1, minusZ_Z, 3, 3, 2);
                         xStack.push(xCel);
                         zStack.push(zCel - 1);
                         discovered[xCel][zCel - 1] = true;
                         break;
 
                     case 3: // +z
-                        fillRect(world, 0, x + 2 + xCel * 7, y + 1, z + 6 + zCel * 7, 3, 3, 2);
+                        fillRect(world, 0, minusZ_X, y + 1, minusZ_Z + roomL, 3, 3, 2);
                         xStack.push(xCel);
                         zStack.push(zCel + 1);
                         discovered[xCel][zCel + 1] = true;
                         break;
-
                 }
             }
         }
