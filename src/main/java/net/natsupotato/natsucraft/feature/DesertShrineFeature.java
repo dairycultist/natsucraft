@@ -70,8 +70,8 @@ public class DesertShrineFeature extends Feature {
                                                 localWorld.setBlock(ox, oy, oz, Block.COBWEB.id);
                             }
 
-                            world.setBlock(localX + 4, localY + 1, localZ + 4, Block.SPAWNER.id);
-                            ((MobSpawnerBlockEntity) world.getBlockEntity(localX + 4, localY + 1, localZ + 4))
+                            localWorld.setBlock(localX + 4, localY + 1, localZ + 4, Block.SPAWNER.id);
+                            ((MobSpawnerBlockEntity) localWorld.getBlockEntity(localX + 4, localY + 1, localZ + 4))
                                     .setSpawnedEntityId(monster);
 
                             break;
@@ -106,7 +106,7 @@ public class DesertShrineFeature extends Feature {
 
         // tunnel down
         GenerationHelper.fillRect(world, Block.SANDSTONE.id, x - 2, y - 10, z - 2, 5, 11, 5);
-        GenerationHelper.fillRect(world, 0, x - 1, y - 10, z - 1, 3, 11, 3);
+        GenerationHelper.fillRect(world, 0, x - 1, y - 12, z - 1, 3, 13, 3);
 
         // ornate pillars
         for (int ox = x - 3; ox <= x + 3; ox += 6) {
