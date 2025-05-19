@@ -40,7 +40,7 @@ public class DesertShrineFeature extends Feature {
 
                     int roomType = localRandom.nextInt(6);
 
-                    if (roomType == 0 || roomType == 1) {
+                    if (roomType != 0 && roomType != 1) {
                         localWorld.setBlock(localX + 1, localY + 4, localZ + 4, Block.TORCH.id);
                         localWorld.setBlock(localX + 7, localY + 4, localZ + 4, Block.TORCH.id);
                         localWorld.setBlock(localX + 4, localY + 4, localZ + 1, Block.TORCH.id);
@@ -63,7 +63,9 @@ public class DesertShrineFeature extends Feature {
 
                                 for (int ox = localX + 1; ox < localX + 8; ox++)
                                     for (int oz = localZ + 1; oz < localZ + 8; oz++)
-                                        for (int oy = localY + 1; oy < localY + 5; oy++)
+
+                                        // not at floor level since spiders can't move through their webs in this version
+                                        for (int oy = localY + 2; oy < localY + 5; oy++)
                                             if (localWorld.getBlockId(ox, oy, oz) == 0 && localRandom.nextInt(3) == 0)
                                                 localWorld.setBlock(ox, oy, oz, Block.COBWEB.id);
                             }
