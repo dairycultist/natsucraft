@@ -10,6 +10,7 @@
     "biome.ForestBiomeMixin",
     "biome.RainforestBiomeMixin",
     "entity.ChickenEntityMixin",
+    "entity.CobwebBlockMixin",
     "entity.LivingEntityAccessor",
     "entity.PlayerEntityMixin",
     "tool.SwordItemMixin",

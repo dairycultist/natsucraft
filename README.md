@@ -22,6 +22,7 @@ My goal for this mod is to cut down on the survival aspect of beta Minecraft, an
 - Mob skin variants (I like the Deep Aether's pastel quails)
   - Chickens (also they have tails now)
 - Idle regen
+- Spiders are no longer slowed by cobwebs
 - Weapon/tool rework
   - Remove tool durability
   - Remove crafting recipes of wooden and stone weapons/tools

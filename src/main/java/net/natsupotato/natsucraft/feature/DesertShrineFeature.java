@@ -63,9 +63,7 @@ public class DesertShrineFeature extends Feature {
 
                                 for (int ox = localX + 1; ox < localX + 8; ox++)
                                     for (int oz = localZ + 1; oz < localZ + 8; oz++)
-
-                                        // not at floor level since spiders can't move through their webs in this version
-                                        for (int oy = localY + 2; oy < localY + 5; oy++)
+                                        for (int oy = localY + 1; oy < localY + 5; oy++)
                                             if (localWorld.getBlockId(ox, oy, oz) == 0 && localRandom.nextInt(3) == 0)
                                                 localWorld.setBlock(ox, oy, oz, Block.COBWEB.id);
                             }
