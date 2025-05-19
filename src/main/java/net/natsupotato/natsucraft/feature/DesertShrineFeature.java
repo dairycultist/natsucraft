@@ -38,9 +38,18 @@ public class DesertShrineFeature extends Feature {
         }
 
         // maze
-        GenerationHelper.generateMaze(world, random, x - 17, y - 15, z - 17, 7, 6, 7, 5, 5, Block.SANDSTONE.id);
+        GenerationHelper.generateMaze(
+                world, random,
+                x - 22, y - 15, z - 22,
+                9, 6, 9,
+                5, 5,
+                Block.SANDSTONE.id,
+                (localWorld, localRandom, localX, localY, localZ) -> {
 
-        GenerationHelper.replaceRect(world, Block.SANDSTONE.id, Natsucraft.LAPIS_SANDSTONE.id, x - 17, y - 14, z - 17, 36, 1, 36);
+                    if (localRandom.nextBoolean())
+                        GenerationHelper.replaceRect(world, Block.SANDSTONE.id, Natsucraft.LAPIS_SANDSTONE.id, localX, localY + 1, localZ, 9, 1, 9);
+                }
+        );
 
         // tunnel down
         GenerationHelper.fillRect(world, Block.SANDSTONE.id, x - 2, y - 10, z - 2, 5, 11, 5);

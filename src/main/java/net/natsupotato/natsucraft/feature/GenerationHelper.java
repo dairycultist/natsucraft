@@ -14,8 +14,7 @@ public class GenerationHelper {
     }
 
     // generate a closed maze, where xyz is bottom corner
-    // maybe parameters for room size and lambda function for generating individual room contents (after cutting out shape), idk
-    public static void generateMaze(World world, Random random, int x, int y, int z, int roomW, int roomH, int roomL, int xCels, int zCels, int wallBlockId) {
+    public static void generateMaze(World world, Random random, int x, int y, int z, int roomW, int roomH, int roomL, int xCels, int zCels, int wallBlockId, SubGenerator roomPopulator) {
 
         // generate rooms
         for (int xCel = 0; xCel < xCels; xCel++) {
@@ -63,11 +62,11 @@ public class GenerationHelper {
             } else {
 
                 // take path at random
-                int minusZ_X = x + ((roomW - 3) / 2) + xCel * roomW;
-                int minusZ_Z = z - 1 + zCel * roomL;
-
                 int minusX_X = x - 1 + xCel * roomW;
                 int minusX_Z = z + ((roomL - 3) / 2) + zCel * roomL;
+
+                int minusZ_X = x + ((roomW - 3) / 2) + xCel * roomW;
+                int minusZ_Z = z - 1 + zCel * roomL;
 
                 switch (possibleDirections.get(random.nextInt(possibleDirections.size()))) {
 
@@ -99,6 +98,14 @@ public class GenerationHelper {
                         discovered[xCel][zCel + 1] = true;
                         break;
                 }
+            }
+        }
+
+        // lambda function for generating individual room contents (after cutting out shape)
+        for (int xCel = 0; xCel < xCels; xCel++) {
+            for (int zCel = 0; zCel < zCels; zCel++) {
+
+                roomPopulator.generate(world, random, x + xCel * roomW, y, z + zCel * roomL);
             }
         }
     }
