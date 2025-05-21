@@ -17,6 +17,7 @@ import net.modificationstation.stationapi.api.mod.entrypoint.Entrypoint;
 import net.modificationstation.stationapi.api.template.block.TemplateLogBlock;
 import net.modificationstation.stationapi.api.template.block.TemplateMushroomPlantBlock;
 import net.modificationstation.stationapi.api.template.block.TemplateSandstoneBlock;
+import net.modificationstation.stationapi.api.template.item.TemplateFoodItem;
 import net.modificationstation.stationapi.api.template.item.TemplateItem;
 import net.modificationstation.stationapi.api.template.item.TemplateSwordItem;
 import net.modificationstation.stationapi.api.util.Namespace;
@@ -40,6 +41,8 @@ public class Natsucraft {
 
     public static Item LICH_SWORD;
     public static Item GLOWSAP;
+    public static Item CHICKEN_RAW;
+    public static Item CHICKEN_COOKED;
 
     @EventListener
     public void registerBlocks(BlockRegistryEvent event) {
@@ -110,6 +113,12 @@ public class Natsucraft {
 
         GLOWSAP = new TemplateItem(NAMESPACE.id("glowsap"))
         .setTranslationKey(NAMESPACE, "glowsap");
+
+        CHICKEN_RAW = new TemplateFoodItem(NAMESPACE.id("chicken_raw"), 2, true)
+        .setTranslationKey(NAMESPACE, "chicken_raw");
+
+        CHICKEN_COOKED = new TemplateFoodItem(NAMESPACE.id("chicken_cooked"), 6, true)
+        .setTranslationKey(NAMESPACE, "chicken_cooked");
     }
 
     @EventListener
