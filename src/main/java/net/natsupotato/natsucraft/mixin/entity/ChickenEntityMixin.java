@@ -13,8 +13,9 @@ public class ChickenEntityMixin {
     private void initMixin(CallbackInfo ci) {
 
         ((LivingEntityAccessor) this).setTexture("/assets/natsucraft/stationapi/textures/entity/chicken_"
-                                                 + (int) (Math.random() * 2) + ".png");
+                                                 + (int) (Math.random() * 3) + ".png");
     }
 
-    // might mixin NBT later
+    // might mixin NBT later to save variant
+    // also make certain variants only spawn in certain biomes idk
 }
