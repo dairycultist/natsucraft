@@ -47,11 +47,11 @@ public class DesertCryptFeature extends Feature {
                         localWorld.setBlock(localX + 4, localY + 4, localZ + 7, Block.TORCH.id);
                     }
 
-                    ChestBlockEntity chest;
+                    ChestBlockEntity chest = null;
 
                     switch (roomType) {
 
-                        // 1/3 chance of spawner room
+                        // spawner room + chest room
                         case 0:
                         case 1:
 
@@ -74,16 +74,35 @@ public class DesertCryptFeature extends Feature {
                             ((MobSpawnerBlockEntity) localWorld.getBlockEntity(localX + 4, localY + 1, localZ + 4))
                                     .setSpawnedEntityId(monster);
 
+                        // just chest room
+                        case 2:
+
+                            if (localRandom.nextBoolean())
+                                chest = GenerationHelper.lootChest(localWorld, localRandom, localX + 1, localY + 1, localZ + 2, 4,
+                                        new Item[]{Natsucraft.GLOWSAP, Natsucraft.FABRIC, Item.IRON_INGOT},
+                                        new int[]{2, 2, 1},
+                                        new int[]{6, 5, 4}
+                                );
+
+                            if (localRandom.nextBoolean())
+                                chest = GenerationHelper.lootChest(localWorld, localRandom, localX + 7, localY + 1, localZ + 6, 4,
+                                        new Item[]{Natsucraft.GLOWSAP, Natsucraft.FABRIC, Item.IRON_INGOT},
+                                        new int[]{2, 2, 1},
+                                        new int[]{6, 5, 4}
+                                );
+
+                            if (chest != null && localRandom.nextInt(20) == 0)
+                                chest.setStack(localRandom.nextInt(chest.size()), new ItemStack(Item.CHAIN_CHESTPLATE));
+
                             break;
 
-                        // 1/6 chance of treasure room
-                        case 2:
-                            localWorld.setBlock(localX + 4, localY + 2, localZ + 4, Block.CHEST.id);
-                            chest = (ChestBlockEntity) localWorld.getBlockEntity(localX + 4, localY + 2, localZ + 4);
-
-                            chest.setStack(localRandom.nextInt(chest.size()), new ItemStack(Item.GOLD_INGOT, localRandom.nextInt(2, 5)));
-                            chest.setStack(localRandom.nextInt(chest.size()), new ItemStack(Item.GOLD_INGOT, localRandom.nextInt(2, 5)));
-                            chest.setStack(localRandom.nextInt(chest.size()), new ItemStack(Item.IRON_INGOT, localRandom.nextInt(2, 5)));
+                        // treasure room
+                        case 3:
+                            chest = GenerationHelper.lootChest(localWorld, localRandom, localX + 4, localY + 2, localZ + 4, 4,
+                                    new Item[] { Item.GOLD_INGOT, Item.IRON_INGOT, Item.DIAMOND },
+                                    new int[] { 2, 2, 1 },
+                                    new int[] { 5, 5, 2 }
+                            );
 
                             if (localRandom.nextBoolean())
                                 chest.setStack(localRandom.nextInt(chest.size()), new ItemStack(Item.GOLDEN_APPLE, 1));
@@ -92,13 +111,13 @@ public class DesertCryptFeature extends Feature {
                             GenerationHelper.replaceRect(localWorld, Block.SANDSTONE.id, Natsucraft.LAPIS_SANDSTONE.id, localX, localY + 1, localZ, 9, 1, 9);
                             break;
 
-                        // 1/6 chance of weird pillar room
-                        case 3:
+                        // weird pillar room
+                        case 4:
                             GenerationHelper.fillRect(localWorld, Block.SANDSTONE.id, localX + 3, localY + 1, localZ + 3, 3, 4, 3);
                             break;
 
-                        // 1/6 chance of tomb
-                        case 4:
+                        // tomb
+                        case 5:
                             GenerationHelper.fillRect(localWorld, Block.SANDSTONE.id, localX + 2, localY + 1, localZ + 3, 5, 1, 3);
                             localWorld.setBlockWithoutNotifyingNeighbors(localX + 2, localY + 1, localZ + 3, Block.SLAB.id, 1);
                             localWorld.setBlockWithoutNotifyingNeighbors(localX + 2, localY + 1, localZ + 5, Block.SLAB.id, 1);
@@ -110,18 +129,14 @@ public class DesertCryptFeature extends Feature {
                             localWorld.setBlockWithoutNotifyingNeighbors(localX + 6, localY + 1, localZ + 5, Block.SLAB.id, 1);
                             localWorld.setBlockWithoutNotifyingNeighbors(localX + 3, localY + 1, localZ + 4, Block.GOLD_BLOCK.id);
 
-                            localWorld.setBlock(localX + 3, localY, localZ + 4, Block.CHEST.id);
-                            chest = (ChestBlockEntity) localWorld.getBlockEntity(localX + 3, localY, localZ + 4);
-
-                            for (int i=0; i<6; i++)
-                                chest.setStack(localRandom.nextInt(chest.size()), new ItemStack(Item.BONE, localRandom.nextInt(1, 5)));
+                            chest = GenerationHelper.lootChest(localWorld, localRandom, localX + 3, localY, localZ + 4, 8,
+                                    new Item[] { Item.BONE, Natsucraft.FABRIC },
+                                    new int[] { 1, 1 },
+                                    new int[] { 5, 5 }
+                            );
 
                             if (localRandom.nextBoolean())
                                 chest.setStack(localRandom.nextInt(chest.size()), new ItemStack(Item.IRON_SWORD, 1));
-
-                        // 1/6 chance of hallway room
-                        default:
-                            break;
                     }
                 }
         );
