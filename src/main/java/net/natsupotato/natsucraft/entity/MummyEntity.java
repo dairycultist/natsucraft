@@ -3,6 +3,7 @@ package net.natsupotato.natsucraft.entity;
 import net.minecraft.entity.mob.MonsterEntity;
 import net.minecraft.item.Item;
 import net.minecraft.world.World;
+import net.natsupotato.natsucraft.Natsucraft;
 
 public class MummyEntity extends MonsterEntity {
 
@@ -26,7 +27,5 @@ public class MummyEntity extends MonsterEntity {
         return "mob.zombiedeath";
     }
 
-    protected int getDroppedItemId() {
-        return Item.FEATHER.id;
-    }
+    protected int getDroppedItemId() { return Natsucraft.FABRIC.id; }
 }

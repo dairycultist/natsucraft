@@ -45,6 +45,8 @@ public class Natsucraft {
     public static Item GLOWSAP;
     public static Item CHICKEN_RAW;
     public static Item CHICKEN_COOKED;
+    public static Item FABRIC;
+    public static Item BANDAGE;
 
     @EventListener
     public void registerBlocks(BlockRegistryEvent event) {
@@ -121,6 +123,13 @@ public class Natsucraft {
 
         CHICKEN_COOKED = new TemplateFoodItem(NAMESPACE.id("chicken_cooked"), 6, true)
         .setTranslationKey(NAMESPACE, "chicken_cooked");
+
+        FABRIC = new TemplateItem(NAMESPACE.id("fabric"))
+                .setTranslationKey(NAMESPACE, "fabric");
+
+        BANDAGE = new TemplateFoodItem(NAMESPACE.id("bandage"), 6, false)
+                .setMaxCount(8)
+                .setTranslationKey(NAMESPACE, "bandage");
     }
 
     @EventListener

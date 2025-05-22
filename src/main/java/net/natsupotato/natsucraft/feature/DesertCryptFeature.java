@@ -11,9 +11,7 @@ import net.natsupotato.natsucraft.Natsucraft;
 
 import java.util.Random;
 
-public class DesertShrineFeature extends Feature {
-
-    // desert crypt
+public class DesertCryptFeature extends Feature {
 
     @Override
     public boolean generate(World world, Random random, int x, int y, int z) {
