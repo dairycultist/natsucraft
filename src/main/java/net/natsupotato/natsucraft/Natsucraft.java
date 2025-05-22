@@ -127,7 +127,7 @@ public class Natsucraft {
         FABRIC = new TemplateItem(NAMESPACE.id("fabric"))
                 .setTranslationKey(NAMESPACE, "fabric");
 
-        BANDAGE = new TemplateFoodItem(NAMESPACE.id("bandage"), 6, false)
+        BANDAGE = new TemplateFoodItem(NAMESPACE.id("bandage"), 4, false)
                 .setMaxCount(8)
                 .setTranslationKey(NAMESPACE, "bandage");
     }

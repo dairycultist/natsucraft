@@ -30,6 +30,7 @@ My goal for this mod is to cut down on the survival aspect of beta Minecraft, an
   - Retexture/rename stone tools to copper
 - Crafting recipes
   - 1 Glowsap + 1 Stick = 4 Torches
+  - 3 Fabric + 1 Glowsap = 1 Bandage
 
 ### New enemies
 
@@ -39,7 +40,8 @@ My goal for this mod is to cut down on the survival aspect of beta Minecraft, an
   - summoned by...
   - drops the lich sword
 - Mummy ([skin base](https://www.minecraftskins.com/skin/22900078/mummy/))
-  - (TODO) Drops fabric
+  - Drops fabric
+  - Basically just a retextured zombie that doesn't burn in daylight
 
 ### Unique tools/weapons/armor
 
@@ -49,9 +51,8 @@ My goal for this mod is to cut down on the survival aspect of beta Minecraft, an
 
 - Add custom jungle leaves + sapling
 - Refactor to dairycultist.\<new title>
-- 3 Fabric + 1 Glowsap = 1 Bandage
 
-## Planned (maybe)
+## Ideas that may or may not be added
 
 - Lots of unique tools/weapons/armor
   - Ceremonial Dagger - low damage, but vampirism (found as loot)
@@ -61,6 +62,7 @@ My goal for this mod is to cut down on the survival aspect of beta Minecraft, an
 - Exploration (my fav)
   - Surface Structures
     - Villages
+    - Battle towers
   - Dungeons
     - I like dungeon crawling/looting and caving (and I don't like stripmining)
     - Has iron, gold, and sometimes an unlit nether portal, meaning you technically don't need to do any mining to progress
