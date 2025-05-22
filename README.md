@@ -28,6 +28,8 @@ My goal for this mod is to cut down on the survival aspect of beta Minecraft, an
   - Remove crafting recipes of wooden and stone weapons/tools
   - Player spawns with stone tools (on world spawn and after death)
   - Retexture/rename stone tools to copper
+- Crafting recipes
+  - 1 Glowsap + 1 Stick = 4 Torches
 
 ### New enemies
 
@@ -49,9 +51,9 @@ My goal for this mod is to cut down on the survival aspect of beta Minecraft, an
   - Ceremonial Dagger - low damage, but vampirism (found as loot) 
   - Pharaoh's Blade - high damage (found as loot)
   - Scimitar - basically just an iron sword (dropped by mummies)
-- mummy ([skin base](https://www.minecraftskins.com/skin/22900078/mummy/))
-- mummy will drop fabric, which if you combine three of with 1 sap, you make a bandage
-- crafting recipe for sap + stick = torches
+- Mummy ([skin base](https://www.minecraftskins.com/skin/22900078/mummy/))
+  - Drops fabric
+- 3 Fabric + 1 Glowsap = 1 Bandage
 
 ## Planned (maybe)
 
