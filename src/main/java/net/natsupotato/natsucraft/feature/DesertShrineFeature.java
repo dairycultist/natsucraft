@@ -13,6 +13,8 @@ import java.util.Random;
 
 public class DesertShrineFeature extends Feature {
 
+    // desert crypt
+
     @Override
     public boolean generate(World world, Random random, int x, int y, int z) {
 
@@ -47,6 +49,8 @@ public class DesertShrineFeature extends Feature {
                         localWorld.setBlock(localX + 4, localY + 4, localZ + 7, Block.TORCH.id);
                     }
 
+                    ChestBlockEntity chest;
+
                     switch (roomType) {
 
                         // 1/3 chance of spawner room
@@ -77,7 +81,7 @@ public class DesertShrineFeature extends Feature {
                         // 1/6 chance of treasure room
                         case 2:
                             localWorld.setBlock(localX + 4, localY + 2, localZ + 4, Block.CHEST.id);
-                            ChestBlockEntity chest = (ChestBlockEntity) localWorld.getBlockEntity(localX + 4, localY + 2, localZ + 4);
+                            chest = (ChestBlockEntity) localWorld.getBlockEntity(localX + 4, localY + 2, localZ + 4);
 
                             chest.setStack(localRandom.nextInt(chest.size()), new ItemStack(Item.GOLD_INGOT, localRandom.nextInt(2, 5)));
                             chest.setStack(localRandom.nextInt(chest.size()), new ItemStack(Item.GOLD_INGOT, localRandom.nextInt(2, 5)));
@@ -95,7 +99,29 @@ public class DesertShrineFeature extends Feature {
                             GenerationHelper.fillRect(localWorld, Block.SANDSTONE.id, localX + 3, localY + 1, localZ + 3, 3, 4, 3);
                             break;
 
-                        // 1/3 chance of hallway room
+                        // 1/6 chance of tomb
+                        case 4:
+                            GenerationHelper.fillRect(localWorld, Block.SANDSTONE.id, localX + 2, localY + 1, localZ + 3, 5, 1, 3);
+                            localWorld.setBlockWithoutNotifyingNeighbors(localX + 2, localY + 1, localZ + 3, Block.SLAB.id, 1);
+                            localWorld.setBlockWithoutNotifyingNeighbors(localX + 2, localY + 1, localZ + 5, Block.SLAB.id, 1);
+                            localWorld.setBlockWithoutNotifyingNeighbors(localX + 4, localY + 1, localZ + 3, Block.SLAB.id, 1);
+                            localWorld.setBlockWithoutNotifyingNeighbors(localX + 4, localY + 1, localZ + 5, Block.SLAB.id, 1);
+                            localWorld.setBlockWithoutNotifyingNeighbors(localX + 5, localY + 1, localZ + 3, Block.SLAB.id, 1);
+                            localWorld.setBlockWithoutNotifyingNeighbors(localX + 5, localY + 1, localZ + 5, Block.SLAB.id, 1);
+                            localWorld.setBlockWithoutNotifyingNeighbors(localX + 6, localY + 1, localZ + 3, Block.SLAB.id, 1);
+                            localWorld.setBlockWithoutNotifyingNeighbors(localX + 6, localY + 1, localZ + 5, Block.SLAB.id, 1);
+                            localWorld.setBlockWithoutNotifyingNeighbors(localX + 3, localY + 1, localZ + 4, Block.GOLD_BLOCK.id);
+
+                            localWorld.setBlock(localX + 3, localY, localZ + 4, Block.CHEST.id);
+                            chest = (ChestBlockEntity) localWorld.getBlockEntity(localX + 3, localY, localZ + 4);
+
+                            for (int i=0; i<6; i++)
+                                chest.setStack(localRandom.nextInt(chest.size()), new ItemStack(Item.BONE, localRandom.nextInt(1, 5)));
+
+                            if (localRandom.nextBoolean())
+                                chest.setStack(localRandom.nextInt(chest.size()), new ItemStack(Item.IRON_SWORD, 1));
+
+                        // 1/6 chance of hallway room
                         default:
                             break;
                     }
@@ -113,8 +139,7 @@ public class DesertShrineFeature extends Feature {
                 world.setBlockWithoutNotifyingNeighbors(ox, y, oz, Block.SANDSTONE.id);
                 world.setBlockWithoutNotifyingNeighbors(ox, y + 1, oz, Block.SANDSTONE.id);
                 world.setBlockWithoutNotifyingNeighbors(ox, y + 2, oz, Natsucraft.GLOWSAP_SANDSTONE.id);
-                world.setBlockWithoutNotifyingNeighbors(ox, y + 3, oz, Block.SLAB.id);
-                world.setBlockMetaWithoutNotifyingNeighbors(ox, y + 3, oz, 1);
+                world.setBlockWithoutNotifyingNeighbors(ox, y + 3, oz, Block.SLAB.id, 1);
             }
         }
 

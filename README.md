@@ -49,6 +49,9 @@ My goal for this mod is to cut down on the survival aspect of beta Minecraft, an
   - Ceremonial Dagger - low damage, but vampirism (found as loot) 
   - Pharaoh's Blade - high damage (found as loot)
   - Scimitar - basically just an iron sword (dropped by mummies)
+- mummy ([skin base](https://www.minecraftskins.com/skin/22900078/mummy/))
+- mummy will drop fabric, which if you combine three of with 1 sap, you make a bandage
+- crafting recipe for sap + stick = torches
 
 ## Planned (maybe)
 
