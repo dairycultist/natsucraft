@@ -1,6 +1,7 @@
 package net.natsupotato.natsucraft.mixin.biome;
 
 import net.minecraft.world.biome.Biome;
+import net.natsupotato.natsucraft.entity.MummyEntity;
 import net.natsupotato.natsucraft.feature.DesertShrineFeature;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.injection.At;
@@ -15,7 +16,9 @@ public class BiomeMixin {
 
         Biome self = (Biome) (Object) this;
 
-        if (name.equals("Desert"))
+        if (name.equals("Desert")) {
             self.addFeature(new DesertShrineFeature());
+            self.addHostileEntity(MummyEntity.class, 10);
+        }
     }
 }

@@ -61,7 +61,7 @@ public class DesertShrineFeature extends Feature {
                             String monster;
 
                             if (localRandom.nextBoolean()) {
-                                monster = "Zombie";
+                                monster = "Mummy";
                             } else {
                                 monster = "Spider";
 

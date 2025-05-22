@@ -22,6 +22,8 @@ import net.modificationstation.stationapi.api.template.item.TemplateItem;
 import net.modificationstation.stationapi.api.template.item.TemplateSwordItem;
 import net.modificationstation.stationapi.api.util.Namespace;
 import net.modificationstation.stationapi.api.util.Null;
+import net.natsupotato.natsucraft.entity.LichEntity;
+import net.natsupotato.natsucraft.entity.MummyEntity;
 import net.natsupotato.natsucraft.mixin.tool.ToolItemAccessor;
 
 import java.util.Random;
@@ -125,5 +127,6 @@ public class Natsucraft {
     public void registerEntities(EntityRegister event) {
 
         event.register(LichEntity.class, "Lich");
+        event.register(MummyEntity.class, "Mummy");
     }
 }

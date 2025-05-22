@@ -1,14 +1,13 @@
-package net.natsupotato.natsucraft;
+package net.natsupotato.natsucraft.entity;
 
 import net.fabricmc.api.EnvType;
 import net.fabricmc.api.Environment;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.mob.MonsterEntity;
 import net.minecraft.entity.mob.SkeletonEntity;
-import net.minecraft.entity.player.PlayerEntity;
-import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.world.World;
+import net.natsupotato.natsucraft.Natsucraft;
 
 public class LichEntity extends MonsterEntity {
 

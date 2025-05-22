@@ -38,6 +38,8 @@ My goal for this mod is to cut down on the survival aspect of beta Minecraft, an
   - After a certain amount of damage, the lich uses necromancy to summon three skeletons in a puff of smoke to assist it in battle
   - summoned by...
   - drops the lich sword
+- Mummy ([skin base](https://www.minecraftskins.com/skin/22900078/mummy/))
+  - (TODO) Drops fabric
 
 ### Unique tools/weapons/armor
 
@@ -47,16 +49,14 @@ My goal for this mod is to cut down on the survival aspect of beta Minecraft, an
 
 - Add custom jungle leaves + sapling
 - Refactor to dairycultist.\<new title>
-- Lots of unique tools/weapons/armor
-  - Ceremonial Dagger - low damage, but vampirism (found as loot) 
-  - Pharaoh's Blade - high damage (found as loot)
-  - Scimitar - basically just an iron sword (dropped by mummies)
-- Mummy ([skin base](https://www.minecraftskins.com/skin/22900078/mummy/))
-  - Drops fabric
 - 3 Fabric + 1 Glowsap = 1 Bandage
 
 ## Planned (maybe)
 
+- Lots of unique tools/weapons/armor
+  - Ceremonial Dagger - low damage, but vampirism (found as loot)
+  - Pharaoh's Blade - high damage (found as loot)
+  - Scimitar - basically just an iron sword (dropped by mummies)
 - Update some UI textures (like hearts and inventory)
 - Exploration (my fav)
   - Surface Structures
@@ -76,4 +76,5 @@ My goal for this mod is to cut down on the survival aspect of beta Minecraft, an
 - Armor rework
   - Armor now grants more max HP instead of reducing damage taken
 - Wings ([reference](https://www.curseforge.com/minecraft/mc-mods/simple-flight))
+  - Port over cockatrice for their feathers? could probably also use their features for some new weapons/tools
 - Familiars ([reference](https://www.curseforge.com/minecraft/mc-mods/touhou-little-maid))
