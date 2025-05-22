@@ -93,6 +93,8 @@ public class DesertCryptFeature extends Feature {
                             if (localRandom.nextBoolean())
                                 chest.setStack(localRandom.nextInt(chest.size()), new ItemStack(Item.IRON_SWORD, 1));
 
+                            break;
+
                         // spawner room/chest room
                         default:
 
