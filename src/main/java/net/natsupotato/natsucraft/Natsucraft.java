@@ -33,7 +33,7 @@ import static net.minecraft.block.Block.*;
 public class Natsucraft {
 
     @Entrypoint.Namespace
-    public static final Namespace NAMESPACE = Null.get();
+    public static Namespace NAMESPACE = Null.get();
 
     public static Block LAPIS_SANDSTONE;
     public static Block GLOWSAP_SANDSTONE;

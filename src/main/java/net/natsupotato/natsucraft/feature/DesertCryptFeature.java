@@ -16,7 +16,7 @@ public class DesertCryptFeature extends Feature {
     @Override
     public boolean generate(World world, Random random, int x, int y, int z) {
 
-        if (random.nextInt(8) != 0) // 128
+        if (random.nextInt(128) != 0)
             return false;
 
         // base/foundation

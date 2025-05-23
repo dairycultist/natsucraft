@@ -51,6 +51,7 @@ My goal for this mod is to cut down on the survival aspect of beta Minecraft, an
 
 - Add custom jungle leaves + sapling
 - Refactor to dairycultist.\<new title>
+- Some sort of mechanic that encourages both 1) building a permanent, large base and 2) often leaving base to explore far away before returning
 
 ## Ideas that may or may not be added
 
