@@ -6,28 +6,31 @@ My goal for this mod is to cut down on the survival aspect of beta Minecraft, an
 
 ## Implemented (subject to change)
 
-I like customization
-I like RPG mechanics
-I like dungeons
-I like resource gathering
-Add a character development system into minecraft
-with skills and stuff
-honestly I should really just keep things simple
-I go so overboard adding stuff that's not really overtly fun
-I should just... add a bunch of dungeons and biomes
+[//]: # (I like customization)
+[//]: # (I like RPG mechanics)
+[//]: # (I like dungeons)
+[//]: # (I like resource gathering)
+[//]: # (Add a character development system into minecraft)
+[//]: # (with skills and stuff)
+[//]: # (honestly I should really just keep things simple)
+[//]: # (I go so overboard adding stuff that's not really overtly fun)
+[//]: # (I should just... add a bunch of dungeons and biomes)
+[//]: # (I just wanna come across a strange cobblestone monument in Minecraft beta and explore its hallways :<)
+
+### Misc
 
 - Idle regen
+- Ornate sandstone (lapis and glowstone)
 
 ### Dungeons
+
+- Desert crypt (featuring an underground dungeon)
 
 ### Biomes
 
 - Updated rainforest biome (previously was just a forest that spawned big oak trees more often, now has jungle trees with jungle wood!)
 - Updated forest biome (inspired by The Aether/Deep Aether)
   - Grows mushrooms, including new glowcaps
-- Updated desert biome
-  - Desert shrine (featuring an underground dungeon)
-  - Ornate sandstone (lapis and glowstone)
 
 ### Mobs
 
@@ -52,10 +55,6 @@ I should just... add a bunch of dungeons and biomes
 
 ## Ideas that may or may not be added
 
-- Lots of unique tools/weapons/armor
-  - Ceremonial Dagger - low damage, but vampirism (found as loot)
-  - Pharaoh's Blade - high damage (found as loot)
-  - Scimitar - basically just an iron sword (dropped by mummies)
 - Update some UI textures (like hearts and inventory)
 - Exploration (my fav)
   - Surface Structures
@@ -73,8 +72,6 @@ I should just... add a bunch of dungeons and biomes
       - you need gold to make another portal
       - if you don't like mining for endgame gear, you can explore/fight for it instead
     - Red slime
-- Armor rework
-  - Armor now grants more max HP instead of reducing damage taken
 - Wings ([reference](https://www.curseforge.com/minecraft/mc-mods/simple-flight))
   - Port over cockatrice for their feathers? could probably also use their features for some new weapons/tools
 - Familiars ([reference](https://www.curseforge.com/minecraft/mc-mods/touhou-little-maid))
