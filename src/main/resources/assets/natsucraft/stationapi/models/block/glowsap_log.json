@@ -1,7 +1,0 @@
-{
-  "parent": "block/cube_column",
-  "textures": {
-    "side": "natsucraft:block/glowsap_log",
-    "end": "minecraft:block/oak_log_top"
-  }
-}

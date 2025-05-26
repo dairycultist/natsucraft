@@ -5,12 +5,11 @@ item.shovelStone.name=Copper Shovel
 item.hoeStone.name=Copper Hoe
 
 tile.@.lapis_sandstone.name=Ornate Sandstone
-tile.@.glowsap_sandstone.name=Ornate Sandstone
+tile.@.glowstone_sandstone.name=Ornate Sandstone
 tile.@.jungle_log.name=Wood
 tile.@.glowsap_log.name=Wood
 item.@.lich_sword.name=Lich Sword
 tile.@.glowcap.name=Glowcap
-item.@.glowsap.name=Glowsap
 item.@.chicken_raw.name=Raw Chicken
 item.@.chicken_cooked.name=Cooked Chicken
 item.@.fabric.name=Fabric

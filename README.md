@@ -6,46 +6,43 @@ My goal for this mod is to cut down on the survival aspect of beta Minecraft, an
 
 ## Implemented (subject to change)
 
-### Vanilla+
+I like customization
+I like RPG mechanics
+I like dungeons
+I like resource gathering
+Add a character development system into minecraft
+with skills and stuff
+honestly I should really just keep things simple
+I go so overboard adding stuff that's not really overtly fun
+I should just... add a bunch of dungeons and biomes
 
-- Decoration Blocks
-  - Glowcaps (mushroom that glows when placed)
-  - Jungle wood
-  - Ornate sandstone (lapis and glowsap)
-- Worldgen/exploration
-  - Updated rainforest biome (previously was just a forest that spawned big oak trees more often)
-  - Updated forest biome (inspired by The Aether/Deep Aether)
-    - Grows mushrooms (including glowcaps)
-    - Some tree logs are glowsap ore
-  - Updated desert biome
-    - Desert shrine (featuring an underground dungeon)
-- Mob skin variants (I like the Deep Aether's pastel quails)
-  - Chickens (also they have tails now)
 - Idle regen
-- Spiders are no longer slowed by cobwebs
-- Weapon/tool rework
-  - Remove tool durability
-  - Remove crafting recipes of wooden and stone weapons/tools
-  - Player spawns with stone tools (on world spawn and after death)
-  - Retexture/rename stone tools to copper
-- Crafting recipes
-  - 1 Glowsap + 1 Stick = 4 Torches
-  - 3 Fabric + 1 Glowsap = 1 Bandage
 
-### New enemies
+### Dungeons
 
-- Lich ([inspiration](https://the-grimoire-of-gaia.fandom.com/wiki/Bone_Knight)) ([skin base](https://namemc.com/skin/adcc6eab0088f51e))
+### Biomes
+
+- Updated rainforest biome (previously was just a forest that spawned big oak trees more often, now has jungle trees with jungle wood!)
+- Updated forest biome (inspired by The Aether/Deep Aether)
+  - Grows mushrooms, including new glowcaps
+- Updated desert biome
+  - Desert shrine (featuring an underground dungeon)
+  - Ornate sandstone (lapis and glowstone)
+
+### Mobs
+
+- Add Lich ([inspiration](https://the-grimoire-of-gaia.fandom.com/wiki/Bone_Knight)) ([skin base](https://namemc.com/skin/adcc6eab0088f51e))
   - end goal of the game is to defeat the lich (?)
   - After a certain amount of damage, the lich uses necromancy to summon three skeletons in a puff of smoke to assist it in battle
   - summoned by...
   - drops the lich sword
-- Mummy ([skin base](https://www.minecraftskins.com/skin/22900078/mummy/))
+- Add Mummy ([skin base](https://www.minecraftskins.com/skin/22900078/mummy/))
   - Drops fabric
   - Basically just a retextured zombie that doesn't burn in daylight
-
-### Unique tools/weapons/armor
-
-- Lich sword (dropped by Lich)
+- Chicken
+  - skin variants (I like the Deep Aether's pastel quails)
+  - they have tails now
+- Spiders are no longer slowed by cobwebs
 
 ## To-do
 

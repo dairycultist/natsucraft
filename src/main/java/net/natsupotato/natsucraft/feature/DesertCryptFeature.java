@@ -123,14 +123,14 @@ public class DesertCryptFeature extends Feature {
                             // chests
                             if (localRandom.nextBoolean())
                                 chest = GenerationHelper.lootChest(localWorld, localRandom, localX + 1, localY + 1, localZ + 2, 4,
-                                        new Item[]{Natsucraft.GLOWSAP, Natsucraft.FABRIC, Item.IRON_INGOT},
+                                        new Item[]{Natsucraft.FABRIC, Item.IRON_INGOT},
                                         new int[]{2, 2, 1},
                                         new int[]{6, 5, 4}
                                 );
 
                             if (localRandom.nextBoolean())
                                 chest = GenerationHelper.lootChest(localWorld, localRandom, localX + 7, localY + 1, localZ + 6, 4,
-                                        new Item[]{Natsucraft.GLOWSAP, Natsucraft.FABRIC, Item.IRON_INGOT},
+                                        new Item[]{Natsucraft.FABRIC, Item.IRON_INGOT},
                                         new int[]{2, 2, 1},
                                         new int[]{6, 5, 4}
                                 );
@@ -153,7 +153,7 @@ public class DesertCryptFeature extends Feature {
 
                 world.setBlockWithoutNotifyingNeighbors(ox, y, oz, Block.SANDSTONE.id);
                 world.setBlockWithoutNotifyingNeighbors(ox, y + 1, oz, Block.SANDSTONE.id);
-                world.setBlockWithoutNotifyingNeighbors(ox, y + 2, oz, Natsucraft.GLOWSAP_SANDSTONE.id);
+                world.setBlockWithoutNotifyingNeighbors(ox, y + 2, oz, Natsucraft.GLOWSTONE_SANDSTONE.id);
                 world.setBlockWithoutNotifyingNeighbors(ox, y + 3, oz, Block.SLAB.id, 1);
             }
         }

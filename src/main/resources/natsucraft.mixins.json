@@ -12,16 +12,10 @@
     "entity.ChickenEntityMixin",
     "entity.CobwebBlockMixin",
     "entity.LivingEntityAccessor",
-    "entity.PlayerEntityMixin",
-    "tool.SwordItemMixin",
-    "tool.ToolItemAccessor",
-    "tool.ToolItemMixin",
-    "tool.ToolRecipesMixin",
-    "tool.WeaponRecipesMixin"
+    "entity.PlayerEntityMixin"
   ],
   "server": [],
   "client": [
-    "InGameHudMixin",
     "entity.ChickenEntityModelMixin",
     "entity.UndeadEntityRendererMixin"
   ],

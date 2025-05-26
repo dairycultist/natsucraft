@@ -2,9 +2,6 @@
   "type": "minecraft:crafting_shapeless",
   "ingredients": [
     {
-      "item": "natsucraft:glowsap"
-    },
-    {
       "item": "natsucraft:fabric"
     },
     {

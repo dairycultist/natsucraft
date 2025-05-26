@@ -10,11 +10,11 @@
       "item": "minecraft:sandstone"
     },
     "b": {
-      "item": "natsucraft:glowsap"
+      "item": "minecraft:glowstone_dust"
     }
   },
   "result": {
-    "item": "natsucraft:glowsap_sandstone",
+    "item": "natsucraft:glowstone_sandstone",
     "count": 8
   }
 }

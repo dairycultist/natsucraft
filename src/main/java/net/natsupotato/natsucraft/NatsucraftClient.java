@@ -20,28 +20,4 @@ public class NatsucraftClient {
         event.renderers.put(LichEntity.class, new UndeadEntityRenderer(new BipedEntityModel(), 0.5f));
         event.renderers.put(MummyEntity.class, new UndeadEntityRenderer(new ZombieEntityModel(), 0.5f));
     }
-
-    @EventListener
-    public void registerTextures(TextureRegisterEvent event) {
-
-        Item.STONE_SWORD.setTextureId(
-                Atlases.getGuiItems().addTexture(Identifier.of(Natsucraft.NAMESPACE, "item/copper_sword")).index
-        );
-
-        Item.STONE_PICKAXE.setTextureId(
-                Atlases.getGuiItems().addTexture(Identifier.of(Natsucraft.NAMESPACE, "item/copper_pickaxe")).index
-        );
-
-        Item.STONE_AXE.setTextureId(
-                Atlases.getGuiItems().addTexture(Identifier.of(Natsucraft.NAMESPACE, "item/copper_axe")).index
-        );
-
-        Item.STONE_SHOVEL.setTextureId(
-                Atlases.getGuiItems().addTexture(Identifier.of(Natsucraft.NAMESPACE, "item/copper_shovel")).index
-        );
-
-        Item.STONE_HOE.setTextureId(
-                Atlases.getGuiItems().addTexture(Identifier.of(Natsucraft.NAMESPACE, "item/copper_hoe")).index
-        );
-    }
 }
