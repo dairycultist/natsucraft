@@ -3,6 +3,7 @@ package net.natsupotato.natsucraft.mixin.biome;
 import net.minecraft.world.biome.Biome;
 import net.natsupotato.natsucraft.entity.MummyEntity;
 import net.natsupotato.natsucraft.feature.DesertCryptFeature;
+import net.natsupotato.natsucraft.feature.TowerFeature;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.Inject;
@@ -15,6 +16,8 @@ public class BiomeMixin {
     protected void setNameMixin(String name, CallbackInfoReturnable<Biome> cir) {
 
         Biome self = (Biome) (Object) this;
+
+        self.addFeature(new TowerFeature());
 
         if (name.equals("Desert")) {
             self.addFeature(new DesertCryptFeature());
