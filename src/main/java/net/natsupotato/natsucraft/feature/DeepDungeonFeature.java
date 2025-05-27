@@ -21,19 +21,28 @@ public class DeepDungeonFeature extends Feature {
         // TODO make spawn 3 times more often in Jungle biomes
         // TODO top floor is kinda lame
 
-        if (random.nextInt(96) != 0)
+        if (random.nextInt(8) != 96)
             return false;
 
         if (!Block.BLOCKS_OPAQUE[world.getBlockId(x, y - 1, z)])
             return false;
 
         // top floor
-        GenerationHelper.fillHollowRect(world, Block.COBBLESTONE.id, x, y, z, 10, 5, 10);
+        GenerationHelper.fillHollowRect(world, Block.COBBLESTONE.id, x, y, z, 10, 7, 10);
         GenerationHelper.fillRect(world, Block.DIRT.id, x + 1, y, z + 1, 8, 1, 8);
 
-        // door
-        GenerationHelper.fillRect(world, Block.COBBLESTONE.id, x + 2, y, z - 1, 6, 5, 1);
-        GenerationHelper.fillRect(world, 0, x + 3, y + 1, z - 1, 4, 3, 2);
+        GenerationHelper.fillRect(world, Block.COBBLESTONE.id, x, y + 7, z, 10, 1, 10);
+
+        GenerationHelper.fillRectMeta(world, Block.SLAB.id, 3, x, y + 6, z, 10, 1, 1);
+        GenerationHelper.fillRectMeta(world, Block.SLAB.id, 3, x, y + 6, z + 9, 10, 1, 1);
+        GenerationHelper.fillRectMeta(world, Block.SLAB.id, 3, x, y + 6, z, 1, 1, 10);
+        GenerationHelper.fillRectMeta(world, Block.SLAB.id, 3, x + 9, y + 6, z, 1, 1, 10);
+
+        // doors
+        GenerationHelper.fillRect(world, 0, x + 3, y + 1, z, 4, 5, 1);
+        GenerationHelper.fillRect(world, 0, x + 3, y + 1, z + 9, 4, 5, 1);
+        GenerationHelper.fillRect(world, 0, x, y + 1, z + 3, 1, 5, 4);
+        GenerationHelper.fillRect(world, 0, x + 9, y + 1, z + 3, 1, 5, 4);
 
         for (int i = 1; i < FLOORS; i++) {
 
