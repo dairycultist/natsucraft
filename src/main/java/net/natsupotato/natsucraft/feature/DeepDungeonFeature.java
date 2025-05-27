@@ -19,6 +19,7 @@ public class DeepDungeonFeature extends Feature {
     public boolean generate(World world, Random random, int x, int y, int z) {
 
         // TODO make spawn 3 times more often in Jungle biomes
+        // TODO top floor is kinda lame
 
         if (random.nextInt(96) != 0)
             return false;
@@ -37,7 +38,7 @@ public class DeepDungeonFeature extends Feature {
         for (int i = 1; i < FLOORS; i++) {
 
             int floorY = y - i * 5;
-            final int DIAMOND_CHANCE = FLOORS * 2 - i;
+            final int DIAMOND_CHANCE = FLOORS - i;
 
             // floor
             GenerationHelper.generateMaze(world, random, x, floorY, z, 5, 5, 5, 2, 2, Block.COBBLESTONE.id,
@@ -57,14 +58,14 @@ public class DeepDungeonFeature extends Feature {
                             GenerationHelper.replaceRectRandomly(world, random, 5, Block.COBBLESTONE.id, Block.IRON_ORE.id, localX + 1, localY, localZ + 1, 3, 1, 3);
 
                             if (localRandom.nextInt(DIAMOND_CHANCE) == 0)
-                                GenerationHelper.replaceRectRandomly(world, random, 5, Block.COBBLESTONE.id, Block.DIAMOND_ORE.id, localX + 1, localY, localZ + 1, 3, 1, 3);
+                                GenerationHelper.replaceRectRandomly(world, random, 3, Block.COBBLESTONE.id, Block.DIAMOND_ORE.id, localX + 1, localY, localZ + 1, 3, 1, 3);
 
                         } else if (localRandom.nextInt(4) == 0) {
 
                             ChestBlockEntity chest = GenerationHelper.lootChest(world, random, localX + 2, localY + 1, localZ + 2, 10,
                                     new Item[] { Item.IRON_INGOT, Item.GOLD_INGOT, Item.STRING, Item.LEATHER, Item.SEEDS, Natsucraft.BANDAGE },
                                     new int[] { 3, 3, 1, 1, 1, 1 },
-                                    new int[] { 5, 5, 4, 4, 4, 3 }
+                                    new int[] { 6, 6, 4, 4, 4, 3 }
                             );
 
                             if (localRandom.nextInt(32) == 0)
@@ -75,6 +76,7 @@ public class DeepDungeonFeature extends Feature {
 
             // get mossier as you go down
             GenerationHelper.replaceRectRandomly(world, random, FLOORS + 1 - i, Block.COBBLESTONE.id, Block.MOSSY_COBBLESTONE.id, x, y - i * 5, z, 10, 5, 10);
+            GenerationHelper.replaceRectRandomly(world, random, FLOORS * 2 + 1 - i * 2, Block.COBBLESTONE.id, Block.MOSSY_COBBLESTONE.id, x, y - i * 5, z, 10, 5, 10);
 
             // ladder connecting up
             if (i % 2 == 0)
