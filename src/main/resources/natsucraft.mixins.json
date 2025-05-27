@@ -7,6 +7,7 @@
     "LeavesBlockMixin",
     "biome.BiomeMixin",
     "biome.ForestBiomeMixin",
+    "biome.HellBiomeMixin",
     "biome.RainforestBiomeMixin",
     "entity.ChickenEntityMixin",
     "entity.CobwebBlockMixin",

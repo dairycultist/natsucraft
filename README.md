@@ -2,10 +2,9 @@
 
 A soft-fantasy mod for Minecraft b1.7.3 made with StationAPI.
 
-My goal for this mod is to cut down on the survival aspect of beta Minecraft, and flesh out the exploration aspect (which I find more fun).
-
 ## Implemented (subject to change)
 
+[//]: # (My goal for this mod is to cut down on the survival aspect of beta Minecraft, and flesh out the exploration aspect &#40;which I find more fun&#41;.)
 [//]: # (I like customization)
 [//]: # (I like RPG mechanics)
 [//]: # (I like dungeons)
@@ -31,6 +30,8 @@ My goal for this mod is to cut down on the survival aspect of beta Minecraft, an
 - Updated rainforest biome (previously was just a forest that spawned big oak trees more often, now has jungle trees with jungle wood!)
 - Updated forest biome (inspired by The Aether/Deep Aether)
   - Grows mushrooms, including new glowcaps
+- Updated Nether
+  - Grows glowcaps
 
 ### Mobs
 
@@ -67,7 +68,6 @@ My goal for this mod is to cut down on the survival aspect of beta Minecraft, an
     - grows blackberry bushes (and blueberries, and bunnies, and quails, like the Aether)
     - spawns slimes
   - Nether
-    - Grows mushrooms (including glowcaps)
     - Gold (and diamond) are only found most often (but not exclusively) in the nether
       - you need gold to make another portal
       - if you don't like mining for endgame gear, you can explore/fight for it instead
