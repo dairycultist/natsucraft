@@ -21,7 +21,7 @@ public class DeepDungeonFeature extends Feature {
         // TODO make spawn 3 times more often in Jungle biomes
         // TODO top floor is kinda lame
 
-        if (random.nextInt(8) != 96)
+        if (random.nextInt(96) != 0)
             return false;
 
         if (!Block.BLOCKS_OPAQUE[world.getBlockId(x, y - 1, z)])

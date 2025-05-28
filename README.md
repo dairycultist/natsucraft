@@ -55,14 +55,14 @@ A soft-fantasy mod for Minecraft b1.7.3 made with StationAPI.
 - Refactor to dairycultist.\<new title>
 - Some sort of mechanic that encourages both 1) building a permanent, large base and 2) often leaving base to explore far away before returning
 
-- make deep dungeons have random contents/variants. some are zombie, some are spider, etc, but the top is the same,
+- make deep dungeons have random contents/variants. some are zombie, some are spider, etc, but the top is the same
 - spider boss, twice the size of a regular spider, with a big butt, make the texture kind of white. spawns at the bottom of a special spider dungeons
 
 ## Ideas that may or may not be added
 
 - Update some UI textures (like hearts and inventory)
-- you should implement a key that you find in the dungeon to unlock the boss door
-- Exploration (my fav)
+- Implement a key that you find in the dungeon to unlock the boss door
+- Exploration
   - Surface Structures
     - Villages
     - Battle towers
