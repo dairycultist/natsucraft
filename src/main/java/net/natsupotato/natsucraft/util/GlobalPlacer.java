@@ -48,4 +48,8 @@ public class GlobalPlacer implements Placer {
         fillRect(blockId, meta, x, y, z, w, h, l);
         fillRect(0, x + 1, y + 1, z + 1, w - 2, h - 2, l - 2);
     }
+
+    public void replaceRect(BlockLambda block, int x, int y, int z, int w, int h, int l) {
+        System.err.println("Not Implemented!");
+    }
 }

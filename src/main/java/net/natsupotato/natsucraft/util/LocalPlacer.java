@@ -60,4 +60,16 @@ public class LocalPlacer implements Placer {
         fillRect(blockId, meta, x, y, z, w, h, l);
         fillRect(0, x + 1, y + 1, z + 1, w - 2, h - 2, l - 2);
     }
+
+    public void replaceRect(BlockLambda block, int x, int y, int z, int w, int h, int l) {
+
+        int xb = x + localX + w;
+        int yb = y + localY + h;
+        int zb = z + localZ + l;
+
+        for (int xa = x + localX; xa < xb; xa++)
+            for (int ya = y + localY; ya < yb; ya++)
+                for (int za = z + localZ; za < zb; za++)
+                    world.setBlockWithoutNotifyingNeighbors(xa, ya, za, block.getBlock(world.getBlockId(xa, ya, za)));
+    }
 }

@@ -1,10 +1,13 @@
 # Dungeoncraft
 
-A soft-fantasy mod for b1.7.3 that adds cool dungeons.
-
-I'm gonna cut down the scope of this project to just dungeons and dungeon-related stuff (mobs, blocks, etc).
+I'm gonna cut down the scope of this project to just soft-fantasy dungeons and dungeon-related stuff (mobs, blocks, etc).
 
 I just wanna come across a strange cobblestone monument in Minecraft beta and explore/loot its hallways :<
+
+The thing with Minecraft structures is they're so drop-in-a-bucket, they should be incorporated into the surroundings more.
+Like how biomes aren't just 1 chunk of biome, structures should be more spread out, with peripheral structures and bigger
+central structures incorporated into the terrain. Ancient ruins that build on the lonely feeling in b1.7.3.
+Stone structures that could possibly date back to some kind of really old lost civilization.
 
 ## Implemented (subject to change)
 
@@ -25,9 +28,13 @@ I just wanna come across a strange cobblestone monument in Minecraft beta and ex
 - Chicken
   - skin variants (I like the Deep Aether's pastel quails)
   - they have tails now
+  - drops meat
 - Spiders are no longer slowed by cobwebs
 
 ## To-do
 
 - Refactor to `dairycultist.dungeoncraft`
 - Some sort of mechanic that encourages both 1) building a permanent, large base and 2) often leaving base to explore far away before returning
+- prettier (roundedish) corners in crypt
+- naming conventions in beta are convenient because when I add slightly brighter stone with a border and cracked slightly brighter stone with a border and slightly brighter stone with a border subdivided into four quadrants I can just call all of them "stone"
+- chest with iron trim

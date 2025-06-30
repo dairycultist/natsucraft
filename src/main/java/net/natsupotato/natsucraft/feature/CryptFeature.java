@@ -4,7 +4,6 @@ import net.minecraft.block.Block;
 import net.minecraft.world.World;
 import net.minecraft.world.gen.feature.Feature;
 import net.natsupotato.natsucraft.util.GenerationHelper;
-import net.natsupotato.natsucraft.util.GlobalPlacer;
 import net.natsupotato.natsucraft.util.LocalPlacer;
 import net.natsupotato.natsucraft.util.Placer;
 
@@ -58,6 +57,20 @@ public class CryptFeature extends Feature {
 
                     placer.fillRect(Block.COBBLESTONE.id, 1, 5, 1, 7, 1, 7);
                     placer.fillRect(0, 2, 5, 2, 5, 1, 5);
+
+                    placer.replaceRect((prevBlockId) -> {
+
+                        if (prevBlockId == Block.COBBLESTONE.id) {
+
+                            switch (localRandom.nextInt(3)) {
+                                case 0: return Block.STONE.id;
+                                case 1: return Block.MOSSY_COBBLESTONE.id;
+                            }
+                        }
+
+                        return prevBlockId;
+                    },
+                    0, 0, 0, 9, 7, 9);
 
 //                    int roomType = localRandom.nextInt(10);
 //
