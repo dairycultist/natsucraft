@@ -1,35 +1,16 @@
 package net.natsupotato.natsucraft.util;
 
-import net.minecraft.block.Block;
-import net.minecraft.block.entity.ChestBlockEntity;
-import net.minecraft.item.Item;
-import net.minecraft.item.ItemStack;
 import net.minecraft.world.World;
 
 import java.util.ArrayList;
 import java.util.Random;
 import java.util.Stack;
 
-public class GenerationHelper {
+public class MazeUtil {
 
     public interface SubGenerator {
 
-        void generate(LocalPlacer placer, Random localRandom);
-    }
-
-    public static ChestBlockEntity lootChest(World world, Random random, int x, int y, int z, int tries, Item[] items, int[] mins, int[] maxes) {
-
-        world.setBlock(x, y, z, Block.CHEST.id);
-        ChestBlockEntity chest = (ChestBlockEntity) world.getBlockEntity(x, y, z);
-
-        for (int i = 0; i < tries; i++) {
-
-            int itemIndex = random.nextInt(items.length);
-
-            chest.setStack(random.nextInt(chest.size()), new ItemStack(items[itemIndex], random.nextInt(mins[itemIndex], maxes[itemIndex])));
-        }
-
-        return chest;
+        void generate(LocalPlacer placer);
     }
 
     // generate a closed maze, where xyz is bottom corner
@@ -126,7 +107,7 @@ public class GenerationHelper {
         for (int xCel = 0; xCel < xCels; xCel++) {
             for (int zCel = 0; zCel < zCels; zCel++) {
 
-                roomPopulator.generate(new LocalPlacer(world, x + xCel * roomW, y, z + zCel * roomL), random);
+                roomPopulator.generate(new LocalPlacer(world, x + xCel * roomW, y, z + zCel * roomL));
             }
         }
     }

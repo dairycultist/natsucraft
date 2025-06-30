@@ -3,8 +3,8 @@ package net.natsupotato.natsucraft.feature;
 import net.minecraft.block.Block;
 import net.minecraft.world.World;
 import net.minecraft.world.gen.feature.Feature;
-import net.natsupotato.natsucraft.util.GenerationHelper;
 import net.natsupotato.natsucraft.util.LocalPlacer;
+import net.natsupotato.natsucraft.util.MazeUtil;
 import net.natsupotato.natsucraft.util.Placer;
 
 import java.util.Random;
@@ -22,33 +22,14 @@ public class CryptFeature extends Feature {
 
     public boolean place(World world, Random random, int x, int y, int z) {
 
-        Placer topPlacer = new LocalPlacer(world, x - 5, y, z - 5);
-
-        // top floor
-        topPlacer.hollowRect(Block.COBBLESTONE.id, 0, 0, 0, 11, 7, 11);
-        topPlacer.fillRect(Block.DIRT.id, 1, 0, 1, 9, 1, 9);
-
-        topPlacer.fillRect(Block.COBBLESTONE.id, 0, 7, 0, 11, 1, 11);
-
-        topPlacer.fillRect(Block.SLAB.id, 3, 0, 6, 0, 11, 1, 1);
-        topPlacer.fillRect(Block.SLAB.id, 3, 0, 6, 10, 11, 1, 1);
-        topPlacer.fillRect(Block.SLAB.id, 3, 0, 6, 0, 1, 1, 11);
-        topPlacer.fillRect(Block.SLAB.id, 3, 10, 6, 0, 1, 1, 11);
-
-        // doors
-        topPlacer.fillRect(0, 3, 1, 0, 5, 5, 1);
-        topPlacer.fillRect(0, 3, 1, 10, 5, 5, 1);
-        topPlacer.fillRect(0, 0, 1, 3, 1, 5, 5);
-        topPlacer.fillRect(0, 10, 1, 3, 1, 5, 5);
-
         // maze
-        GenerationHelper.generateMaze(
+        MazeUtil.generateMaze(
                 world, random,
                 x - 22, y - 16, z - 22,
                 9, 7, 9,
                 5, 5,
                 Block.COBBLESTONE.id,
-                (placer, localRandom) -> {
+                (placer) -> {
 
                     placer.fillRect(Block.LOG.id, 1, 1, 1, 1, 5, 1);
                     placer.fillRect(Block.LOG.id, 7, 1, 1, 1, 5, 1);
@@ -62,7 +43,7 @@ public class CryptFeature extends Feature {
 
                         if (prevBlockId == Block.COBBLESTONE.id) {
 
-                            switch (localRandom.nextInt(3)) {
+                            switch (random.nextInt(3)) {
                                 case 0: return Block.STONE.id;
                                 case 1: return Block.MOSSY_COBBLESTONE.id;
                             }
@@ -176,9 +157,28 @@ public class CryptFeature extends Feature {
                 }
         );
 
+        Placer placer = new LocalPlacer(world, x - 5, y, z - 5);
+
+        // top floor
+        placer.hollowRect(Block.COBBLESTONE.id, 0, 0, 0, 11, 7, 11);
+        placer.fillRect(Block.DIRT.id, 1, 0, 1, 9, 1, 9);
+
+        placer.fillRect(Block.COBBLESTONE.id, 0, 7, 0, 11, 1, 11);
+
+        placer.fillRect(Block.SLAB.id, 3, 0, 6, 0, 11, 1, 1);
+        placer.fillRect(Block.SLAB.id, 3, 0, 6, 10, 11, 1, 1);
+        placer.fillRect(Block.SLAB.id, 3, 0, 6, 0, 1, 1, 11);
+        placer.fillRect(Block.SLAB.id, 3, 10, 6, 0, 1, 1, 11);
+
+        // doors
+        placer.fillRect(0, 3, 1, 0, 5, 5, 1);
+        placer.fillRect(0, 3, 1, 10, 5, 5, 1);
+        placer.fillRect(0, 0, 1, 3, 1, 5, 5);
+        placer.fillRect(0, 10, 1, 3, 1, 5, 5);
+
         // tunnel down
-        topPlacer.fillRect(Block.COBBLESTONE.id, 3, -10, 3, 5, 11, 5);
-        topPlacer.fillRect(0, 4, -12, 4, 3, 13, 3);
+        placer.fillRect(Block.COBBLESTONE.id, 3, -10, 3, 5, 11, 5);
+        placer.fillRect(0, 4, -12, 4, 3, 13, 3);
 
         return true;
     }
