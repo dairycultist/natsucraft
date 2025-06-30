@@ -1,14 +1,12 @@
 package net.natsupotato.natsucraft.feature;
 
 import net.minecraft.block.Block;
-import net.minecraft.block.entity.ChestBlockEntity;
-import net.minecraft.block.entity.MobSpawnerBlockEntity;
-import net.minecraft.item.Item;
-import net.minecraft.item.ItemStack;
 import net.minecraft.world.World;
 import net.minecraft.world.gen.feature.Feature;
-import net.natsupotato.natsucraft.Natsucraft;
 import net.natsupotato.natsucraft.util.GenerationHelper;
+import net.natsupotato.natsucraft.util.GlobalPlacer;
+import net.natsupotato.natsucraft.util.LocalPlacer;
+import net.natsupotato.natsucraft.util.Placer;
 
 import java.util.Random;
 
@@ -25,22 +23,24 @@ public class CryptFeature extends Feature {
 
     public boolean place(World world, Random random, int x, int y, int z) {
 
+        Placer topPlacer = new LocalPlacer(world, x - 5, y, z - 5);
+
         // top floor
-        GenerationHelper.fillHollowRect(world, Block.COBBLESTONE.id, x - 5, y, z - 5, 11, 7, 11);
-        GenerationHelper.fillRect(world, Block.DIRT.id, x - 4, y, z - 4, 9, 1, 9);
+        topPlacer.hollowRect(Block.COBBLESTONE.id, 0, 0, 0, 11, 7, 11);
+        topPlacer.fillRect(Block.DIRT.id, 1, 0, 1, 9, 1, 9);
 
-        GenerationHelper.fillRect(world, Block.COBBLESTONE.id, x - 5, y + 7, z - 5, 11, 1, 11);
+        topPlacer.fillRect(Block.COBBLESTONE.id, 0, 7, 0, 11, 1, 11);
 
-        GenerationHelper.fillRectMeta(world, Block.SLAB.id, 3, x - 5, y + 6, z - 5, 11, 1, 1);
-        GenerationHelper.fillRectMeta(world, Block.SLAB.id, 3, x - 5, y + 6, z + 5, 11, 1, 1);
-        GenerationHelper.fillRectMeta(world, Block.SLAB.id, 3, x - 5, y + 6, z - 5, 1, 1, 11);
-        GenerationHelper.fillRectMeta(world, Block.SLAB.id, 3, x + 5, y + 6, z - 5, 1, 1, 11);
+//        topPlacer.fillRectMeta(Block.SLAB.id, 3, x - 5, y + 6, z - 5, 11, 1, 1);
+//        topPlacer.fillRectMeta(Block.SLAB.id, 3, x - 5, y + 6, z + 5, 11, 1, 1);
+//        topPlacer.fillRectMeta(Block.SLAB.id, 3, x - 5, y + 6, z - 5, 1, 1, 11);
+//        topPlacer.fillRectMeta(Block.SLAB.id, 3, x + 5, y + 6, z - 5, 1, 1, 11);
 
         // doors
-        GenerationHelper.fillRect(world, 0, x - 2, y + 1, z - 5, 5, 5, 1);
-        GenerationHelper.fillRect(world, 0, x - 2, y + 1, z + 5, 5, 5, 1);
-        GenerationHelper.fillRect(world, 0, x - 5, y + 1, z - 2, 1, 5, 5);
-        GenerationHelper.fillRect(world, 0, x + 5, y + 1, z - 2, 1, 5, 5);
+        topPlacer.fillRect(0, 3, 1, 0, 5, 5, 1);
+        topPlacer.fillRect(0, 3, 1, 10, 5, 5, 1);
+        topPlacer.fillRect(0, 0, 1, 3, 1, 5, 5);
+        topPlacer.fillRect(0, 10, 1, 3, 1, 5, 5);
 
         // maze
         GenerationHelper.generateMaze(
@@ -48,15 +48,15 @@ public class CryptFeature extends Feature {
                 x - 22, y - 16, z - 22,
                 9, 7, 9,
                 5, 5,
-                Block.SANDSTONE.id,
+                Block.COBBLESTONE.id,
                 (placer, localRandom) -> {
 
-                    placer.fillRect(Block.SANDSTONE.id, 1, 1, 1, 1, 5, 1);
-                    placer.fillRect(Block.SANDSTONE.id, 7, 1, 1, 1, 5, 1);
-                    placer.fillRect(Block.SANDSTONE.id, 1, 1, 7, 1, 5, 1);
-                    placer.fillRect(Block.SANDSTONE.id, 7, 1, 7, 1, 5, 1);
+                    placer.fillRect(Block.LOG.id, 1, 1, 1, 1, 5, 1);
+                    placer.fillRect(Block.LOG.id, 7, 1, 1, 1, 5, 1);
+                    placer.fillRect(Block.LOG.id, 1, 1, 7, 1, 5, 1);
+                    placer.fillRect(Block.LOG.id, 7, 1, 7, 1, 5, 1);
 
-                    placer.fillRect(Block.SANDSTONE.id, 1, 5, 1, 7, 1, 7);
+                    placer.fillRect(Block.COBBLESTONE.id, 1, 5, 1, 7, 1, 7);
                     placer.fillRect(0, 2, 5, 2, 5, 1, 5);
 
 //                    int roomType = localRandom.nextInt(10);
@@ -164,8 +164,8 @@ public class CryptFeature extends Feature {
         );
 
         // tunnel down
-        GenerationHelper.fillRect(world, Block.SANDSTONE.id, x - 2, y - 10, z - 2, 5, 11, 5);
-        GenerationHelper.fillRect(world, 0, x - 1, y - 12, z - 1, 3, 13, 3);
+        topPlacer.fillRect(Block.COBBLESTONE.id, 3, -10, 3, 5, 11, 5);
+        topPlacer.fillRect(0, 4, -12, 4, 3, 13, 3);
 
         return true;
     }
