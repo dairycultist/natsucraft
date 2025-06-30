@@ -24,15 +24,22 @@ public class DesertCryptFeature extends Feature {
 
     public boolean place(World world, Random random, int x, int y, int z) {
 
-        // base/foundation
-        GenerationHelper.fillRect(world, Block.SANDSTONE.id, x - 3, y - 5, z - 3, 7, 5, 7);
+        // top floor
+        GenerationHelper.fillHollowRect(world, Block.COBBLESTONE.id, x - 5, y, z - 5, 11, 7, 11);
+        GenerationHelper.fillRect(world, Block.DIRT.id, x - 4, y, z - 4, 9, 1, 9);
 
-        for (int ox = x - 3; ox <= x + 3; ox++)
-            for (int oz = z - 3; oz <= z + 3; oz++)
-                world.setBlockWithoutNotifyingNeighbors(ox, y, oz, Block.SLAB.id, 1); // should probably add a helper with meta
+        GenerationHelper.fillRect(world, Block.COBBLESTONE.id, x - 5, y + 7, z - 5, 11, 1, 11);
 
-        // center platform
-        GenerationHelper.fillRect(world, Block.SANDSTONE.id, x - 2, y, z - 2, 5, 1, 5);
+        GenerationHelper.fillRectMeta(world, Block.SLAB.id, 3, x - 5, y + 6, z - 5, 11, 1, 1);
+        GenerationHelper.fillRectMeta(world, Block.SLAB.id, 3, x - 5, y + 6, z + 5, 11, 1, 1);
+        GenerationHelper.fillRectMeta(world, Block.SLAB.id, 3, x - 5, y + 6, z - 5, 1, 1, 11);
+        GenerationHelper.fillRectMeta(world, Block.SLAB.id, 3, x + 5, y + 6, z - 5, 1, 1, 11);
+
+        // doors
+        GenerationHelper.fillRect(world, 0, x - 2, y + 1, z - 5, 5, 5, 1);
+        GenerationHelper.fillRect(world, 0, x - 2, y + 1, z + 5, 5, 5, 1);
+        GenerationHelper.fillRect(world, 0, x - 5, y + 1, z - 2, 1, 5, 5);
+        GenerationHelper.fillRect(world, 0, x + 5, y + 1, z - 2, 1, 5, 5);
 
         // maze
         GenerationHelper.generateMaze(
@@ -159,17 +166,6 @@ public class DesertCryptFeature extends Feature {
         // tunnel down
         GenerationHelper.fillRect(world, Block.SANDSTONE.id, x - 2, y - 10, z - 2, 5, 11, 5);
         GenerationHelper.fillRect(world, 0, x - 1, y - 12, z - 1, 3, 13, 3);
-
-        // ornate pillars
-        for (int ox = x - 3; ox <= x + 3; ox += 6) {
-            for (int oz = z - 3; oz <= z + 3; oz += 6) {
-
-                world.setBlockWithoutNotifyingNeighbors(ox, y, oz, Block.SANDSTONE.id);
-                world.setBlockWithoutNotifyingNeighbors(ox, y + 1, oz, Block.SANDSTONE.id);
-                world.setBlockWithoutNotifyingNeighbors(ox, y + 2, oz, Natsucraft.GLOWSTONE_SANDSTONE.id);
-                world.setBlockWithoutNotifyingNeighbors(ox, y + 3, oz, Block.SLAB.id, 1);
-            }
-        }
 
         return true;
     }
