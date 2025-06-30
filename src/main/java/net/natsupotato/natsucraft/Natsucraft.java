@@ -1,8 +1,14 @@
 package net.natsupotato.natsucraft;
 
+import com.matthewperiut.retrocommands.api.Command;
+import com.matthewperiut.retrocommands.api.CommandRegistry;
+import com.matthewperiut.retrocommands.util.SharedCommandSource;
+import net.fabricmc.api.ModInitializer;
+import net.fabricmc.loader.api.FabricLoader;
 import net.mine_diver.unsafeevents.listener.EventListener;
 import net.minecraft.block.Block;
 import net.minecraft.entity.Entity;
+import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.Item;
 import net.minecraft.item.ToolMaterial;
 import net.modificationstation.stationapi.api.event.entity.EntityRegister;
@@ -19,12 +25,40 @@ import net.modificationstation.stationapi.api.util.Namespace;
 import net.modificationstation.stationapi.api.util.Null;
 import net.natsupotato.natsucraft.entity.LichEntity;
 import net.natsupotato.natsucraft.entity.MummyEntity;
+import net.natsupotato.natsucraft.feature.DesertCryptFeature;
 
 import java.util.Random;
 
 import static net.minecraft.block.Block.*;
 
-public class Natsucraft {
+public class Natsucraft implements ModInitializer {
+
+    public void onInitialize() {
+
+        if (FabricLoader.getInstance().isModLoaded("retrocommands")) {
+
+            CommandRegistry.add(new Command() {
+
+                @Override
+                public void command(SharedCommandSource commandSource, String[] parameters) {
+
+                    PlayerEntity p = commandSource.getPlayer();
+
+                    new DesertCryptFeature().place(p.world, p.world.random, (int) p.x, (int) p.y, (int) p.z);
+                }
+
+                @Override
+                public String name() {
+                    return "place";
+                }
+
+                @Override
+                public void manual(SharedCommandSource commandSource) {
+                    commandSource.sendFeedback("Places a DesertCryptFeature");
+                }
+            });
+        }
+    }
 
     @Entrypoint.Namespace
     public static Namespace NAMESPACE = Null.get();

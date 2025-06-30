@@ -108,10 +108,9 @@ dependencies {
         transitive false
     }
 
-// Not compatible with stapi alpha 3
-//    modRuntimeOnly ("com.github.matthewperiut:stapi-fast-intro:17a7ed0") { 
-//        transitive false 
-//    }
+    modImplementation("maven.modrinth:bh-creative:${project.bhcreative_version}-fabric,b1.7.3") {
+        transitive false
+    }
 }
 
 processResources {

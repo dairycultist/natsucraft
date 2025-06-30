@@ -19,6 +19,11 @@ public class DesertCryptFeature extends Feature {
         if (random.nextInt(128) != 0)
             return false;
 
+        return place(world, random, x, y, z);
+    }
+
+    public boolean place(World world, Random random, int x, int y, int z) {
+
         // base/foundation
         GenerationHelper.fillRect(world, Block.SANDSTONE.id, x - 3, y - 5, z - 3, 7, 5, 7);
 

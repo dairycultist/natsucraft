@@ -11,7 +11,8 @@
   "entrypoints": {
     "stationapi:event_bus": [ "net.natsupotato.natsucraft.Natsucraft" ],
     "stationapi:event_bus_client": [ "net.natsupotato.natsucraft.NatsucraftClient" ],
-    "stationapi:event_bus_server": []
+    "stationapi:event_bus_server": [],
+    "main": [ "net.natsupotato.natsucraft.Natsucraft" ]
   },
   "mixins": [
     "natsucraft.mixins.json"
