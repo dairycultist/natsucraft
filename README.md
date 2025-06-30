@@ -1,20 +1,12 @@
-# NatsuCraft (working title)
+# Dungeoncraft
 
-A soft-fantasy mod for Minecraft b1.7.3 made with StationAPI.
+A soft-fantasy mod for b1.7.3 that adds cool dungeons.
+
+I'm gonna cut down the scope of this project to just dungeons and dungeon-related stuff (mobs, blocks, etc).
+
+I just wanna come across a strange cobblestone monument in Minecraft beta and explore/loot its hallways :<
 
 ## Implemented (subject to change)
-
-[//]: # (My goal for this mod is to cut down on the survival aspect of beta Minecraft, and flesh out the exploration aspect &#40;which I find more fun&#41;.)
-[//]: # (I like customization)
-[//]: # (I like RPG mechanics)
-[//]: # (I like dungeons)
-[//]: # (I like resource gathering)
-[//]: # (Add a character development system into minecraft)
-[//]: # (with skills and stuff)
-[//]: # (honestly I should really just keep things simple)
-[//]: # (I go so overboard adding stuff that's not really overtly fun)
-[//]: # (I should just... add a bunch of dungeons and biomes)
-[//]: # (I just wanna come across a strange cobblestone monument in Minecraft beta and explore its hallways :<)
 
 ### Misc
 
@@ -51,32 +43,5 @@ A soft-fantasy mod for Minecraft b1.7.3 made with StationAPI.
 
 ## To-do
 
-- Add custom jungle leaves + sapling
 - Refactor to dairycultist.\<new title>
 - Some sort of mechanic that encourages both 1) building a permanent, large base and 2) often leaving base to explore far away before returning
-
-- make deep dungeons have random contents/variants. some are zombie, some are spider, etc, but the top is the same
-- spider boss, twice the size of a regular spider, with a big butt, make the texture kind of white. spawns at the bottom of a special spider dungeons
-
-## Ideas that may or may not be added
-
-- Update some UI textures (like hearts and inventory)
-- Implement a key that you find in the dungeon to unlock the boss door
-- Exploration
-  - Surface Structures
-    - Villages
-    - Battle towers
-  - Dungeons
-    - I like dungeon crawling/looting and caving (and I don't like stripmining)
-    - Has iron, gold, and sometimes an unlit nether portal, meaning you technically don't need to do any mining to progress
-  - Updated forest biome
-    - grows blackberry bushes (and blueberries, and bunnies, and quails, like the Aether)
-    - spawns slimes
-  - Nether
-    - Gold (and diamond) are only found most often (but not exclusively) in the nether
-      - you need gold to make another portal
-      - if you don't like mining for endgame gear, you can explore/fight for it instead
-    - Red slime
-- Wings ([reference](https://www.curseforge.com/minecraft/mc-mods/simple-flight))
-  - Port over cockatrice for their feathers? could probably also use their features for some new weapons/tools
-- Familiars ([reference](https://www.curseforge.com/minecraft/mc-mods/touhou-little-maid))
