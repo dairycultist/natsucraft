@@ -15,8 +15,6 @@ import net.modificationstation.stationapi.api.event.entity.EntityRegister;
 import net.modificationstation.stationapi.api.event.registry.BlockRegistryEvent;
 import net.modificationstation.stationapi.api.event.registry.ItemRegistryEvent;
 import net.modificationstation.stationapi.api.mod.entrypoint.Entrypoint;
-import net.modificationstation.stationapi.api.template.block.TemplateLogBlock;
-import net.modificationstation.stationapi.api.template.block.TemplateMushroomPlantBlock;
 import net.modificationstation.stationapi.api.template.block.TemplateSandstoneBlock;
 import net.modificationstation.stationapi.api.template.item.TemplateFoodItem;
 import net.modificationstation.stationapi.api.template.item.TemplateItem;
@@ -26,8 +24,6 @@ import net.modificationstation.stationapi.api.util.Null;
 import net.natsupotato.natsucraft.entity.LichEntity;
 import net.natsupotato.natsucraft.entity.MummyEntity;
 import net.natsupotato.natsucraft.feature.DesertCryptFeature;
-
-import java.util.Random;
 
 import static net.minecraft.block.Block.*;
 
