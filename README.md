@@ -35,6 +35,5 @@ Stone structures that could possibly date back to some kind of really old lost c
 
 - Refactor to `dairycultist.dungeoncraft`
 - Some sort of mechanic that encourages both 1) building a permanent, large base and 2) often leaving base to explore far away before returning
-- prettier (roundedish) corners in crypt
 - naming conventions in beta are convenient because when I add slightly brighter stone with a border and cracked slightly brighter stone with a border and slightly brighter stone with a border subdivided into four quadrants I can just call all of them "stone"
 - chest with iron trim

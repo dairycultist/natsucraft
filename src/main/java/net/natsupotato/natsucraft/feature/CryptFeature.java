@@ -31,21 +31,44 @@ public class CryptFeature extends Feature {
                 Block.COBBLESTONE.id,
                 (placer) -> {
 
+                    // pillars
                     placer.fillRect(Block.LOG.id, 1, 1, 1, 1, 5, 1);
                     placer.fillRect(Block.LOG.id, 7, 1, 1, 1, 5, 1);
                     placer.fillRect(Block.LOG.id, 1, 1, 7, 1, 5, 1);
                     placer.fillRect(Block.LOG.id, 7, 1, 7, 1, 5, 1);
 
+                    // top trim
                     placer.fillRect(Block.COBBLESTONE.id, 1, 5, 1, 7, 1, 7);
                     placer.fillRect(0, 2, 5, 2, 5, 1, 5);
 
+                    // round(ish) corners
+                    placer.setBlock(Block.COBBLESTONE.id, 2, 5, 2);
+                    placer.setBlock(Block.COBBLESTONE.id, 6, 5, 2);
+                    placer.setBlock(Block.COBBLESTONE.id, 2, 5, 6);
+                    placer.setBlock(Block.COBBLESTONE.id, 6, 5, 6);
+
+                    placer.setBlock(Block.COBBLESTONE.id, 1, 4, 2);
+                    placer.setBlock(Block.COBBLESTONE.id, 2, 4, 1);
+
+                    placer.setBlock(Block.COBBLESTONE.id, 7, 4, 2);
+                    placer.setBlock(Block.COBBLESTONE.id, 6, 4, 1);
+
+                    placer.setBlock(Block.COBBLESTONE.id, 1, 4, 6);
+                    placer.setBlock(Block.COBBLESTONE.id, 2, 4, 7);
+
+                    placer.setBlock(Block.COBBLESTONE.id, 7, 4, 6);
+                    placer.setBlock(Block.COBBLESTONE.id, 6, 4, 7);
+
+                    // randomize block palette
                     placer.replaceRect((prevBlockId) -> {
 
                         if (prevBlockId == Block.COBBLESTONE.id) {
 
                             switch (random.nextInt(3)) {
-                                case 0: return Block.STONE.id;
-                                case 1: return Block.MOSSY_COBBLESTONE.id;
+                                case 0:
+                                case 1:
+                                        return Block.STONE.id;
+                                case 2: return Block.MOSSY_COBBLESTONE.id;
                             }
                         }
 
@@ -55,12 +78,10 @@ public class CryptFeature extends Feature {
 
 //                    int roomType = localRandom.nextInt(10);
 //
-//                    if (roomType == 0 || roomType == 1 || roomType == 2) {
-//                        localWorld.setBlock(localX + 1, localY + 4, localZ + 4, Block.TORCH.id);
-//                        localWorld.setBlock(localX + 7, localY + 4, localZ + 4, Block.TORCH.id);
-//                        localWorld.setBlock(localX + 4, localY + 4, localZ + 1, Block.TORCH.id);
-//                        localWorld.setBlock(localX + 4, localY + 4, localZ + 7, Block.TORCH.id);
-//                    }
+                    placer.setBlock(Block.TORCH.id, 1, 4, 4);
+                    placer.setBlock(Block.TORCH.id, 7, 4, 4);
+                    placer.setBlock(Block.TORCH.id, 4, 4, 1);
+                    placer.setBlock(Block.TORCH.id, 4, 4, 7);
 //
 //                    ChestBlockEntity chest = null;
 //

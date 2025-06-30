@@ -17,12 +17,12 @@ public class LocalPlacer implements Placer {
 
     public void setBlock(int blockId, int x, int y, int z) {
 
-        world.setBlock(blockId, x + localX, y + localY, z + localZ);
+        world.setBlockWithoutNotifyingNeighbors(x + localX, y + localY, z + localZ, blockId);
     }
 
     public void setBlock(int blockId, int meta, int x, int y, int z) {
 
-        world.setBlock(blockId, meta, x + localX, y + localY, z + localZ);
+        world.setBlockWithoutNotifyingNeighbors(x + localX, y + localY, z + localZ, blockId, meta);
     }
 
     public void fillRect(int blockId, int x, int y, int z, int w, int h, int l) {
