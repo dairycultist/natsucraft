@@ -31,10 +31,10 @@ public class CryptFeature extends Feature {
 
         topPlacer.fillRect(Block.COBBLESTONE.id, 0, 7, 0, 11, 1, 11);
 
-//        topPlacer.fillRectMeta(Block.SLAB.id, 3, x - 5, y + 6, z - 5, 11, 1, 1);
-//        topPlacer.fillRectMeta(Block.SLAB.id, 3, x - 5, y + 6, z + 5, 11, 1, 1);
-//        topPlacer.fillRectMeta(Block.SLAB.id, 3, x - 5, y + 6, z - 5, 1, 1, 11);
-//        topPlacer.fillRectMeta(Block.SLAB.id, 3, x + 5, y + 6, z - 5, 1, 1, 11);
+        topPlacer.fillRect(Block.SLAB.id, 3, 0, 6, 0, 11, 1, 1);
+        topPlacer.fillRect(Block.SLAB.id, 3, 0, 6, 10, 11, 1, 1);
+        topPlacer.fillRect(Block.SLAB.id, 3, 0, 6, 0, 1, 1, 11);
+        topPlacer.fillRect(Block.SLAB.id, 3, 10, 6, 0, 1, 1, 11);
 
         // doors
         topPlacer.fillRect(0, 3, 1, 0, 5, 5, 1);

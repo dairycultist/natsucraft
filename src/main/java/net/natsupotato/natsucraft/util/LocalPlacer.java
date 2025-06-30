@@ -20,6 +20,11 @@ public class LocalPlacer implements Placer {
         world.setBlock(blockId, x + localX, y + localY, z + localZ);
     }
 
+    public void setBlock(int blockId, int meta, int x, int y, int z) {
+
+        world.setBlock(blockId, meta, x + localX, y + localY, z + localZ);
+    }
+
     public void fillRect(int blockId, int x, int y, int z, int w, int h, int l) {
 
         int xb = x + localX + w;
@@ -32,9 +37,27 @@ public class LocalPlacer implements Placer {
                     world.setBlockWithoutNotifyingNeighbors(xa, ya, za, blockId);
     }
 
+    public void fillRect(int blockId, int meta, int x, int y, int z, int w, int h, int l) {
+
+        int xb = x + localX + w;
+        int yb = y + localY + h;
+        int zb = z + localZ + l;
+
+        for (int xa = x + localX; xa < xb; xa++)
+            for (int ya = y + localY; ya < yb; ya++)
+                for (int za = z + localZ; za < zb; za++)
+                    world.setBlockWithoutNotifyingNeighbors(xa, ya, za, blockId, meta);
+    }
+
     public void hollowRect(int blockId, int x, int y, int z, int w, int h, int l) {
 
         fillRect(blockId, x, y, z, w, h, l);
+        fillRect(0, x + 1, y + 1, z + 1, w - 2, h - 2, l - 2);
+    }
+
+    public void hollowRect(int blockId, int meta, int x, int y, int z, int w, int h, int l) {
+
+        fillRect(blockId, meta, x, y, z, w, h, l);
         fillRect(0, x + 1, y + 1, z + 1, w - 2, h - 2, l - 2);
     }
 }
