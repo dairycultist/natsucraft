@@ -1,7 +1,0 @@
-{
-  "parent": "block/cube_column",
-  "textures": {
-    "side": "natsucraft:block/jungle_log_side",
-    "end": "natsucraft:block/jungle_log_top"
-  }
-}

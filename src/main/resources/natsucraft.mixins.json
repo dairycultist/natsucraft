@@ -4,15 +4,9 @@
   "package": "net.natsupotato.natsucraft.mixin",
   "compatibilityLevel": "JAVA_17",
   "mixins": [
-    "LeavesBlockMixin",
-    "biome.BiomeMixin",
-    "biome.ForestBiomeMixin",
-    "biome.HellBiomeMixin",
-    "biome.RainforestBiomeMixin",
     "entity.ChickenEntityMixin",
     "entity.CobwebBlockMixin",
-    "entity.LivingEntityAccessor",
-    "entity.PlayerEntityMixin"
+    "entity.LivingEntityAccessor"
   ],
   "server": [],
   "client": [
