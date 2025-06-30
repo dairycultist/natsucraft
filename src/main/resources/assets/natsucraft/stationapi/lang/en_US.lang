@@ -4,8 +4,6 @@ item.hatchetStone.name=Copper Axe
 item.shovelStone.name=Copper Shovel
 item.hoeStone.name=Copper Hoe
 
-tile.@.lapis_sandstone.name=Ornate Sandstone
-tile.@.glowstone_sandstone.name=Ornate Sandstone
 item.@.lich_sword.name=Lich Sword
 item.@.chicken_raw.name=Raw Chicken
 item.@.chicken_cooked.name=Cooked Chicken

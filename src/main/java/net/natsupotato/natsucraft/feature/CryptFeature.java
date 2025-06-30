@@ -11,7 +11,7 @@ import net.natsupotato.natsucraft.Natsucraft;
 
 import java.util.Random;
 
-public class DesertCryptFeature extends Feature {
+public class CryptFeature extends Feature {
 
     @Override
     public boolean generate(World world, Random random, int x, int y, int z) {
@@ -83,7 +83,6 @@ public class DesertCryptFeature extends Feature {
                                 chest.setStack(localRandom.nextInt(chest.size()), new ItemStack(Item.GOLDEN_APPLE, 1));
 
                             GenerationHelper.fillRect(localWorld, Block.SANDSTONE.id, localX + 3, localY + 1, localZ + 3, 3, 1, 3);
-                            GenerationHelper.replaceRect(localWorld, Block.SANDSTONE.id, Natsucraft.LAPIS_SANDSTONE.id, localX, localY + 1, localZ, 9, 1, 9);
                             break;
 
                         // weird pillar room

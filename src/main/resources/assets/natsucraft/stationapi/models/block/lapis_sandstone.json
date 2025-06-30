@@ -1,7 +1,0 @@
-{
-  "parent": "block/cube_column",
-  "textures": {
-    "side": "natsucraft:block/lapis_sandstone",
-    "end": "minecraft:block/sandstone_top"
-  }
-}
