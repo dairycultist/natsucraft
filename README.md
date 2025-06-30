@@ -8,23 +8,9 @@ I just wanna come across a strange cobblestone monument in Minecraft beta and ex
 
 ## Implemented (subject to change)
 
-### Misc
-
-- Idle regen
-- Ornate sandstone (lapis and glowstone)
-
 ### Dungeons
 
-- Desert crypt
-- Deep dungeon
-
-### Biomes
-
-- Updated rainforest biome (previously was just a forest that spawned big oak trees more often, now has jungle trees with jungle wood!)
-- Updated forest biome (inspired by The Aether/Deep Aether)
-  - Grows mushrooms, including new glowcaps
-- Updated Nether
-  - Grows glowcaps
+- Crypt (mostly just a generic test dungeon)
 
 ### Mobs
 
@@ -43,5 +29,5 @@ I just wanna come across a strange cobblestone monument in Minecraft beta and ex
 
 ## To-do
 
-- Refactor to dairycultist.\<new title>
+- Refactor to `dairycultist.dungeoncraft`
 - Some sort of mechanic that encourages both 1) building a permanent, large base and 2) often leaving base to explore far away before returning
