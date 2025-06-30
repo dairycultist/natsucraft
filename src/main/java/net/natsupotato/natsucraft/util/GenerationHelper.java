@@ -1,4 +1,4 @@
-package net.natsupotato.natsucraft.feature;
+package net.natsupotato.natsucraft.util;
 
 import net.minecraft.block.Block;
 import net.minecraft.block.entity.ChestBlockEntity;
@@ -14,7 +14,7 @@ public class GenerationHelper {
 
     public interface SubGenerator {
 
-        void generate(World localWorld, Random localRandom, int localX, int localY, int localZ);
+        void generate(LocalPlacer placer, Random localRandom);
     }
 
     public static ChestBlockEntity lootChest(World world, Random random, int x, int y, int z, int tries, Item[] items, int[] mins, int[] maxes) {
@@ -124,7 +124,7 @@ public class GenerationHelper {
         for (int xCel = 0; xCel < xCels; xCel++) {
             for (int zCel = 0; zCel < zCels; zCel++) {
 
-                roomPopulator.generate(world, random, x + xCel * roomW, y, z + zCel * roomL);
+                roomPopulator.generate(new LocalPlacer(world, x + xCel * roomW, y, z + zCel * roomL), random);
             }
         }
     }

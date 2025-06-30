@@ -82,7 +82,13 @@ public class Natsucraft implements ModInitializer {
 
                     PlayerEntity p = commandSource.getPlayer();
 
-                    new CryptFeature().place(p.world, p.world.random, (int) p.x, (int) p.y, (int) p.z);
+                    new CryptFeature().place(
+                            p.world,
+                            p.world.random,
+                            (int) p.x,
+                            p.world.getTopY((int) p.x, (int) p.z),
+                            (int) p.z
+                    );
                 }
 
                 @Override
