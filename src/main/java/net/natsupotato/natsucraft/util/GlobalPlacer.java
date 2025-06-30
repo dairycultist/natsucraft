@@ -1,5 +1,6 @@
 package net.natsupotato.natsucraft.util;
 
+import net.minecraft.block.entity.BlockEntity;
 import net.minecraft.world.World;
 
 public class GlobalPlacer implements Placer {
@@ -19,6 +20,11 @@ public class GlobalPlacer implements Placer {
     public void setBlock(int blockId, int meta, int x, int y, int z) {
 
         world.setBlockWithoutNotifyingNeighbors(x, y, z, blockId, meta);
+    }
+
+    public BlockEntity setBlockEntity(int blockId, int x, int y, int z) {
+        System.err.println("Not Implemented!");
+        return null;
     }
 
     public void fillRect(int blockId, int x, int y, int z, int w, int h, int l) {
