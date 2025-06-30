@@ -37,11 +37,19 @@ public class DesertCryptFeature extends Feature {
         // maze
         GenerationHelper.generateMaze(
                 world, random,
-                x - 22, y - 15, z - 22,
-                9, 6, 9,
+                x - 22, y - 16, z - 22,
+                9, 7, 9,
                 5, 5,
                 Block.SANDSTONE.id,
                 (localWorld, localRandom, localX, localY, localZ) -> {
+
+                    GenerationHelper.fillRect(localWorld, Block.SANDSTONE.id, localX + 1, localY + 1, localZ + 1, 1,  5, 1);
+                    GenerationHelper.fillRect(localWorld, Block.SANDSTONE.id, localX + 7, localY + 1, localZ + 1, 1,  5, 1);
+                    GenerationHelper.fillRect(localWorld, Block.SANDSTONE.id, localX + 1, localY + 1, localZ + 7, 1,  5, 1);
+                    GenerationHelper.fillRect(localWorld, Block.SANDSTONE.id, localX + 7, localY + 1, localZ + 7, 1,  5, 1);
+
+                    GenerationHelper.fillRect(localWorld, Block.SANDSTONE.id, localX + 1, localY + 5, localZ + 1, 7,  1, 7);
+                    GenerationHelper.fillRect(localWorld, 0, localX + 2, localY + 5, localZ + 2, 5,  1, 5);
 
                     int roomType = localRandom.nextInt(10);
 
@@ -113,7 +121,7 @@ public class DesertCryptFeature extends Feature {
 
                                 for (int ox = localX + 1; ox < localX + 8; ox++)
                                     for (int oz = localZ + 1; oz < localZ + 8; oz++)
-                                        for (int oy = localY + 1; oy < localY + 5; oy++)
+                                        for (int oy = localY + 1; oy < localY + 6; oy++)
                                             if (localWorld.getBlockId(ox, oy, oz) == 0 && localRandom.nextInt(3) == 0)
                                                 localWorld.setBlock(ox, oy, oz, Block.COBWEB.id);
                             }
