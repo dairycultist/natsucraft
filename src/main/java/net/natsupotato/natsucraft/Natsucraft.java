@@ -11,8 +11,8 @@ import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.Item;
 import net.minecraft.item.ToolMaterial;
 import net.modificationstation.stationapi.api.event.entity.EntityRegister;
-import net.modificationstation.stationapi.api.event.registry.BlockRegistryEvent;
 import net.modificationstation.stationapi.api.event.registry.ItemRegistryEvent;
+import net.modificationstation.stationapi.api.event.worldgen.biome.BiomeModificationEvent;
 import net.modificationstation.stationapi.api.mod.entrypoint.Entrypoint;
 import net.modificationstation.stationapi.api.template.item.TemplateFoodItem;
 import net.modificationstation.stationapi.api.template.item.TemplateItem;
@@ -33,11 +33,6 @@ public class Natsucraft implements ModInitializer {
     public static Item CHICKEN_COOKED;
     public static Item FABRIC;
     public static Item BANDAGE;
-
-    @EventListener
-    public void registerBlocks(BlockRegistryEvent event) {
-
-    }
 
     @EventListener
     public void registerItems(ItemRegistryEvent event) {
@@ -69,6 +64,12 @@ public class Natsucraft implements ModInitializer {
 
         event.register(LichEntity.class, "Lich");
         event.register(MummyEntity.class, "Mummy");
+    }
+
+    @EventListener
+    public void registerEntitySpawn(BiomeModificationEvent event) {
+
+        event.biome.addFeature(new MegalithFeature());
     }
 
     public void onInitialize() {
