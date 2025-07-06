@@ -49,7 +49,7 @@ public class MegalithFeature extends Feature {
             MazeUtil.generateMaze(
                     world,
                     random,
-                    new LocalPlacer(world, EXTERIOR_WALL_PADDING, layerY - bottom, EXTERIOR_WALL_PADDING, placer),
+                    new LocalPlacer(placer, EXTERIOR_WALL_PADDING, layerY - bottom, EXTERIOR_WALL_PADDING),
                     9,
                     7,
                     9,

@@ -21,9 +21,9 @@ public class LocalPlacer {
         this.localZ = z;
     }
 
-    public LocalPlacer(World world, int x, int y, int z, LocalPlacer relativeTo) {
+    public LocalPlacer(LocalPlacer relativeTo, int x, int y, int z) {
 
-        this.world = world;
+        this.world = relativeTo.world;
         this.localX = x + relativeTo.localX;
         this.localY = y + relativeTo.localY;
         this.localZ = z + relativeTo.localZ;

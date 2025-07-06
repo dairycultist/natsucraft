@@ -107,7 +107,7 @@ public class MazeUtil {
         for (int xCel = 0; xCel < xCels; xCel++) {
             for (int zCel = 0; zCel < zCels; zCel++) {
 
-                roomPopulator.generate(new LocalPlacer(world, xCel * roomW, 0, zCel * roomL, bottomCorner));
+                roomPopulator.generate(new LocalPlacer(bottomCorner, xCel * roomW, 0, zCel * roomL));
             }
         }
     }
