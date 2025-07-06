@@ -9,6 +9,11 @@ Like how biomes aren't just 1 chunk of biome, structures should be more spread o
 central structures incorporated into the terrain. Ancient ruins that build on the lonely feeling in b1.7.3.
 Stone structures that could possibly date back to some kind of really old lost civilization.
 
+im thinking it could just be an 100% serverside mod with no added Things but with new structures
+
+megalophobia mod that just adds gigantic, above-ground structures (megaliths). big blocks lined with columns and detail
+work, filled with kilometers of tunnels
+
 ## Implemented (subject to change)
 
 ### Dungeons
