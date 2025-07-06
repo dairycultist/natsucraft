@@ -12,10 +12,10 @@ import java.util.Random;
 
 public class MegalithFeature extends Feature {
 
-    private static final int ROOMS_WIDE = 2;
-    private static final int EXTERIOR_WALL_PADDING = 7;
-    private static final int HEIGHT_ABOVE_SURFACE = 48;
-    private static final int DEPTH_BENEATH_SURFACE = 8;
+    private static final int ROOMS_WIDE = 9;
+    private static final int EXTERIOR_WALL_PADDING = 3;
+    private static final int HEIGHT_ABOVE_SURFACE = 40;
+    private static final int DEPTH_BENEATH_SURFACE = 40;
 
     @Override
     public boolean generate(World world, Random random, int x, int y, int z) {
@@ -29,6 +29,7 @@ public class MegalithFeature extends Feature {
     public boolean place(World world, Random random, int x, int y, int z) {
 
         // worst code on the planet idc tho
+        // probably needs more variety to be worth exploring. maybe when I clean it up first lol
 
         int w = ROOMS_WIDE * 9 + EXTERIOR_WALL_PADDING * 2;
         int bottom = y - DEPTH_BENEATH_SURFACE;
@@ -38,7 +39,7 @@ public class MegalithFeature extends Feature {
         placer.fillRect(Block.COBBLESTONE.id, 0, 0, 0, w, HEIGHT_ABOVE_SURFACE + DEPTH_BENEATH_SURFACE, w);
 
         // maze
-        for (int layerY = bottom; layerY < y + HEIGHT_ABOVE_SURFACE - 5; layerY += 10) {
+        for (int layerY = bottom; layerY < y + HEIGHT_ABOVE_SURFACE - 8; layerY += 10) {
 
             MazeUtil.generateMaze(
                     world,
@@ -118,7 +119,7 @@ public class MegalithFeature extends Feature {
 
                                 switch (random.nextInt(3)) {
                                     case 0:
-                                        monster = "Mummy";
+                                        monster = "Zombie";
                                         break;
                                     case 1:
                                         monster = "Spider";
@@ -177,6 +178,10 @@ public class MegalithFeature extends Feature {
             placer.fillRect(0, EXTERIOR_WALL_PADDING + 1 + 9 * i, DEPTH_BENEATH_SURFACE + 6, 0, 7, HEIGHT_ABOVE_SURFACE - 8, 2);
             // +z
             placer.fillRect(0, EXTERIOR_WALL_PADDING + 1 + 9 * i, DEPTH_BENEATH_SURFACE + 6, w - 2, 7, HEIGHT_ABOVE_SURFACE - 8, 2);
+            // -x
+            placer.fillRect(0, 0, DEPTH_BENEATH_SURFACE + 6, EXTERIOR_WALL_PADDING + 1 + 9 * i, 2, HEIGHT_ABOVE_SURFACE - 8, 7);
+            // +x
+            placer.fillRect(0, w - 2, DEPTH_BENEATH_SURFACE + 6, EXTERIOR_WALL_PADDING + 1 + 9 * i, 2, HEIGHT_ABOVE_SURFACE - 8, 7);
 
             for (int layerY = 1; layerY < DEPTH_BENEATH_SURFACE + HEIGHT_ABOVE_SURFACE - 5; layerY += 10) {
 
@@ -185,11 +190,17 @@ public class MegalithFeature extends Feature {
 
                 // randomly carve some exits
                 // -z
-                if (random.nextInt(5) < 2)
+                if (random.nextBoolean())
                     placer.fillRect(0, EXTERIOR_WALL_PADDING + 3 + 9 * i, layerY, 2, 3, 3, EXTERIOR_WALL_PADDING - 1);
                 // +z
-                if (random.nextInt(5) < 2)
+                if (random.nextBoolean())
                     placer.fillRect(0, EXTERIOR_WALL_PADDING + 3 + 9 * i, layerY, w - EXTERIOR_WALL_PADDING - 1, 3, 3, EXTERIOR_WALL_PADDING - 1);
+                // -x
+                if (random.nextBoolean())
+                    placer.fillRect(0, 2, layerY, EXTERIOR_WALL_PADDING + 3 + 9 * i, EXTERIOR_WALL_PADDING - 1, 3, 3);
+                // +x
+                if (random.nextBoolean())
+                    placer.fillRect(0, w - EXTERIOR_WALL_PADDING - 1, layerY, EXTERIOR_WALL_PADDING + 3 + 9 * i, EXTERIOR_WALL_PADDING - 1, 3, 3);
             }
         }
 
