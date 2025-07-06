@@ -12,10 +12,10 @@ import java.util.Random;
 
 public class MegalithFeature extends Feature {
 
-    private static final int ROOMS_WIDE = 9;
-    private static final int EXTERIOR_WALL_PADDING = 6;
-    private static final int HEIGHT_ABOVE_SURFACE = 40;
-    private static final int DEPTH_BENEATH_SURFACE = 40;
+    private static final int ROOMS_WIDE = 2;
+    private static final int EXTERIOR_WALL_PADDING = 7;
+    private static final int HEIGHT_ABOVE_SURFACE = 48;
+    private static final int DEPTH_BENEATH_SURFACE = 8;
 
     @Override
     public boolean generate(World world, Random random, int x, int y, int z) {
@@ -28,6 +28,8 @@ public class MegalithFeature extends Feature {
 
     public boolean place(World world, Random random, int x, int y, int z) {
 
+        // worst code on the planet idc tho
+
         int w = ROOMS_WIDE * 9 + EXTERIOR_WALL_PADDING * 2;
         int bottom = y - DEPTH_BENEATH_SURFACE;
 
@@ -36,7 +38,7 @@ public class MegalithFeature extends Feature {
         placer.fillRect(Block.COBBLESTONE.id, 0, 0, 0, w, HEIGHT_ABOVE_SURFACE + DEPTH_BENEATH_SURFACE, w);
 
         // maze
-        for (int layerY = bottom; layerY < y + HEIGHT_ABOVE_SURFACE; layerY += 10) {
+        for (int layerY = bottom; layerY < y + HEIGHT_ABOVE_SURFACE - 5; layerY += 10) {
 
             MazeUtil.generateMaze(
                     world,
@@ -173,13 +175,21 @@ public class MegalithFeature extends Feature {
             // carve in holes to make pillars
             // -z
             placer.fillRect(0, EXTERIOR_WALL_PADDING + 1 + 9 * i, DEPTH_BENEATH_SURFACE + 6, 0, 7, HEIGHT_ABOVE_SURFACE - 8, 2);
+            // +z
+            placer.fillRect(0, EXTERIOR_WALL_PADDING + 1 + 9 * i, DEPTH_BENEATH_SURFACE + 6, w - 2, 7, HEIGHT_ABOVE_SURFACE - 8, 2);
 
-            for (int layerY = DEPTH_BENEATH_SURFACE + 11; layerY < DEPTH_BENEATH_SURFACE + HEIGHT_ABOVE_SURFACE; layerY += 10) {
+            for (int layerY = 1; layerY < DEPTH_BENEATH_SURFACE + HEIGHT_ABOVE_SURFACE - 5; layerY += 10) {
+
+                if (layerY < DEPTH_BENEATH_SURFACE)
+                    continue;
 
                 // randomly carve some exits
                 // -z
                 if (random.nextInt(5) < 2)
                     placer.fillRect(0, EXTERIOR_WALL_PADDING + 3 + 9 * i, layerY, 2, 3, 3, EXTERIOR_WALL_PADDING - 1);
+                // +z
+                if (random.nextInt(5) < 2)
+                    placer.fillRect(0, EXTERIOR_WALL_PADDING + 3 + 9 * i, layerY, w - EXTERIOR_WALL_PADDING - 1, 3, 3, EXTERIOR_WALL_PADDING - 1);
             }
         }
 
