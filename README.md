@@ -1,24 +1,20 @@
 # Dungeoncraft
 
-I'm gonna cut down the scope of this project to just soft-fantasy dungeons and dungeon-related stuff (mobs, blocks, etc).
+I'm gonna cut down the scope of this project to just megalophobia-inducing above-ground dungeons (megaliths). I'm thinking
+it could just be an 100% serverside mod with no added Things but with new structures.
 
-I just wanna come across a strange cobblestone monument in Minecraft beta and explore/loot its hallways :<
+I just wanna come across a strange cobblestone monument in Minecraft beta and explore/loot its kilometers of hallways :3
 
 The thing with Minecraft structures is they're so drop-in-a-bucket, they should be incorporated into the surroundings more.
 Like how biomes aren't just 1 chunk of biome, structures should be more spread out, with peripheral structures and bigger
 central structures incorporated into the terrain. Ancient ruins that build on the lonely feeling in b1.7.3.
 Stone structures that could possibly date back to some kind of really old lost civilization.
 
-im thinking it could just be an 100% serverside mod with no added Things but with new structures
-
-megalophobia mod that just adds gigantic, above-ground structures (megaliths). big blocks lined with columns and detail
-work, filled with kilometers of tunnels
-
 ## Implemented (subject to change)
 
-### Dungeons
+### Structures
 
-- Crypt (mostly just a generic test dungeon)
+- MegalithFeature
 
 ### Mobs
 
@@ -34,11 +30,12 @@ work, filled with kilometers of tunnels
   - skin variants (I like the Deep Aether's pastel quails)
   - they have tails now
   - drops meat
-- Spiders are no longer slowed by cobwebs
+- Spiders are no longer slowed by cobwebs (can this work serverside only? idk)
 
 ## To-do
 
-- Refactor to `dairycultist.dungeoncraft`
+- remove Lich, Mummy, and Chicken (save some of the code tho)
+- Refactor to `dairycultist.<something>`
 - Some sort of mechanic that encourages both 1) building a permanent, large base and 2) often leaving base to explore far away before returning
 - naming conventions in beta are convenient because when I add slightly brighter stone with a border and cracked slightly brighter stone with a border and slightly brighter stone with a border subdivided into four quadrants I can just call all of them "stone"
 - chest with iron trim
