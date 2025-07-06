@@ -13,16 +13,16 @@ public class MazeUtil {
         void generate(LocalPlacer placer);
     }
 
-    // generate a closed maze, where xyz is bottom corner
-    public static void generateMaze(World world, Random random, int x, int y, int z, int roomW, int roomH, int roomL, int xCels, int zCels, int wallBlockId, SubGenerator roomPopulator) {
+    // generate a closed maze
+    public static void generateMaze(World world, Random random, LocalPlacer bottomCorner, int roomW, int roomH, int roomL, int xCels, int zCels, int wallBlockId, SubGenerator roomPopulator) {
 
-        GlobalPlacer placer = new GlobalPlacer(world);
+        LocalPlacer placer = bottomCorner;
 
         // generate rooms
         for (int xCel = 0; xCel < xCels; xCel++) {
             for (int zCel = 0; zCel < zCels; zCel++) {
 
-                placer.hollowRect(wallBlockId, x + xCel * roomW, y, z + zCel * roomL, roomW, roomH, roomL);
+                placer.hollowRect(wallBlockId, xCel * roomW, 0, zCel * roomL, roomW, roomH, roomL);
             }
         }
 
@@ -64,37 +64,37 @@ public class MazeUtil {
             } else {
 
                 // take path at random
-                int minusX_X = x - 1 + xCel * roomW;
-                int minusX_Z = z + ((roomL - 3) / 2) + zCel * roomL;
+                int minusX_X = -1 + xCel * roomW;
+                int minusX_Z = ((roomL - 3) / 2) + zCel * roomL;
 
-                int minusZ_X = x + ((roomW - 3) / 2) + xCel * roomW;
-                int minusZ_Z = z - 1 + zCel * roomL;
+                int minusZ_X = ((roomW - 3) / 2) + xCel * roomW;
+                int minusZ_Z = -1 + zCel * roomL;
 
                 switch (possibleDirections.get(random.nextInt(possibleDirections.size()))) {
 
                     case 0: // -x
-                        placer.fillRect(0, minusX_X, y + 1, minusX_Z, 2, 3, 3);
+                        placer.fillRect(0, minusX_X, 1, minusX_Z, 2, 3, 3);
                         xStack.push(xCel - 1);
                         zStack.push(zCel);
                         discovered[xCel - 1][zCel] = true;
                         break;
 
                     case 1: // +x
-                        placer.fillRect(0, minusX_X + roomW, y + 1, minusX_Z, 2, 3, 3);
+                        placer.fillRect(0, minusX_X + roomW, 1, minusX_Z, 2, 3, 3);
                         xStack.push(xCel + 1);
                         zStack.push(zCel);
                         discovered[xCel + 1][zCel] = true;
                         break;
 
                     case 2: // -z
-                        placer.fillRect(0, minusZ_X, y + 1, minusZ_Z, 3, 3, 2);
+                        placer.fillRect(0, minusZ_X, 1, minusZ_Z, 3, 3, 2);
                         xStack.push(xCel);
                         zStack.push(zCel - 1);
                         discovered[xCel][zCel - 1] = true;
                         break;
 
                     case 3: // +z
-                        placer.fillRect(0, minusZ_X, y + 1, minusZ_Z + roomL, 3, 3, 2);
+                        placer.fillRect(0, minusZ_X, 1, minusZ_Z + roomL, 3, 3, 2);
                         xStack.push(xCel);
                         zStack.push(zCel + 1);
                         discovered[xCel][zCel + 1] = true;
@@ -107,7 +107,7 @@ public class MazeUtil {
         for (int xCel = 0; xCel < xCels; xCel++) {
             for (int zCel = 0; zCel < zCels; zCel++) {
 
-                roomPopulator.generate(new LocalPlacer(world, x + xCel * roomW, y, z + zCel * roomL));
+                roomPopulator.generate(new LocalPlacer(world, xCel * roomW, 0, zCel * roomL, bottomCorner));
             }
         }
     }

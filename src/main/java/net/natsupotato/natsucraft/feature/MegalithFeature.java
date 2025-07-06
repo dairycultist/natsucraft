@@ -6,7 +6,6 @@ import net.minecraft.world.World;
 import net.minecraft.world.gen.feature.Feature;
 import net.natsupotato.natsucraft.util.LocalPlacer;
 import net.natsupotato.natsucraft.util.MazeUtil;
-import net.natsupotato.natsucraft.util.Placer;
 
 import java.util.Random;
 
@@ -34,26 +33,30 @@ public class MegalithFeature extends Feature {
         int w = ROOMS_WIDE * 9 + EXTERIOR_WALL_PADDING * 2;
         int bottom = y - DEPTH_BENEATH_SURFACE;
 
-        Placer placer = new LocalPlacer(world, x - w / 2, bottom, z - w / 2);
+        LocalPlacer placer = new LocalPlacer(world, x - w / 2, bottom, z - w / 2);
 
+        // base
         placer.fillRect(Block.COBBLESTONE.id, 0, 0, 0, w, HEIGHT_ABOVE_SURFACE + DEPTH_BENEATH_SURFACE, w);
 
-        // maze
+        placer.fillRect(Block.SLAB.id, 3, 0, DEPTH_BENEATH_SURFACE + HEIGHT_ABOVE_SURFACE - 2, 0, w, 1, 1);
+        placer.fillRect(Block.SLAB.id, 3, 0, DEPTH_BENEATH_SURFACE + HEIGHT_ABOVE_SURFACE - 2, 0, 1, 1, w);
+        placer.fillRect(Block.SLAB.id, 3, 0, DEPTH_BENEATH_SURFACE + HEIGHT_ABOVE_SURFACE - 2, w - 1, w, 1, 1);
+        placer.fillRect(Block.SLAB.id, 3, w - 1, DEPTH_BENEATH_SURFACE + HEIGHT_ABOVE_SURFACE - 2, 0, 1, 1, w);
+
+        // internal layers of mazes
         for (int layerY = bottom; layerY < y + HEIGHT_ABOVE_SURFACE - 8; layerY += 10) {
 
             MazeUtil.generateMaze(
                     world,
                     random,
-                    x - w / 2 + EXTERIOR_WALL_PADDING,
-                    layerY,
-                    z - w / 2 + EXTERIOR_WALL_PADDING,
+                    new LocalPlacer(world, EXTERIOR_WALL_PADDING, layerY - bottom, EXTERIOR_WALL_PADDING, placer),
                     9,
                     7,
                     9,
                     ROOMS_WIDE,
                     ROOMS_WIDE,
                     Block.COBBLESTONE.id,
-                    (roomPlacer) -> {
+                    (LocalPlacer roomPlacer) -> {
 
                         // pillars
                         roomPlacer.fillRect(Block.LOG.id, 1, 1, 1, 1, 5, 1);
@@ -166,11 +169,7 @@ public class MegalithFeature extends Feature {
             );
         }
 
-        placer.fillRect(Block.SLAB.id, 3, 0, DEPTH_BENEATH_SURFACE + HEIGHT_ABOVE_SURFACE - 2, 0, w, 1, 1);
-        placer.fillRect(Block.SLAB.id, 3, 0, DEPTH_BENEATH_SURFACE + HEIGHT_ABOVE_SURFACE - 2, 0, 1, 1, w);
-        placer.fillRect(Block.SLAB.id, 3, 0, DEPTH_BENEATH_SURFACE + HEIGHT_ABOVE_SURFACE - 2, w - 1, w, 1, 1);
-        placer.fillRect(Block.SLAB.id, 3, w - 1, DEPTH_BENEATH_SURFACE + HEIGHT_ABOVE_SURFACE - 2, 0, 1, 1, w);
-
+        // carving
         for (int i = 0; i < ROOMS_WIDE; i++) {
 
             // carve in holes to make pillars

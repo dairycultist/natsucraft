@@ -3,7 +3,12 @@ package net.natsupotato.natsucraft.util;
 import net.minecraft.block.entity.BlockEntity;
 import net.minecraft.world.World;
 
-public class LocalPlacer implements Placer {
+public class LocalPlacer {
+
+    public interface BlockLambda {
+
+        int getBlock(int prevBlockId);
+    }
 
     private final World world;
     private final int localX, localY, localZ;
@@ -14,6 +19,14 @@ public class LocalPlacer implements Placer {
         this.localX = x;
         this.localY = y;
         this.localZ = z;
+    }
+
+    public LocalPlacer(World world, int x, int y, int z, LocalPlacer relativeTo) {
+
+        this.world = world;
+        this.localX = x + relativeTo.localX;
+        this.localY = y + relativeTo.localY;
+        this.localZ = z + relativeTo.localZ;
     }
 
     public void setBlock(int blockId, int x, int y, int z) {
