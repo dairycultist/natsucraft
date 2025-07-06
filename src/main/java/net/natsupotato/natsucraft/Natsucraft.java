@@ -21,7 +21,7 @@ import net.modificationstation.stationapi.api.util.Namespace;
 import net.modificationstation.stationapi.api.util.Null;
 import net.natsupotato.natsucraft.entity.LichEntity;
 import net.natsupotato.natsucraft.entity.MummyEntity;
-import net.natsupotato.natsucraft.feature.CryptFeature;
+import net.natsupotato.natsucraft.feature.MegalithFeature;
 
 public class Natsucraft implements ModInitializer {
 
@@ -82,7 +82,7 @@ public class Natsucraft implements ModInitializer {
 
                     PlayerEntity p = commandSource.getPlayer();
 
-                    new CryptFeature().place(
+                    new MegalithFeature().place(
                             p.world,
                             p.world.random,
                             (int) p.x,
