@@ -178,7 +178,7 @@ public class MegalithFeature extends Feature {
 
                 // randomly carve some exits
                 // -z
-                if (random.nextInt(5) == 0)
+                if (random.nextInt(5) < 2)
                     placer.fillRect(0, EXTERIOR_WALL_PADDING + 3 + 9 * i, layerY, 2, 3, 3, EXTERIOR_WALL_PADDING - 1);
             }
         }

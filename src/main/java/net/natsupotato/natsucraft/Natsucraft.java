@@ -98,7 +98,7 @@ public class Natsucraft implements ModInitializer {
 
                 @Override
                 public void manual(SharedCommandSource commandSource) {
-                    commandSource.sendFeedback("Places a DesertCryptFeature");
+                    commandSource.sendFeedback("Places a MegalithFeature");
                 }
             });
         }
