@@ -22,10 +22,11 @@ public class MegalithFeature extends Feature {
         if (random.nextInt(128) != 0)
             return false;
 
-        return place(world, random, x, y, z);
+        place(world, random, x, y, z);
+        return true;
     }
 
-    public boolean place(World world, Random random, int x, int y, int z) {
+    public void place(World world, Random random, int x, int y, int z) {
 
         // worst code on the planet idc tho
         // probably needs more variety to be worth exploring. maybe when I clean it up first lol
@@ -90,29 +91,23 @@ public class MegalithFeature extends Feature {
                         int roomType = random.nextInt(5);
 
                         // torches
-                        if (roomType == 0) {
+                        if (roomType == 0 || roomType == 1) {
                             roomPlacer.setBlock(Block.TORCH.id, 1, 4, 4);
                             roomPlacer.setBlock(Block.TORCH.id, 7, 4, 4);
                             roomPlacer.setBlock(Block.TORCH.id, 4, 4, 1);
                             roomPlacer.setBlock(Block.TORCH.id, 4, 4, 7);
                         }
 
-                        //                    ChestBlockEntity chest = null;
-
                         switch (roomType) {
 
                             // treasure room
                             case 0:
-                                //                            chest = ChestUtil.lootChest(world, random, localX + 4, localY + 2, localZ + 4, 4,
-                                //                                    new Item[] { Item.GOLD_INGOT, Item.IRON_INGOT, Item.DIAMOND },
-                                //                                    new int[] { 2, 2, 1 },
-                                //                                    new int[] { 5, 5, 2 }
-                                //                            );
-                                //
-                                //                            if (localRandom.nextBoolean())
-                                //                                chest.setStack(localRandom.nextInt(chest.size()), new ItemStack(Item.GOLDEN_APPLE, 1));
-
                                 roomPlacer.fillRect(Block.COBBLESTONE.id, 3, 1, 3, 3, 1, 3);
+                                break;
+
+                            // stairwell down room
+                            case 1:
+                                roomPlacer.fillRect(0, 3, -4, 3, 3, 5, 3);
                                 break;
 
                             // spawner room/chest room
@@ -130,38 +125,18 @@ public class MegalithFeature extends Feature {
                                         // webs
                                         roomPlacer.replaceRect((prevBlockId) -> {
 
-                                                    if (prevBlockId == 0 && random.nextInt(3) == 0)
-                                                        return Block.COBWEB.id;
+                                            if (prevBlockId == 0 && random.nextInt(3) == 0)
+                                                return Block.COBWEB.id;
 
-                                                    return prevBlockId;
-                                                },
-                                                1, 1, 1, 8, 6, 8);
+                                            return prevBlockId;
+                                        },
+                                        1, 1, 1, 8, 6, 8);
                                         break;
                                 }
 
-                                if (monster != null) {
-
+                                if (monster != null)
                                     ((MobSpawnerBlockEntity) roomPlacer.setBlockEntity(Block.SPAWNER.id, 4, 1, 4))
                                             .setSpawnedEntityId(monster);
-                                }
-
-                                //                            // chests
-                                //                            if (localRandom.nextBoolean())
-                                //                                chest = GenerationHelper.lootChest(localWorld, localRandom, localX + 1, localY + 1, localZ + 2, 4,
-                                //                                        new Item[]{Natsucraft.FABRIC, Item.IRON_INGOT},
-                                //                                        new int[]{2, 2, 1},
-                                //                                        new int[]{6, 5, 4}
-                                //                                );
-                                //
-                                //                            if (localRandom.nextBoolean())
-                                //                                chest = GenerationHelper.lootChest(localWorld, localRandom, localX + 7, localY + 1, localZ + 6, 4,
-                                //                                        new Item[]{Natsucraft.FABRIC, Item.IRON_INGOT},
-                                //                                        new int[]{2, 2, 1},
-                                //                                        new int[]{6, 5, 4}
-                                //                                );
-                                //
-                                //                            if (chest != null && localRandom.nextInt(20) == 0)
-                                //                                chest.setStack(localRandom.nextInt(chest.size()), new ItemStack(Item.CHAIN_CHESTPLATE));
 
                                 break;
                         }
@@ -218,7 +193,5 @@ public class MegalithFeature extends Feature {
             return prevBlockId;
         },
         0, 0, 0, w, DEPTH_BENEATH_SURFACE + HEIGHT_ABOVE_SURFACE, w);
-
-        return true;
     }
 }
