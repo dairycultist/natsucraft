@@ -1,10 +1,12 @@
 {
   "required": true,
   "minVersion": "0.8",
-  "package": "net.natsupotato.natsucraft.mixin",
+  "package": "net.dairycultist.megaliths.mixin",
   "compatibilityLevel": "JAVA_17",
   "mixins": [],
-  "server": [ "CobwebBlockMixin" ],
+  "server": [
+    "CobwebBlockMixin"
+  ],
   "client": [],
   "injectors": {
     "defaultRequire": 1

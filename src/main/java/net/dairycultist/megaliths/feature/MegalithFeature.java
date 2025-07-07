@@ -1,11 +1,11 @@
-package net.natsupotato.natsucraft.feature;
+package net.dairycultist.megaliths.feature;
 
 import net.minecraft.block.Block;
 import net.minecraft.block.entity.MobSpawnerBlockEntity;
 import net.minecraft.world.World;
 import net.minecraft.world.gen.feature.Feature;
-import net.natsupotato.natsucraft.util.LocalPlacer;
-import net.natsupotato.natsucraft.util.MazeUtil;
+import net.dairycultist.megaliths.util.LocalPlacer;
+import net.dairycultist.megaliths.util.MazeUtil;
 
 import java.util.Random;
 

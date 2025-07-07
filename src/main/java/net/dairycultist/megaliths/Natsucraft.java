@@ -1,4 +1,4 @@
-package net.natsupotato.natsucraft;
+package net.dairycultist.megaliths;
 
 import com.matthewperiut.retrocommands.api.Command;
 import com.matthewperiut.retrocommands.api.CommandRegistry;
@@ -8,7 +8,7 @@ import net.fabricmc.loader.api.FabricLoader;
 import net.mine_diver.unsafeevents.listener.EventListener;
 import net.minecraft.entity.player.PlayerEntity;
 import net.modificationstation.stationapi.api.event.worldgen.biome.BiomeModificationEvent;
-import net.natsupotato.natsucraft.feature.MegalithFeature;
+import net.dairycultist.megaliths.feature.MegalithFeature;
 
 public class Natsucraft implements ModInitializer {
 

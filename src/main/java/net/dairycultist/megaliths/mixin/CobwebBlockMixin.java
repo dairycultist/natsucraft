@@ -1,4 +1,4 @@
-package net.natsupotato.natsucraft.mixin;
+package net.dairycultist.megaliths.mixin;
 
 import net.minecraft.block.CobwebBlock;
 import net.minecraft.entity.Entity;

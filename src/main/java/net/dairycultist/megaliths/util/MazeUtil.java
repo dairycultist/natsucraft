@@ -1,4 +1,4 @@
-package net.natsupotato.natsucraft.util;
+package net.dairycultist.megaliths.util;
 
 import net.minecraft.world.World;
 

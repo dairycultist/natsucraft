@@ -6,16 +6,20 @@
   "description": "",
   "authors": [ "NatsuPotato" ],
   "license": "MIT",
-  "icon": "assets/natsucraft/icon.png",
+  "icon": "assets/megaliths/icon.png",
   "environment": "*",
   "entrypoints": {
     "stationapi:event_bus": [],
     "stationapi:event_bus_client": [],
-    "stationapi:event_bus_server": [ "net.natsupotato.natsucraft.Natsucraft" ],
-    "main": [ "net.natsupotato.natsucraft.Natsucraft" ]
+    "stationapi:event_bus_server": [
+      "net.dairycultist.megaliths.Natsucraft"
+    ],
+    "main": [
+      "net.dairycultist.megaliths.Natsucraft"
+    ]
   },
   "mixins": [
-    "natsucraft.mixins.json"
+    "megaliths.mixins.json"
   ],
   "depends": {
     "minecraft": "1.0.0-beta.7.3"

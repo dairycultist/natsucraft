@@ -1,4 +1,4 @@
-# Dungeoncraft
+# Megaliths Minecraft Mod
 
 I'm gonna cut down the scope of this project to just megalophobia-inducing above-ground dungeons (megaliths). I'm thinking
 it could just be an 100% serverside mod with no added Things but with new structures.
@@ -10,7 +10,7 @@ Like how biomes aren't just 1 chunk of biome, structures should be more spread o
 central structures incorporated into the terrain. Ancient ruins that build on the lonely feeling in b1.7.3.
 Stone structures that could possibly date back to some kind of really old lost civilization.
 
-## Implemented (subject to change)
+## Implemented
 
 ### Structures
 
@@ -19,8 +19,3 @@ Stone structures that could possibly date back to some kind of really old lost c
 ### Mobs
 
 - Spiders are no longer slowed by cobwebs (can this work serverside only? idk)
-
-## To-do
-
-- remove Lich, Mummy, and Chicken (save some of the code tho)
-- Refactor to `dairycultist.megaliths`
