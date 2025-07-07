@@ -1,22 +1,18 @@
 {
   "schemaVersion": 1,
-  "id": "natsucraft",
+  "id": "megaliths",
   "version": "${version}",
-  "name": "Natsucraft",
+  "name": "Megaliths",
   "description": "",
-  "authors": [ "NatsuPotato" ],
+  "authors": [ "Dairycultist" ],
   "license": "MIT",
   "icon": "assets/megaliths/icon.png",
   "environment": "*",
   "entrypoints": {
     "stationapi:event_bus": [],
     "stationapi:event_bus_client": [],
-    "stationapi:event_bus_server": [
-      "net.dairycultist.megaliths.Natsucraft"
-    ],
-    "main": [
-      "net.dairycultist.megaliths.Natsucraft"
-    ]
+    "stationapi:event_bus_server": [],
+    "main": [ "net.dairycultist.megaliths.Natsucraft" ]
   },
   "mixins": [
     "megaliths.mixins.json"

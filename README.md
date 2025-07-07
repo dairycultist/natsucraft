@@ -18,4 +18,4 @@ Stone structures that could possibly date back to some kind of really old lost c
 
 ### Mobs
 
-- Spiders are no longer slowed by cobwebs (can this work serverside only? idk)
+- Spiders are no longer slowed by cobwebs (unsure if this can work serverside only)
