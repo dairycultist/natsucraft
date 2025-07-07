@@ -1,6 +1,0 @@
-{
-  "parent": "item/handheld",
-  "textures": {
-    "layer0": "natsucraft:item/lich_sword"
-  }
-}

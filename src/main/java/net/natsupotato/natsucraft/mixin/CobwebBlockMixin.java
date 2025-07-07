@@ -1,4 +1,4 @@
-package net.natsupotato.natsucraft.mixin.entity;
+package net.natsupotato.natsucraft.mixin;
 
 import net.minecraft.block.CobwebBlock;
 import net.minecraft.entity.Entity;

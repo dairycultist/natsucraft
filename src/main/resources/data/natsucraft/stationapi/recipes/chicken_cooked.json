@@ -1,9 +1,0 @@
-{
-  "type": "minecraft:smelting",
-  "ingredient": {
-    "item": "natsucraft:chicken_raw"
-  },
-  "result": {
-    "item": "natsucraft:chicken_cooked"
-  }
-}
