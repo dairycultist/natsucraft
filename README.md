@@ -19,3 +19,11 @@ Stone structures that could possibly date back to some kind of really old lost c
 ### Mobs
 
 - Spiders are no longer slowed by cobwebs (unsure if this can work serverside only)
+
+## TO-DO
+
+- Tune spawnrate of megaliths
+- Decide on size of megaliths
+- Add chests to megaliths
+- Add arches to megaliths
+- Add new rooms to megaliths (for more variety to be worth exploring)

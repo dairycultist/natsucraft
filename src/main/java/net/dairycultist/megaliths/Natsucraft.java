@@ -14,6 +14,7 @@ public class Natsucraft implements ModInitializer {
     public void onInitialize() {
 
         Biome.FOREST.addFeature(new MegalithFeature());
+        Biome.PLAINS.addFeature(new MegalithFeature());
 
         if (FabricLoader.getInstance().isModLoaded("retrocommands")) {
 

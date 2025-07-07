@@ -11,15 +11,20 @@ import java.util.Random;
 
 public class MegalithFeature extends Feature {
 
-    private static final int ROOMS_WIDE = 9;
+    private static final int ROOMS_WIDE = 3;
     private static final int EXTERIOR_WALL_PADDING = 3;
-    private static final int HEIGHT_ABOVE_SURFACE = 40;
-    private static final int DEPTH_BENEATH_SURFACE = 40;
+    private static final int HEIGHT_ABOVE_SURFACE = 20;
+    private static final int DEPTH_BENEATH_SURFACE = 20;
+
+//    private static final int ROOMS_WIDE = 9;
+//    private static final int EXTERIOR_WALL_PADDING = 3;
+//    private static final int HEIGHT_ABOVE_SURFACE = 40;
+//    private static final int DEPTH_BENEATH_SURFACE = 40;
 
     @Override
     public boolean generate(World world, Random random, int x, int y, int z) {
 
-        if (random.nextInt(128) != 0)
+        if (random.nextInt(16) != 0)
             return false;
 
         place(world, random, x, y, z);
@@ -29,7 +34,6 @@ public class MegalithFeature extends Feature {
     public void place(World world, Random random, int x, int y, int z) {
 
         // worst code on the planet idc tho
-        // probably needs more variety to be worth exploring. maybe when I clean it up first lol
 
         int w = ROOMS_WIDE * 9 + EXTERIOR_WALL_PADDING * 2;
         int bottom = y - DEPTH_BENEATH_SURFACE;
